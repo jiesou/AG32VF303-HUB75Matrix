@@ -90,7 +90,7 @@ always @(posedge sys_clock) begin
     sys_clk_div_cnt <= sys_clk_div_cnt + 2'd1;
 end
 hub75_driver hub75_inst (
-    .clk(sys_clock), // 理论上要分频一下，实际上不分频也可以
+    .clk(sys_clk_div4), // 要分频，否则鬼影
     .rd_addr_a(hub_addr_top),
     .rd_addr_b(hub_addr_bot),
     .rd_data_a(data_to_hub_top),
@@ -205,13 +205,14 @@ reg [3:0] hub75_addr_reg;   // 0 到 15 (16 行)
 // 由计数器推动
 // 修正错位
 // 1. 正在显示第 N 行时 (hub75_addr_reg = N)，我们需要移位读入第 N+1 行的数据。
-// 2. 在 LATCH 状态 (即将切换到 N+1 行显示)，由于 ram 读取有 1 cycle 延迟。
+// 2. 在 LATCH/ADDR 状态 (即将切换到 N+1 行显示)，由于 ram 读取有 1 cycle 延迟。
 //    我们需要预读取第 N+2 行的第 0 个像素，
 //    以便在进入 SHIFT 状态的第一个周期就能输出正确数据。
 wire [3:0] row_to_fetch;
-assign row_to_fetch = (state_reg == STATE_LATCH) ? (hub75_addr_reg + 4'd2) : (hub75_addr_reg + 4'd1);
+assign row_to_fetch = (state_reg == STATE_SHIFT) ? (hub75_addr_reg + 4'd1) : (hub75_addr_reg + 4'd2);
 wire [5:0] col_to_fetch;
-assign col_to_fetch = (state_reg == STATE_LATCH) ? 6'd0 : (shift_count_reg[5:0] + 6'd1);
+assign col_to_fetch = (state_reg == STATE_SHIFT) ? (shift_count_reg[5:0] + 6'd1) : 6'd0;
+
 // 拼接方式：{行地址(5bit), 列地址(6bit)} 刚好 11 位
 // 上半屏行：0~15 最高位一定是 0，下半屏行：16~31 最高位一定是 1
 assign rd_addr_a = {1'b0, row_to_fetch, col_to_fetch};      // 行 0-15
@@ -221,7 +222,8 @@ assign rd_addr_b = {1'b1, row_to_fetch, col_to_fetch};      // 行 16-31
 // 核心状态机
 // --------------------------------------------------------
 localparam [1:0] STATE_SHIFT = 2'b00; // 数据移位
-localparam [1:0] STATE_LATCH = 2'b01; // 锁存和换行
+localparam [1:0] STATE_LATCH = 2'b01; // 锁存
+localparam [1:0] STATE_ADDR  = 2'b10; // 换行
 reg [1:0] state_reg;
 always @(posedge clk) begin
     begin
@@ -238,7 +240,12 @@ always @(posedge clk) begin
             end
             
             STATE_LATCH: begin
-                // 在锁存周期改变地址（LAT 保持高）
+                // 锁存状态，LAT 发出脉冲，随后才切换行选地址
+                state_reg <= STATE_ADDR;
+            end
+
+            STATE_ADDR: begin
+                // 切换行选地址状态
                 if (hub75_addr_reg == ROW_MAX) begin
                     hub75_addr_reg <= 0; // 回到第 0 行
                 end else begin
@@ -260,6 +267,7 @@ end
 
 // --- 输出 wire 信号 ---
 // HUB75_CLK：只在移位时给时钟
+// 不能反相时钟，否则会错位
 assign HUB75_CLK  = (state_reg == STATE_SHIFT) ? clk : 1'b0;  
 
 // A/B/C/D 地址线：绑定寄存器
@@ -269,13 +277,14 @@ assign HUB75_ADDR = hub75_addr_reg;
 // 上下反了交换 a 和 b 即可
 assign HUB75_DATA = {rd_data_b, rd_data_a};
 
-// LAT 信号：只在 LATCH 状态，且只持续一个时钟周期
+// LAT 信号：只在 LATCH 状态
 assign HUB75_LAT = (state_reg == STATE_LATCH); 
 
 // OE 信号：保持低电平（常亮）
 // 在锁存周期禁用输出（保持高电平），避免地址/数据切换时出现伪影
 // 扩展消隐时间：前后各多 4 个周期，防止鬼影
 assign HUB75_OE = ((state_reg == STATE_LATCH) || 
+                   (state_reg == STATE_ADDR) ||
                    (state_reg == STATE_SHIFT && (shift_count_reg < 4 || shift_count_reg > SHIFT_MAX - 4))) ? 1'b1 : 1'b0;
 
 endmodule

@@ -3,11 +3,11 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'pll_inst|auto_generated|pll1|clk[0]'
-Slack : 4.039
+Slack : 4.037
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'PIN_HSI'
-Slack : 99.039
+Slack : 99.037
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'PIN_HSI'
@@ -35,11 +35,11 @@ Slack : 121.000
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'pll_inst|auto_generated|pll1|clk[0]'
-Slack : 4.130
+Slack : 4.127
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'PIN_HSI'
-Slack : 99.130
+Slack : 99.127
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'PIN_HSI'
@@ -67,11 +67,11 @@ Slack : 121.000
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'pll_inst|auto_generated|pll1|clk[0]'
-Slack : 4.594
+Slack : 4.591
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'PIN_HSI'
-Slack : 99.594
+Slack : 99.591
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'PIN_HSI'

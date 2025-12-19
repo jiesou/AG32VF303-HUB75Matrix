@@ -1,5 +1,5 @@
 Partition Merge report for example_board
-Fri Dec 19 13:50:50 2025
+Fri Dec 19 14:21:27 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,7 +40,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                               ;
 +------------------------------------+--------------------------------------------------+
-; Partition Merge Status             ; Successful - Fri Dec 19 13:50:50 2025            ;
+; Partition Merge Status             ; Successful - Fri Dec 19 14:21:27 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
@@ -869,9 +869,9 @@ Note: The Incremental Compilation Advisor can be used to get more detailed recom
 ;                                             ;       ;      ;                                ;
 ; Total combinational functions               ; 62    ; 1    ; 0                              ;
 ; Logic element usage by number of LUT inputs ;       ;      ;                                ;
-;     -- 4 input functions                    ; 9     ; 0    ; 0                              ;
+;     -- 4 input functions                    ; 10    ; 0    ; 0                              ;
 ;     -- 3 input functions                    ; 4     ; 0    ; 0                              ;
-;     -- <=2 input functions                  ; 49    ; 1    ; 0                              ;
+;     -- <=2 input functions                  ; 48    ; 1    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Logic elements by mode                      ;       ;      ;                                ;
 ;     -- normal mode                          ; 42    ; 1    ; 0                              ;
@@ -894,8 +894,8 @@ Note: The Incremental Compilation Advisor can be used to get more detailed recom
 ;     -- Registered Output Connections        ; 0     ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Internal Connections                        ;       ;      ;                                ;
-;     -- Total Connections                    ; 484   ; 1    ; 18                             ;
-;     -- Registered Connections               ; 236   ; 0    ; 0                              ;
+;     -- Total Connections                    ; 486   ; 1    ; 18                             ;
+;     -- Registered Connections               ; 237   ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; External Connections                        ;       ;      ;                                ;
 ;     -- Top                                  ; 6     ; 0    ; 15                             ;
@@ -1017,9 +1017,9 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;                                             ;                     ;
 ; Total combinational functions               ; 63                  ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 9                   ;
+;     -- 4 input functions                    ; 10                  ;
 ;     -- 3 input functions                    ; 4                   ;
-;     -- <=2 input functions                  ; 50                  ;
+;     -- <=2 input functions                  ; 49                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
 ;     -- normal mode                          ; 43                  ;
@@ -1038,8 +1038,8 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MATRIXSPI_SCK~input ;
 ; Maximum fan-out                             ; 40                  ;
-; Total fan-out                               ; 481                 ;
-; Average fan-out                             ; 2.99                ;
+; Total fan-out                               ; 483                 ;
+; Average fan-out                             ; 3.00                ;
 +---------------------------------------------+---------------------+
 
 
@@ -1059,7 +1059,7 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 13:50:49 2025
+    Info: Processing started: Fri Dec 19 14:21:27 2025
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off example_board -c example_board --merge=on
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "rv32"
@@ -1101,8 +1101,8 @@ Info (21057): Implemented 112 device resources after synthesis - the final resou
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 4619 megabytes
-    Info: Processing ended: Fri Dec 19 13:50:50 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Dec 19 14:21:27 2025
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

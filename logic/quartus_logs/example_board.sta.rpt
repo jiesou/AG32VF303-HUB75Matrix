@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for example_board
-Fri Dec 19 13:51:18 2025
+Fri Dec 19 14:21:56 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -134,7 +134,7 @@ applicable agreement for further details.
 +-------------------+--------+--------------------------+
 ; SDC File Path     ; Status ; Read at                  ;
 +-------------------+--------+--------------------------+
-; example_board.sdc ; OK     ; Fri Dec 19 13:51:16 2025 ;
+; example_board.sdc ; OK     ; Fri Dec 19 14:21:54 2025 ;
 +-------------------+--------+--------------------------+
 
 
@@ -155,8 +155,8 @@ applicable agreement for further details.
 +-------------+-----------------+-------------------------------------+------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name                          ; Note                                           ;
 +-------------+-----------------+-------------------------------------+------------------------------------------------+
-; 1040.58 MHz ; 238.04 MHz      ; PIN_HSI                             ; limit due to minimum period restriction (tmin) ;
-; 1040.58 MHz ; 238.04 MHz      ; pll_inst|auto_generated|pll1|clk[0] ; limit due to minimum period restriction (tmin) ;
+; 1038.42 MHz ; 238.04 MHz      ; PIN_HSI                             ; limit due to minimum period restriction (tmin) ;
+; 1038.42 MHz ; 238.04 MHz      ; pll_inst|auto_generated|pll1|clk[0] ; limit due to minimum period restriction (tmin) ;
 +-------------+-----------------+-------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -172,8 +172,8 @@ HTML report is unavailable in plain text report export.
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; pll_inst|auto_generated|pll1|clk[0] ; 4.039  ; 0.000         ;
-; PIN_HSI                             ; 99.039 ; 0.000         ;
+; pll_inst|auto_generated|pll1|clk[0] ; 4.037  ; 0.000         ;
+; PIN_HSI                             ; 99.037 ; 0.000         ;
 +-------------------------------------+--------+---------------+
 
 
@@ -216,7 +216,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 ; Slack ; From Node                             ; To Node                               ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
-; 4.039 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.088     ; 0.894      ;
+; 4.037 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.088     ; 0.896      ;
 ; 4.075 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.088     ; 0.858      ;
 ; 4.075 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.088     ; 0.858      ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
@@ -227,7 +227,7 @@ No paths to report.
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; 99.039 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.088     ; 0.894      ;
+; 99.037 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.088     ; 0.896      ;
 ; 99.075 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.088     ; 0.858      ;
 ; 99.075 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.088     ; 0.858      ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -240,7 +240,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.446 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.088      ; 0.746      ;
 ; 0.458 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.088      ; 0.758      ;
-; 0.477 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.088      ; 0.777      ;
+; 0.479 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.088      ; 0.779      ;
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -251,7 +251,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 ; 0.446 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.088      ; 0.746      ;
 ; 0.458 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.088      ; 0.758      ;
-; 0.477 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.088      ; 0.777      ;
+; 0.479 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.088      ; 0.779      ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 
 
@@ -357,26 +357,26 @@ No paths to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 8.046  ; 8.232  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 13.061 ; 12.503 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 11.195 ; 10.923 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 13.061 ; 12.503 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 11.182 ; 10.901 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 11.221 ; 10.967 ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 7.999  ; 7.868  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 13.391 ; 12.758 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 11.223 ; 10.949 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 10.865 ; 10.655 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 13.391 ; 12.758 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 11.107 ; 10.848 ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 11.123 ; 10.855 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 11.498 ; 11.191 ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.025  ; 3.086  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.025  ; 3.086  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 5.235  ; 5.421  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 10.250 ; 9.692  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 8.384  ; 8.112  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 10.250 ; 9.692  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 8.371  ; 8.090  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 8.410  ; 8.156  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 11.400 ; 11.088 ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.027  ; 3.088  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.027  ; 3.088  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 5.188  ; 5.057  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 10.580 ; 9.947  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 8.412  ; 8.138  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 8.054  ; 7.844  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 10.580 ; 9.947  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 8.296  ; 8.037  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 8.312  ; 8.044  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 8.687  ; 8.380  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; 0.214  ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; 0.143  ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 8.589  ; 8.277  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; 0.216  ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; 0.145  ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -385,26 +385,26 @@ No paths to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 7.758  ; 7.943  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 10.732 ; 10.470 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 10.801 ; 10.536 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 12.681 ; 12.126 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 10.788 ; 10.514 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 10.827 ; 10.578 ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 7.683  ; 7.527  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 10.484 ; 10.278 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 10.829 ; 10.561 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 10.484 ; 10.278 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 12.997 ; 12.371 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 10.718 ; 10.464 ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 10.732 ; 10.470 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 11.091 ; 10.792 ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.937  ; 2.999  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.937  ; 2.999  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 4.530  ; 4.715  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 7.504  ; 7.242  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 7.573  ; 7.308  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 9.453  ; 8.898  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 7.560  ; 7.286  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 7.599  ; 7.350  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 11.000 ; 10.695 ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.938  ; 3.000  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.938  ; 3.000  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 4.455  ; 4.299  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 7.256  ; 7.050  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 7.601  ; 7.333  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 7.256  ; 7.050  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 9.769  ; 9.143  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 7.490  ; 7.236  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 7.504  ; 7.242  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 7.863  ; 7.564  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.291 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.359 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 7.772  ; 7.467  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.290 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.358 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -419,8 +419,8 @@ No synchronizer chains to report.
 +-------------+-----------------+-------------------------------------+------------------------------------------------+
 ; Fmax        ; Restricted Fmax ; Clock Name                          ; Note                                           ;
 +-------------+-----------------+-------------------------------------+------------------------------------------------+
-; 1149.43 MHz ; 238.04 MHz      ; PIN_HSI                             ; limit due to minimum period restriction (tmin) ;
-; 1149.43 MHz ; 238.04 MHz      ; pll_inst|auto_generated|pll1|clk[0] ; limit due to minimum period restriction (tmin) ;
+; 1145.48 MHz ; 238.04 MHz      ; PIN_HSI                             ; limit due to minimum period restriction (tmin) ;
+; 1145.48 MHz ; 238.04 MHz      ; pll_inst|auto_generated|pll1|clk[0] ; limit due to minimum period restriction (tmin) ;
 +-------------+-----------------+-------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -430,8 +430,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; pll_inst|auto_generated|pll1|clk[0] ; 4.130  ; 0.000         ;
-; PIN_HSI                             ; 99.130 ; 0.000         ;
+; pll_inst|auto_generated|pll1|clk[0] ; 4.127  ; 0.000         ;
+; PIN_HSI                             ; 99.127 ; 0.000         ;
 +-------------------------------------+--------+---------------+
 
 
@@ -474,7 +474,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 ; Slack ; From Node                             ; To Node                               ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
-; 4.130 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.079     ; 0.813      ;
+; 4.127 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.079     ; 0.816      ;
 ; 4.173 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.079     ; 0.770      ;
 ; 4.173 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.079     ; 0.770      ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
@@ -485,7 +485,7 @@ No paths to report.
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; 99.130 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.079     ; 0.813      ;
+; 99.127 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.079     ; 0.816      ;
 ; 99.173 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.079     ; 0.770      ;
 ; 99.173 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.079     ; 0.770      ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -498,7 +498,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.395 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.410 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.079      ; 0.684      ;
-; 0.442 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.079      ; 0.716      ;
+; 0.443 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.079      ; 0.717      ;
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -509,7 +509,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 ; 0.395 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.079      ; 0.669      ;
 ; 0.410 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.079      ; 0.684      ;
-; 0.442 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.079      ; 0.716      ;
+; 0.443 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.079      ; 0.717      ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 
 
@@ -615,26 +615,26 @@ No paths to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 7.272  ; 7.566  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 11.771 ; 11.137 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 10.201 ; 9.868  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 11.771 ; 11.137 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 10.192 ; 9.846  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 10.237 ; 9.917  ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 7.320  ; 7.108  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 12.093 ; 11.364 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 10.229 ; 9.892  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 9.885  ; 9.628  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 12.093 ; 11.364 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 10.125 ; 9.804  ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 10.140 ; 9.807  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 10.510 ; 10.110 ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.769  ; 2.805  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.769  ; 2.805  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 4.838  ; 5.132  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 9.337  ; 8.703  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 7.767  ; 7.434  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 9.337  ; 8.703  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 7.758  ; 7.412  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 7.803  ; 7.483  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 10.417 ; 10.016 ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.770  ; 2.807  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.770  ; 2.807  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 4.886  ; 4.674  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 9.659  ; 8.930  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 7.795  ; 7.458  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 7.451  ; 7.194  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 9.659  ; 8.930  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 7.691  ; 7.370  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 7.706  ; 7.373  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 8.076  ; 7.676  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; 0.335  ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; 0.246  ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 7.983  ; 7.582  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; 0.336  ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; 0.248  ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -643,26 +643,26 @@ No paths to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 6.996  ; 7.280  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 9.768  ; 9.443  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 9.826  ; 9.502  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 11.409 ; 10.781 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 9.817  ; 9.481  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 9.861  ; 9.549  ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 7.009  ; 6.784  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 9.523  ; 9.271  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 9.855  ; 9.526  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 9.523  ; 9.271  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 11.719 ; 10.999 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 9.754  ; 9.441  ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 9.768  ; 9.443  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 10.121 ; 9.733  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.689  ; 2.728  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.689  ; 2.728  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 4.197  ; 4.481  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 6.969  ; 6.644  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 7.027  ; 6.703  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 8.610  ; 7.982  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 7.018  ; 6.682  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 7.062  ; 6.750  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 10.034 ; 9.645  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.691  ; 2.730  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 2.691  ; 2.730  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 4.210  ; 3.985  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 6.724  ; 6.472  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 7.056  ; 6.727  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 6.724  ; 6.472  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 8.920  ; 8.200  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 6.955  ; 6.642  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 6.969  ; 6.644  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 7.322  ; 6.934  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.110 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.194 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 7.235  ; 6.846  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.108 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.192 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -677,8 +677,8 @@ No synchronizer chains to report.
 +-------------------------------------+--------+---------------+
 ; Clock                               ; Slack  ; End Point TNS ;
 +-------------------------------------+--------+---------------+
-; pll_inst|auto_generated|pll1|clk[0] ; 4.594  ; 0.000         ;
-; PIN_HSI                             ; 99.594 ; 0.000         ;
+; pll_inst|auto_generated|pll1|clk[0] ; 4.591  ; 0.000         ;
+; PIN_HSI                             ; 99.591 ; 0.000         ;
 +-------------------------------------+--------+---------------+
 
 
@@ -721,7 +721,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 ; Slack ; From Node                             ; To Node                               ; Launch Clock                        ; Latch Clock                         ; Relationship ; Clock Skew ; Data Delay ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
-; 4.594 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.041     ; 0.372      ;
+; 4.591 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.041     ; 0.375      ;
 ; 4.607 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.041     ; 0.359      ;
 ; 4.607 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 5.000        ; -0.041     ; 0.359      ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
@@ -732,7 +732,7 @@ No paths to report.
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
-; 99.594 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.041     ; 0.372      ;
+; 99.591 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.041     ; 0.375      ;
 ; 99.607 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.041     ; 0.359      ;
 ; 99.607 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 100.000      ; -0.041     ; 0.359      ;
 +--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
@@ -745,7 +745,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 ; 0.182 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.041      ; 0.307      ;
 ; 0.189 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.041      ; 0.314      ;
-; 0.189 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.041      ; 0.314      ;
+; 0.191 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; PIN_HSI      ; PIN_HSI     ; 0.000        ; 0.041      ; 0.316      ;
 +-------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -756,7 +756,7 @@ No paths to report.
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 ; 0.182 ; user_ip:macro_inst|sys_clk_div_cnt[1] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.041      ; 0.307      ;
 ; 0.189 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[0] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.041      ; 0.314      ;
-; 0.189 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.041      ; 0.314      ;
+; 0.191 ; user_ip:macro_inst|sys_clk_div_cnt[0] ; user_ip:macro_inst|sys_clk_div_cnt[1] ; pll_inst|auto_generated|pll1|clk[0] ; pll_inst|auto_generated|pll1|clk[0] ; 0.000        ; 0.041      ; 0.316      ;
 +-------+---------------------------------------+---------------------------------------+-------------------------------------+-------------------------------------+--------------+------------+------------+
 
 
@@ -862,26 +862,26 @@ No paths to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 3.927  ; 3.903  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 6.329  ; 6.061  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 4.945  ; 4.926  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 6.329  ; 6.061  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 4.922  ; 4.899  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 4.976  ; 4.964  ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 3.783  ; 3.807  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 6.442  ; 6.178  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 4.969  ; 4.948  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 4.813  ; 4.785  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 6.442  ; 6.178  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 4.931  ; 4.902  ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 4.922  ; 4.893  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 5.058  ; 5.051  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.368  ; 1.935  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.368  ; 1.935  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 2.497  ; 2.473  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 4.899  ; 4.631  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 3.515  ; 3.496  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 4.899  ; 4.631  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 3.492  ; 3.469  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 3.546  ; 3.534  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 5.043  ; 5.022  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.370  ; 1.937  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.370  ; 1.937  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 2.353  ; 2.377  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 5.012  ; 4.748  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 3.539  ; 3.518  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 3.383  ; 3.355  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 5.012  ; 4.748  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 3.501  ; 3.472  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 3.492  ; 3.463  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 3.628  ; 3.621  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.062 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.038 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 3.613  ; 3.592  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.060 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.036 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -890,26 +890,26 @@ No paths to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 3.795  ; 3.774  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 4.718  ; 4.689  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 4.742  ; 4.721  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 6.130  ; 5.861  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 4.719  ; 4.694  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 4.771  ; 4.757  ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 3.645  ; 3.649  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 4.614  ; 4.584  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 4.765  ; 4.742  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 4.614  ; 4.584  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 6.238  ; 5.973  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 4.728  ; 4.698  ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 4.718  ; 4.689  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 4.848  ; 4.839  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.325  ; 1.891  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.325  ; 1.891  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 2.162  ; 2.141  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 3.085  ; 3.056  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 3.109  ; 3.088  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 4.497  ; 4.228  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 3.086  ; 3.061  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 3.138  ; 3.124  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 4.836  ; 4.813  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.326  ; 1.893  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.326  ; 1.893  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 2.012  ; 2.016  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 2.981  ; 2.951  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 3.132  ; 3.109  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 2.981  ; 2.951  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 4.605  ; 4.340  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 3.095  ; 3.065  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 3.085  ; 3.056  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 3.215  ; 3.206  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.308 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.286 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 3.203  ; 3.180  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.307 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.284 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -924,11 +924,11 @@ No synchronizer chains to report.
 +--------------------------------------+--------+-------+----------+---------+---------------------+
 ; Clock                                ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack                     ; 4.039  ; 0.182 ; N/A      ; N/A     ; 0.799               ;
+; Worst-case Slack                     ; 4.037  ; 0.182 ; N/A      ; N/A     ; 0.799               ;
 ;  PIN_HSE                             ; N/A    ; N/A   ; N/A      ; N/A     ; 61.901              ;
-;  PIN_HSI                             ; 99.039 ; 0.182 ; N/A      ; N/A     ; 49.212              ;
+;  PIN_HSI                             ; 99.037 ; 0.182 ; N/A      ; N/A     ; 49.212              ;
 ;  PIN_OSC                             ; N/A    ; N/A   ; N/A      ; N/A     ; 121.000             ;
-;  pll_inst|auto_generated|pll1|clk[0] ; 4.039  ; 0.182 ; N/A      ; N/A     ; 0.799               ;
+;  pll_inst|auto_generated|pll1|clk[0] ; 4.037  ; 0.182 ; N/A      ; N/A     ; 0.799               ;
 ; Design-wide TNS                      ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  PIN_HSE                             ; N/A    ; N/A   ; N/A      ; N/A     ; 0.000               ;
 ;  PIN_HSI                             ; 0.000  ; 0.000 ; N/A      ; N/A     ; 0.000               ;
@@ -942,26 +942,26 @@ No synchronizer chains to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 8.046  ; 8.232  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 13.061 ; 12.503 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 11.195 ; 10.923 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 13.061 ; 12.503 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 11.182 ; 10.901 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 11.221 ; 10.967 ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 7.999  ; 7.868  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 13.391 ; 12.758 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 11.223 ; 10.949 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 10.865 ; 10.655 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 13.391 ; 12.758 ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 11.107 ; 10.848 ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 11.123 ; 10.855 ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 11.498 ; 11.191 ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.025  ; 3.086  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.025  ; 3.086  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 5.235  ; 5.421  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 10.250 ; 9.692  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 8.384  ; 8.112  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 10.250 ; 9.692  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 8.371  ; 8.090  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 8.410  ; 8.156  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 11.400 ; 11.088 ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.027  ; 3.088  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 3.027  ; 3.088  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 5.188  ; 5.057  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 10.580 ; 9.947  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 8.412  ; 8.138  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 8.054  ; 7.844  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 10.580 ; 9.947  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 8.296  ; 8.037  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 8.312  ; 8.044  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 8.687  ; 8.380  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; 0.335  ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; 0.246  ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 8.589  ; 8.277  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; 0.336  ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; 0.248  ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -970,26 +970,26 @@ No synchronizer chains to report.
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 ; Data Port                                ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                     ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
-; HUB75_CLK                                ; PIN_HSI    ; 3.795  ; 3.774  ; Rise       ; PIN_HSI                             ;
-; HUB75_DATA[*]                            ; PIN_HSI    ; 4.718  ; 4.689  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[0]                           ; PIN_HSI    ; 4.742  ; 4.721  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[1]                           ; PIN_HSI    ; 6.130  ; 5.861  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[2]                           ; PIN_HSI    ; 4.719  ; 4.694  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[3]                           ; PIN_HSI    ; 4.771  ; 4.757  ; Rise       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSI    ; 3.645  ; 3.649  ; Rise       ; PIN_HSI                             ;
+; HUB75_DATA[*]                            ; PIN_HSI    ; 4.614  ; 4.584  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[0]                           ; PIN_HSI    ; 4.765  ; 4.742  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[1]                           ; PIN_HSI    ; 4.614  ; 4.584  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[2]                           ; PIN_HSI    ; 6.238  ; 5.973  ; Rise       ; PIN_HSI                             ;
+;  HUB75_DATA[3]                           ; PIN_HSI    ; 4.728  ; 4.698  ; Rise       ; PIN_HSI                             ;
 ;  HUB75_DATA[4]                           ; PIN_HSI    ; 4.718  ; 4.689  ; Rise       ; PIN_HSI                             ;
-;  HUB75_DATA[5]                           ; PIN_HSI    ; 4.848  ; 4.839  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.325  ; 1.891  ; Rise       ; PIN_HSI                             ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.325  ; 1.891  ; Fall       ; PIN_HSI                             ;
-; HUB75_CLK                                ; PIN_HSE    ; 2.162  ; 2.141  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; HUB75_DATA[*]                            ; PIN_HSE    ; 3.085  ; 3.056  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[0]                           ; PIN_HSE    ; 3.109  ; 3.088  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[1]                           ; PIN_HSE    ; 4.497  ; 4.228  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[2]                           ; PIN_HSE    ; 3.086  ; 3.061  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[3]                           ; PIN_HSE    ; 3.138  ; 3.124  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSI    ; 4.836  ; 4.813  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.326  ; 1.893  ; Rise       ; PIN_HSI                             ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSI    ; 1.326  ; 1.893  ; Fall       ; PIN_HSI                             ;
+; HUB75_CLK                                ; PIN_HSE    ; 2.012  ; 2.016  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; HUB75_DATA[*]                            ; PIN_HSE    ; 2.981  ; 2.951  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[0]                           ; PIN_HSE    ; 3.132  ; 3.109  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[1]                           ; PIN_HSE    ; 2.981  ; 2.951  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[2]                           ; PIN_HSE    ; 4.605  ; 4.340  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[3]                           ; PIN_HSE    ; 3.095  ; 3.065  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
 ;  HUB75_DATA[4]                           ; PIN_HSE    ; 3.085  ; 3.056  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-;  HUB75_DATA[5]                           ; PIN_HSE    ; 3.215  ; 3.206  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.308 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
-; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.359 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
+;  HUB75_DATA[5]                           ; PIN_HSE    ; 3.203  ; 3.180  ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ; -0.307 ;        ; Rise       ; pll_inst|auto_generated|pll1|clk[0] ;
+; alta_rv32:rv32|sys_clk~QIC_DANGLING_PORT ; PIN_HSE    ;        ; -0.358 ; Fall       ; pll_inst|auto_generated|pll1|clk[0] ;
 +------------------------------------------+------------+--------+--------+------------+-------------------------------------+
 
 
@@ -1044,8 +1044,8 @@ No synchronizer chains to report.
 ; HUB75_ADDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
 ; HUB75_CLK     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
 ; HUB75_DATA[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
-; HUB75_DATA[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.09 V              ; -0.011 V            ; 0.196 V                              ; 0.301 V                              ; 4.93e-09 s                  ; 3.56e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.09 V             ; -0.011 V           ; 0.196 V                             ; 0.301 V                             ; 4.93e-09 s                 ; 3.56e-09 s                 ; Yes                       ; Yes                       ;
-; HUB75_DATA[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; HUB75_DATA[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
+; HUB75_DATA[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.09 V              ; -0.011 V            ; 0.196 V                              ; 0.301 V                              ; 4.93e-09 s                  ; 3.56e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.09 V             ; -0.011 V           ; 0.196 V                             ; 0.301 V                             ; 4.93e-09 s                 ; 3.56e-09 s                 ; Yes                       ; Yes                       ;
 ; HUB75_DATA[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
 ; HUB75_DATA[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
 ; HUB75_DATA[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 8.89e-09 V                   ; 3.12 V              ; -0.11 V             ; 0.153 V                              ; 0.272 V                              ; 6.41e-10 s                  ; 4.57e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 8.89e-09 V                  ; 3.12 V             ; -0.11 V            ; 0.153 V                             ; 0.272 V                             ; 6.41e-10 s                 ; 4.57e-10 s                 ; No                        ; Yes                       ;
@@ -1067,8 +1067,8 @@ No synchronizer chains to report.
 ; HUB75_ADDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
 ; HUB75_CLK     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
 ; HUB75_DATA[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
-; HUB75_DATA[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.08 V              ; -0.00457 V          ; 0.185 V                              ; 0.21 V                               ; 5.8e-09 s                   ; 4.46e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.08 V             ; -0.00457 V         ; 0.185 V                             ; 0.21 V                              ; 5.8e-09 s                  ; 4.46e-09 s                 ; Yes                       ; Yes                       ;
-; HUB75_DATA[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; HUB75_DATA[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
+; HUB75_DATA[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.08 V              ; -0.00457 V          ; 0.185 V                              ; 0.21 V                               ; 5.8e-09 s                   ; 4.46e-09 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.08 V             ; -0.00457 V         ; 0.185 V                             ; 0.21 V                              ; 5.8e-09 s                  ; 4.46e-09 s                 ; Yes                       ; Yes                       ;
 ; HUB75_DATA[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
 ; HUB75_DATA[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
 ; HUB75_DATA[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 7.5e-07 V                    ; 3.11 V              ; -0.0503 V           ; 0.122 V                              ; 0.172 V                              ; 7.08e-10 s                  ; 6.43e-10 s                  ; Yes                        ; Yes                        ; 3.08 V                      ; 7.5e-07 V                   ; 3.11 V             ; -0.0503 V          ; 0.122 V                             ; 0.172 V                             ; 7.08e-10 s                 ; 6.43e-10 s                 ; Yes                       ; Yes                       ;
@@ -1090,8 +1090,8 @@ No synchronizer chains to report.
 ; HUB75_ADDR[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
 ; HUB75_CLK     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
 ; HUB75_DATA[0] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
-; HUB75_DATA[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.48 V              ; -0.0173 V           ; 0.356 V                              ; 0.324 V                              ; 3.89e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.48 V             ; -0.0173 V          ; 0.356 V                             ; 0.324 V                             ; 3.89e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
-; HUB75_DATA[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; HUB75_DATA[1] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
+; HUB75_DATA[2] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.48 V              ; -0.0173 V           ; 0.356 V                              ; 0.324 V                              ; 3.89e-09 s                  ; 3.06e-09 s                  ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.48 V             ; -0.0173 V          ; 0.356 V                             ; 0.324 V                             ; 3.89e-09 s                 ; 3.06e-09 s                 ; No                        ; No                        ;
 ; HUB75_DATA[3] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
 ; HUB75_DATA[4] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
 ; HUB75_DATA[5] ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.85e-07 V                   ; 3.57 V              ; -0.141 V            ; 0.301 V                              ; 0.239 V                              ; 4.61e-10 s                  ; 4.2e-10 s                   ; No                         ; No                         ; 3.46 V                      ; 1.85e-07 V                  ; 3.57 V             ; -0.141 V           ; 0.301 V                             ; 0.239 V                             ; 4.61e-10 s                 ; 4.2e-10 s                  ; No                        ; No                        ;
@@ -1150,7 +1150,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 ; Unconstrained Input Ports       ; 3     ; 3    ;
 ; Unconstrained Input Port Paths  ; 36    ; 36   ;
 ; Unconstrained Output Ports      ; 14    ; 14   ;
-; Unconstrained Output Port Paths ; 21    ; 21   ;
+; Unconstrained Output Port Paths ; 22    ; 22   ;
 +---------------------------------+-------+------+
 
 
@@ -1160,7 +1160,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 13:51:15 2025
+    Info: Processing started: Fri Dec 19 14:21:53 2025
 Info: Command: quartus_sta example_board -c example_board
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
@@ -1179,11 +1179,11 @@ Critical Warning (332168): The following clock transfers have no clock uncertain
     Critical Warning (332169): From pll_inst|auto_generated|pll1|clk[0] (Rise) to pll_inst|auto_generated|pll1|clk[0] (Rise) (setup and hold)
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
-Info (332146): Worst-case setup slack is 4.039
+Info (332146): Worst-case setup slack is 4.037
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     4.039         0.000 pll_inst|auto_generated|pll1|clk[0] 
-    Info (332119):    99.039         0.000 PIN_HSI 
+    Info (332119):     4.037         0.000 pll_inst|auto_generated|pll1|clk[0] 
+    Info (332119):    99.037         0.000 PIN_HSI 
 Info (332146): Worst-case hold slack is 0.446
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1206,11 +1206,11 @@ Warning (332060): Node: user_ip:macro_inst|sys_clk_div_cnt[1] was determined to 
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From PIN_HSI (Rise) to PIN_HSI (Rise) (setup and hold)
     Critical Warning (332169): From pll_inst|auto_generated|pll1|clk[0] (Rise) to pll_inst|auto_generated|pll1|clk[0] (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 4.130
+Info (332146): Worst-case setup slack is 4.127
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     4.130         0.000 pll_inst|auto_generated|pll1|clk[0] 
-    Info (332119):    99.130         0.000 PIN_HSI 
+    Info (332119):     4.127         0.000 pll_inst|auto_generated|pll1|clk[0] 
+    Info (332119):    99.127         0.000 PIN_HSI 
 Info (332146): Worst-case hold slack is 0.395
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1231,11 +1231,11 @@ Warning (332060): Node: user_ip:macro_inst|sys_clk_div_cnt[1] was determined to 
 Critical Warning (332168): The following clock transfers have no clock uncertainty assignment. For more accurate results, apply clock uncertainty assignments or use the derive_clock_uncertainty command.
     Critical Warning (332169): From PIN_HSI (Rise) to PIN_HSI (Rise) (setup and hold)
     Critical Warning (332169): From pll_inst|auto_generated|pll1|clk[0] (Rise) to pll_inst|auto_generated|pll1|clk[0] (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 4.594
+Info (332146): Worst-case setup slack is 4.591
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):     4.594         0.000 pll_inst|auto_generated|pll1|clk[0] 
-    Info (332119):    99.594         0.000 PIN_HSI 
+    Info (332119):     4.591         0.000 pll_inst|auto_generated|pll1|clk[0] 
+    Info (332119):    99.591         0.000 PIN_HSI 
 Info (332146): Worst-case hold slack is 0.182
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
@@ -1253,8 +1253,8 @@ Info (332146): Worst-case minimum pulse width slack is 2.255
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 4663 megabytes
-    Info: Processing ended: Fri Dec 19 13:51:18 2025
+    Info: Peak virtual memory: 4654 megabytes
+    Info: Processing ended: Fri Dec 19 14:21:56 2025
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

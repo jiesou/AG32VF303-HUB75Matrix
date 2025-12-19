@@ -108,8 +108,8 @@ VCCIO3                       : AA11      : power  :                   : 3.3V    
 NC                           : AA12      :        :                   :         :           :                
 NC                           : AA13      :        :                   :         :           :                
 NC                           : AA14      :        :                   :         :           :                
-HUB75_DATA[1]                : AA15      : output : 3.3-V LVTTL       :         : 4         : N              
-HUB75_DATA[5]                : AA16      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_DATA[2]                : AA15      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_ADDR[1]                : AA16      : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA17      :        :                   :         : 4         :                
 VCCIO4                       : AA18      : power  :                   : 3.3V    : 4         :                
 NC                           : AA19      :        :                   :         :           :                
@@ -137,7 +137,7 @@ NC                           : AB12      :        :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB13      :        :                   :         : 3         :                
 NC                           : AB14      :        :                   :         :           :                
 NC                           : AB15      :        :                   :         :           :                
-HUB75_DATA[2]                : AB16      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_DATA[1]                : AB16      : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB17      :        :                   :         : 4         :                
 NC                           : AB18      :        :                   :         :           :                
 NC                           : AB19      :        :                   :         :           :                
@@ -164,7 +164,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AC11      :        :                   :      
 NC                           : AC12      :        :                   :         :           :                
 GND                          : AC13      : gnd    :                   :         :           :                
 NC                           : AC14      :        :                   :         :           :                
-HUB75_LAT                    : AC15      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_CLK                    : AC15      : output : 3.3-V LVTTL       :         : 4         : N              
 GND                          : AC16      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC17      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC18      :        :                   :         : 4         :                
@@ -192,7 +192,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3         :                
 VCCIO3                       : AD13      : power  :                   : 3.3V    : 3         :                
 NC                           : AD14      :        :                   :         :           :                
-HUB75_OE                     : AD15      : output : 3.3-V LVTTL       :         : 4         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD15      :        :                   :         : 4         :                
 VCCIO4                       : AD16      : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD17      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD18      :        :                   :         : 4         :                
@@ -220,9 +220,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AE11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE12      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE13      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE14      :        :                   :         : 3         :                
-HUB75_ADDR[0]                : AE15      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_LAT                    : AE15      : output : 3.3-V LVTTL       :         : 4         : N              
 HUB75_DATA[4]                : AE16      : output : 3.3-V LVTTL       :         : 4         : N              
-HUB75_DATA[0]                : AE17      : output : 3.3-V LVTTL       :         : 4         : N              
+MATRIXSPI_MOSI               : AE17      : input  : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE18      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE19      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AE20      :        :                   :         : 4         :                
@@ -248,9 +248,9 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AF11      :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF12      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF14      :        :                   :         : 3         :                
-HUB75_ADDR[2]                : AF15      : output : 3.3-V LVTTL       :         : 4         : N              
-HUB75_DATA[3]                : AF16      : output : 3.3-V LVTTL       :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AF17      :        :                   :         : 4         :                
+HUB75_OE                     : AF15      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_ADDR[3]                : AF16      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_DATA[0]                : AF17      : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF18      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF19      :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AF20      :        :                   :         : 4         :                
@@ -273,13 +273,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AG8       :        :                   :      
 GND                          : AG9       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG10      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG11      :        :                   :         : 3         :                
-HUB75_ADDR[3]                : AG12      : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG12      :        :                   :         : 3         :                
 GND                          : AG13      : gnd    :                   :         :           :                
 GND+                         : AG14      :        :                   :         : 3         :                
 GND+                         : AG15      :        :                   :         : 4         :                
 GND                          : AG16      : gnd    :                   :         :           :                
-HUB75_ADDR[1]                : AG17      : output : 3.3-V LVTTL       :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AG18      :        :                   :         : 4         :                
+HUB75_ADDR[0]                : AG17      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_DATA[3]                : AG18      : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG19      :        :                   :         : 4         :                
 GND                          : AG20      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG21      :        :                   :         : 4         :                
@@ -300,13 +300,13 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AH8       :        :                   :      
 VCCIO3                       : AH9       : power  :                   : 3.3V    : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH10      :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH11      :        :                   :         : 3         :                
-HUB75_CLK                    : AH12      : output : 3.3-V LVTTL       :         : 3         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 3         :                
 VCCIO3                       : AH13      : power  :                   : 3.3V    : 3         :                
 MATRIXSPI_CS                 : AH14      : input  : 3.3-V LVTTL       :         : 3         : N              
 GND+                         : AH15      :        :                   :         : 4         :                
 VCCIO4                       : AH16      : power  :                   : 3.3V    : 4         :                
-MATRIXSPI_MOSI               : AH17      : input  : 3.3-V LVTTL       :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : AH18      :        :                   :         : 4         :                
+HUB75_ADDR[2]                : AH17      : output : 3.3-V LVTTL       :         : 4         : N              
+HUB75_DATA[5]                : AH18      : output : 3.3-V LVTTL       :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH19      :        :                   :         : 4         :                
 VCCIO4                       : AH20      : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH21      :        :                   :         : 4         :                
@@ -358,7 +358,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C13       :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 7         :                
+PIN_OSC                      : C15       : input  : 3.3-V LVTTL       :         : 7         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C17       :        :                   :         : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C18       :        :                   :         : 7         :                
@@ -375,7 +375,7 @@ GND                          : C28       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D2        :        :                   :         : 1         :                
 GND                          : D3        : gnd    :                   :         :           :                
-PIN_OSC                      : D4        : input  : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D4        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D7        :        :                   :         : 8         :                

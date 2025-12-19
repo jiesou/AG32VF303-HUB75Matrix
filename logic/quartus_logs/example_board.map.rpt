@@ -1,5 +1,5 @@
 Analysis & Synthesis report for example_board
-Fri Dec 19 13:50:48 2025
+Fri Dec 19 14:21:26 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 19 13:50:48 2025            ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 19 14:21:26 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
@@ -173,12 +173,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.60        ;
+; Average used               ; 1.80        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  60.0%      ;
+;     Processor 2            ;  80.0%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -215,17 +215,17 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
-; |example_board                               ; 63 (6)            ; 51 (0)       ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board                                                                                                 ; work         ;
+; |example_board                               ; 62 (6)            ; 51 (0)       ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board                                                                                                 ; work         ;
 ;    |alta_gclksw:gclksw_inst|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|alta_gclksw:gclksw_inst                                                                         ; work         ;
 ;    |altpll:pll_inst|                         ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|altpll:pll_inst                                                                                 ; work         ;
 ;       |altpll_vf32:auto_generated|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|altpll:pll_inst|altpll_vf32:auto_generated                                                      ; work         ;
-;    |user_ip:macro_inst|                      ; 57 (13)           ; 50 (13)      ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst                                                                              ; work         ;
+;    |user_ip:macro_inst|                      ; 56 (13)           ; 50 (13)      ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst                                                                              ; work         ;
 ;       |framebuffer_ram:ram_inst|             ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst                                                     ; work         ;
 ;          |altsyncram:mem_rtl_0|              ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0                                ; work         ;
 ;             |altsyncram_t9j1:auto_generated| ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_t9j1:auto_generated ; work         ;
 ;          |altsyncram:mem_rtl_1|              ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1                                ; work         ;
 ;             |altsyncram_t9j1:auto_generated| ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_t9j1:auto_generated ; work         ;
-;       |hub75_driver:hub75_inst|              ; 38 (38)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|hub75_driver:hub75_inst                                                      ; work         ;
+;       |hub75_driver:hub75_inst|              ; 37 (37)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|hub75_driver:hub75_inst                                                      ; work         ;
 ;       |spi_rx_16bit:rx_inst|                 ; 6 (6)             ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|spi_rx_16bit:rx_inst                                                         ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -813,7 +813,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ../../../../.platformio/packages/tool-agrv_logic/etc/arch/rodinia/alta_sim.v ; Project Directory  ; work    ; 08d1c9efdd83a6c865cee658fabe7fee ;
 ; db/altpll_vf32.tdf                                                           ; Project Directory  ; work    ; ba7cf6d657c8600ae31853022e767681 ;
 ; example_board.v                                                              ; Project Directory  ; work    ; 9e2f2f05b3e48edf3e117bba85444b71 ;
-; user_ip.v                                                                    ; Project Directory  ; work    ; a1fa0cd8dfa0e7bf2bd05c6ff67aa85a ;
+; user_ip.v                                                                    ; Project Directory  ; work    ; 593740e004477fdbe5f48ff291c7e671 ;
 +------------------------------------------------------------------------------+--------------------+---------+----------------------------------+
 
 
@@ -947,7 +947,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 13:50:43 2025
+    Info: Processing started: Fri Dec 19 14:21:20 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 59 design units, including 59 entities, in source file /users/user/.platformio/packages/tool-agrv_logic/etc/arch/rodinia/alta_sim.v
@@ -1080,11 +1080,11 @@ Info (12128): Elaborating entity "alta_gclksw" for hierarchy "alta_gclksw:gclksw
 Info (12128): Elaborating entity "user_ip" for hierarchy "user_ip:macro_inst"
 Warning (10230): Verilog HDL assignment warning at user_ip.v(64): truncated value with size 32 to match size of target (11)
 Info (12128): Elaborating entity "spi_rx_16bit" for hierarchy "user_ip:macro_inst|spi_rx_16bit:rx_inst"
-Warning (10230): Verilog HDL assignment warning at user_ip.v(131): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at user_ip.v(129): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "framebuffer_ram" for hierarchy "user_ip:macro_inst|framebuffer_ram:ram_inst"
 Info (12128): Elaborating entity "hub75_driver" for hierarchy "user_ip:macro_inst|hub75_driver:hub75_inst"
-Warning (10230): Verilog HDL assignment warning at user_ip.v(240): truncated value with size 32 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at user_ip.v(254): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at user_ip.v(238): truncated value with size 32 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at user_ip.v(252): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "alta_rv32" for hierarchy "alta_rv32:rv32"
 Warning (10034): Output port "gpio0_io_out_data" at alta_sim.v(3741) has no driver
 Warning (10034): Output port "gpio0_io_out_en" at alta_sim.v(3742) has no driver
@@ -1121,7 +1121,7 @@ Info (281037): Using 2 processors to synthesize 2 partitions in parallel
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 13:50:45 2025
+    Info: Processing started: Fri Dec 19 14:21:22 2025
 Info: Command: quartus_map --parallel=1 --helper=0 --partition=Top example_board -c example_board
 Warning (276027): Inferred dual-clock RAM node "user_ip:macro_inst|framebuffer_ram:ram_inst|mem_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Warning (276027): Inferred dual-clock RAM node "user_ip:macro_inst|framebuffer_ram:ram_inst|mem_rtl_1" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
@@ -1217,22 +1217,22 @@ Info (332111): Found 4 clocks
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 111 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 84 logic cells
+    Info (21061): Implemented 83 logic cells
     Info (21064): Implemented 6 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21071): Implemented 1 partitions
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Fri Dec 19 13:50:48 2025
+    Info: Processing ended: Fri Dec 19 14:21:25 2025
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 13:50:45 2025
+    Info: Processing started: Fri Dec 19 14:21:22 2025
 Info: Command: quartus_map --parallel=1 --helper=1 --partition=rv32 example_board -c example_board
 Info (270000): Limiting DSP block usage to 0 DSP block(s) for the partition alta_rv32:rv32
 Info (270017): Limiting M4K/M9K RAM block usage to 4 M4K/M9K RAM block(s) for the alta_rv32:rv32
@@ -1427,14 +1427,14 @@ Info (21057): Implemented 520 device resources after synthesis - the final resou
     Info (21061): Implemented 1 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 171 warnings
     Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Fri Dec 19 13:50:47 2025
+    Info: Processing ended: Fri Dec 19 14:21:24 2025
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:04
 Info (281038): Finished parallel synthesis of all partitions
 Info (144001): Generated suppressed messages file C:/Users/user/Documents/ag32/hub75matrix_f303/logic/quartus_logs/example_board.map.smsg
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 225 warnings
-    Info: Peak virtual memory: 4604 megabytes
-    Info: Processing ended: Fri Dec 19 13:50:49 2025
+    Info: Peak virtual memory: 4603 megabytes
+    Info: Processing ended: Fri Dec 19 14:21:26 2025
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:07
 

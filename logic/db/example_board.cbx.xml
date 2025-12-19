@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<LOG_ROOT>
-	<PROJECT NAME="example_board">
-		<CBX_INST_ENTRY INSTANCE_NAME="|example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0" CBX_FILE_NAME="altsyncram_t9j1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1" CBX_FILE_NAME="altsyncram_t9j1.tdf"/>
-	</PROJECT>
-</LOG_ROOT>
