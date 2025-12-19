@@ -8,41 +8,38 @@ Clock transfer report:
 === Auto constraints ===
 
 Clock transfer report:
-  Worst  hold:   0.603, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
-  Worst  hold:   0.615, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
-  Worst  hold:   4.200, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
-  Worst  hold:   3.339, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
+  Worst  hold:   0.104, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
+  Worst  hold:   0.615, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
+  Worst  hold:   0.615, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q to pll_inst|auto_generated|pll1|clk[0]
 
 Coverage report
-  User constraints covered 22 connections out of 304 total, coverage: 7.2%
-  Auto constraints covered 259 connections out of 304 total, coverage: 85.2%
+  User constraints covered 13 connections out of 333 total, coverage: 3.9%
+  Auto constraints covered 284 connections out of 333 total, coverage: 85.3%
 
 
-Hold from macro_inst|rx_inst|shift_reg[14] to macro_inst|rx_inst|data_out[15], clock Internal_generated_clock_example_board|MATRIXSPI_SCK, constraint 0.000, skew 0.125, data 0.569
-  Slack:   0.603
-    Arrival Time:    5.304
+Hold from macro_inst|write_addr[0] to macro_inst|ram_inst|mem_rtl_0|auto_generated|ram_block1a0, clock Internal_generated_clock_example_board|MATRIXSPI_SCK, constraint 0.000, skew -0.036, data 0.554
+  Slack:   0.104
+    Arrival Time:    6.320
         0.000    0.000   R                         Launch Clock Edge
       Launch Clock Path:
         0.000    0.000   RR              example_board|MATRIXSPI_SCK =>                MATRIXSPI_SCK~input|padio 
         1.309    1.309   RR                MATRIXSPI_SCK~input|padio =>              MATRIXSPI_SCK~input|combout 
-        2.946    1.637   RR              MATRIXSPI_SCK~input|combout =>         MATRIXSPI_SCK~inputclkctrl|inclk 
-        2.946    0.000   RR         MATRIXSPI_SCK~inputclkctrl|inclk =>        MATRIXSPI_SCK~inputclkctrl|outclk 
-        4.456    1.510   RR        MATRIXSPI_SCK~inputclkctrl|outclk =>               clken_ctrl_X53_Y1_N1|ClkIn 
-        4.604    0.148   RR               clken_ctrl_X53_Y1_N1|ClkIn =>              clken_ctrl_X53_Y1_N1|ClkOut 
-        4.735    0.131   RR              clken_ctrl_X53_Y1_N1|ClkOut =>     macro_inst|rx_inst|shift_reg[14]|Clk 
+        3.977    2.668   RR              MATRIXSPI_SCK~input|combout =>         MATRIXSPI_SCK~inputclkctrl|inclk 
+        3.977    0.000   RR         MATRIXSPI_SCK~inputclkctrl|inclk =>        MATRIXSPI_SCK~inputclkctrl|outclk 
+        5.487    1.510   RR        MATRIXSPI_SCK~inputclkctrl|outclk =>               clken_ctrl_X56_Y1_N0|ClkIn 
+        5.635    0.148   RR               clken_ctrl_X56_Y1_N0|ClkIn =>              clken_ctrl_X56_Y1_N0|ClkOut 
+        5.766    0.131   RR              clken_ctrl_X56_Y1_N0|ClkOut =>             macro_inst|write_addr[0]|Clk 
       Data Path:
-        4.950    0.215   RR     macro_inst|rx_inst|shift_reg[14]|Clk =>       macro_inst|rx_inst|shift_reg[14]|Q D
-        5.304    0.354   RR       macro_inst|rx_inst|shift_reg[14]|Q =>        macro_inst|rx_inst|data_out[15]|C E
-    Required Time:   4.701
+        5.981    0.215   RR             macro_inst|write_addr[0]|Clk =>               macro_inst|write_addr[0]|Q D
+        6.320    0.339   RR               macro_inst|write_addr[0]|Q => macro_inst|ram_inst|mem_rtl_0|auto_generated|ram_block1a0|AddressA[2] E
+    Required Time:   6.216
         0.000    0.000   R                          Latch Clock Edge
       Latch Clock Path:
         0.000    0.000   RR              example_board|MATRIXSPI_SCK =>                MATRIXSPI_SCK~input|padio 
         1.309    1.309   RR                MATRIXSPI_SCK~input|padio =>              MATRIXSPI_SCK~input|combout 
-        3.028    1.719   RR              MATRIXSPI_SCK~input|combout =>         MATRIXSPI_SCK~inputclkctrl|inclk 
-        3.028    0.000   RR         MATRIXSPI_SCK~inputclkctrl|inclk =>        MATRIXSPI_SCK~inputclkctrl|outclk 
-        4.579    1.551   RR        MATRIXSPI_SCK~inputclkctrl|outclk =>               clken_ctrl_X53_Y1_N0|ClkIn 
-        4.727    0.148   RR               clken_ctrl_X53_Y1_N0|ClkIn =>              clken_ctrl_X53_Y1_N0|ClkOut 
-        4.860    0.133   RR              clken_ctrl_X53_Y1_N0|ClkOut =>      macro_inst|rx_inst|data_out[15]|Clk 
-        4.783   -0.077   R                                      Hold
-        4.701   -0.082                               Clock Variation
+        4.059    2.750   RR              MATRIXSPI_SCK~input|combout =>         MATRIXSPI_SCK~inputclkctrl|inclk 
+        4.059    0.000   RR         MATRIXSPI_SCK~inputclkctrl|inclk =>        MATRIXSPI_SCK~inputclkctrl|outclk 
+        5.730    1.671   RR        MATRIXSPI_SCK~inputclkctrl|outclk => macro_inst|ram_inst|mem_rtl_0|auto_generated|ram_block1a0|Clk0 
+        6.298    0.568   R                                      Hold
+        6.216   -0.082                               Clock Variation
 

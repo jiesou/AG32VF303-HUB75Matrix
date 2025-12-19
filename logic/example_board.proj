@@ -9,7 +9,7 @@ flowInline=force
 [GuiMigrateRunPage]
 fitting=1
 fitter=5
-effort=2
+effort=0
 skew=2
 isMC=false
 count=
@@ -43,10 +43,10 @@ probe4Pad=
 [GuiProgramScreen]
 hardwareId=0
 blasterSpeed=70
-prgFile=C:/Users/user/Documents/ag32/hub75matrix/logic/example_board.bin
+prgFile=C:/Users/user/Documents/ag32/hub75matrix_f303/logic/example_board.bin
 eraseBox=false
 lockBox=false
-hseBox=true
+hseBox=false
 cable=2
 runAction=program
 eraseChip=true
@@ -55,3 +55,6 @@ eraseTo=
 binFile=
 readFrom=
 readTo=
+
+[MainWindow]
+recentFile.0=

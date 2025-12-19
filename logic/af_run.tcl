@@ -13,7 +13,7 @@ if { ! [info exists RESULT_DIR] } {
   set alta_work [file join ${RESULT_DIR} alta_db]
 }
 if { ! [info exists DEVICE] } {
-  set DEVICE "AGRV2KL100"
+  set DEVICE "AGRV2KL48"
 }
 if { [info exists DESIGN] && ! [info exists TOP_MODULE] } {
   set TOP_MODULE "$DESIGN"

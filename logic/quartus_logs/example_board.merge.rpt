@@ -1,5 +1,5 @@
 Partition Merge report for example_board
-Fri Dec 19 10:56:24 2025
+Fri Dec 19 13:50:50 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,16 +40,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                               ;
 +------------------------------------+--------------------------------------------------+
-; Partition Merge Status             ; Successful - Fri Dec 19 10:56:24 2025            ;
+; Partition Merge Status             ; Successful - Fri Dec 19 13:50:50 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
 ; Family                             ; Cyclone IV E                                     ;
-; Total logic elements               ; 69                                               ;
-;     Total combinational functions  ; 50                                               ;
+; Total logic elements               ; 83                                               ;
+;     Total combinational functions  ; 63                                               ;
 ;     Dedicated logic registers      ; 51                                               ;
 ; Total registers                    ; 51                                               ;
-; Total pins                         ; 21                                               ;
+; Total pins                         ; 19                                               ;
 ; Total virtual pins                 ; 1                                                ;
 ; Total memory bits                  ; 12,288                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                                ;
@@ -865,47 +865,47 @@ Note: The Incremental Compilation Advisor can be used to get more detailed recom
 +---------------------------------------------+-------+------+--------------------------------+
 ; Statistic                                   ; Top   ; rv32 ; hard_block:auto_generated_inst ;
 +---------------------------------------------+-------+------+--------------------------------+
-; Estimated Total logic elements              ; 68    ; 1    ; 0                              ;
+; Estimated Total logic elements              ; 82    ; 1    ; 0                              ;
 ;                                             ;       ;      ;                                ;
-; Total combinational functions               ; 49    ; 1    ; 0                              ;
+; Total combinational functions               ; 62    ; 1    ; 0                              ;
 ; Logic element usage by number of LUT inputs ;       ;      ;                                ;
 ;     -- 4 input functions                    ; 9     ; 0    ; 0                              ;
 ;     -- 3 input functions                    ; 4     ; 0    ; 0                              ;
-;     -- <=2 input functions                  ; 36    ; 1    ; 0                              ;
+;     -- <=2 input functions                  ; 49    ; 1    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Logic elements by mode                      ;       ;      ;                                ;
-;     -- normal mode                          ; 34    ; 1    ; 0                              ;
-;     -- arithmetic mode                      ; 15    ; 0    ; 0                              ;
+;     -- normal mode                          ; 42    ; 1    ; 0                              ;
+;     -- arithmetic mode                      ; 20    ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Total registers                             ; 51    ; 0    ; 0                              ;
 ;     -- Dedicated logic registers            ; 51    ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Virtual pins                                ; 0     ; 1    ; 0                              ;
-; I/O pins                                    ; 21    ; 0    ; 0                              ;
+; I/O pins                                    ; 19    ; 0    ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0     ; 0    ; 0                              ;
 ; Total memory bits                           ; 12288 ; 0    ; 0                              ;
 ; Total RAM block bits                        ; 0     ; 0    ; 0                              ;
 ; PLL                                         ; 0     ; 0    ; 1                              ;
 ;                                             ;       ;      ;                                ;
 ; Connections                                 ;       ;      ;                                ;
-;     -- Input Connections                    ; 17    ; 1    ; 5                              ;
-;     -- Registered Input Connections         ; 5     ; 0    ; 0                              ;
-;     -- Output Connections                   ; 10    ; 0    ; 13                             ;
+;     -- Input Connections                    ; 13    ; 1    ; 5                              ;
+;     -- Registered Input Connections         ; 3     ; 0    ; 0                              ;
+;     -- Output Connections                   ; 8     ; 0    ; 11                             ;
 ;     -- Registered Output Connections        ; 0     ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Internal Connections                        ;       ;      ;                                ;
-;     -- Total Connections                    ; 451   ; 1    ; 20                             ;
-;     -- Registered Connections               ; 254   ; 0    ; 0                              ;
+;     -- Total Connections                    ; 484   ; 1    ; 18                             ;
+;     -- Registered Connections               ; 236   ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; External Connections                        ;       ;      ;                                ;
-;     -- Top                                  ; 10    ; 0    ; 17                             ;
+;     -- Top                                  ; 6     ; 0    ; 15                             ;
 ;     -- rv32                                 ; 0     ; 0    ; 1                              ;
-;     -- hard_block:auto_generated_inst       ; 17    ; 1    ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 15    ; 1    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Partition Interface                         ;       ;      ;                                ;
 ;     -- Input Ports                          ; 6     ; 224  ; 5                              ;
 ;     -- Output Ports                         ; 13    ; 295  ; 2                              ;
-;     -- Bidir Ports                          ; 2     ; 0    ; 0                              ;
+;     -- Bidir Ports                          ; 0     ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Registered Ports                            ;       ;      ;                                ;
 ;     -- Registered Input Ports               ; 0     ; 0    ; 0                              ;
@@ -924,96 +924,88 @@ Note: The Incremental Compilation Advisor can be used to get more detailed recom
 Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
 
 
-+-----------------------------------------------------------------------------------------------------------------+
-; Partition Merge Partition Pin Processing                                                                        ;
-+-----------------------------+-----------+---------------+----------+--------------------------------------------+
-; Name                        ; Partition ; Type          ; Location ; Status                                     ;
-+-----------------------------+-----------+---------------+----------+--------------------------------------------+
-; HUB75_ADDR[0]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_ADDR[0]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_ADDR[0]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_ADDR[1]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_ADDR[1]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_ADDR[1]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_ADDR[2]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_ADDR[2]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_ADDR[2]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_ADDR[3]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_ADDR[3]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_ADDR[3]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_CLK                   ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_CLK            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_CLK~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_DATA[0]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_DATA[0]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_DATA[0]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_DATA[1]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_DATA[1]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_DATA[1]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_DATA[2]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_DATA[2]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_DATA[2]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_DATA[3]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_DATA[3]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_DATA[3]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_DATA[4]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_DATA[4]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_DATA[4]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_DATA[5]               ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_DATA[5]        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_DATA[5]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_LAT                   ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_LAT            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_LAT~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; HUB75_OE                    ; Top       ; Output Port   ; n/a      ;                                            ;
-;     -- HUB75_OE             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
-;     -- HUB75_OE~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; LED_D2                      ; Top       ; Bidir Port    ; n/a      ;                                            ;
-;     -- LED_D2               ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
-;     -- LED_D2~output        ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
-;                             ;           ;               ;          ;                                            ;
-; LED_D3                      ; Top       ; Bidir Port    ; n/a      ;                                            ;
-;     -- LED_D3               ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
-;     -- LED_D3~output        ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
-;                             ;           ;               ;          ;                                            ;
-; MATRIXSPI_CS                ; Top       ; Input Port    ; n/a      ;                                            ;
-;     -- MATRIXSPI_CS         ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
-;     -- MATRIXSPI_CS~input   ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; MATRIXSPI_MOSI              ; Top       ; Input Port    ; n/a      ;                                            ;
-;     -- MATRIXSPI_MOSI       ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
-;     -- MATRIXSPI_MOSI~input ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; MATRIXSPI_SCK               ; Top       ; Input Port    ; n/a      ;                                            ;
-;     -- MATRIXSPI_SCK        ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
-;     -- MATRIXSPI_SCK~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; PIN_HSE                     ; Top       ; Input Port    ; n/a      ;                                            ;
-;     -- PIN_HSE              ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
-;     -- PIN_HSE~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; PIN_HSI                     ; Top       ; Input Port    ; n/a      ;                                            ;
-;     -- PIN_HSI              ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
-;     -- PIN_HSI~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-; PIN_OSC                     ; Top       ; Input Port    ; n/a      ;                                            ;
-;     -- PIN_OSC              ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
-;     -- PIN_OSC~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
-;                             ;           ;               ;          ;                                            ;
-+-----------------------------+-----------+---------------+----------+--------------------------------------------+
++----------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                         ;
++-----------------------------+-----------+---------------+----------+-------------+
+; Name                        ; Partition ; Type          ; Location ; Status      ;
++-----------------------------+-----------+---------------+----------+-------------+
+; HUB75_ADDR[0]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_ADDR[0]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_ADDR[0]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_ADDR[1]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_ADDR[1]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_ADDR[1]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_ADDR[2]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_ADDR[2]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_ADDR[2]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_ADDR[3]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_ADDR[3]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_ADDR[3]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_CLK                   ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_CLK            ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_CLK~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_DATA[0]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_DATA[0]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_DATA[0]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_DATA[1]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_DATA[1]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_DATA[1]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_DATA[2]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_DATA[2]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_DATA[2]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_DATA[3]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_DATA[3]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_DATA[3]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_DATA[4]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_DATA[4]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_DATA[4]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_DATA[5]               ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_DATA[5]        ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_DATA[5]~output ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_LAT                   ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_LAT            ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_LAT~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; HUB75_OE                    ; Top       ; Output Port   ; n/a      ;             ;
+;     -- HUB75_OE             ; Top       ; Output Pad    ; Unplaced ; Synthesized ;
+;     -- HUB75_OE~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; MATRIXSPI_CS                ; Top       ; Input Port    ; n/a      ;             ;
+;     -- MATRIXSPI_CS         ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- MATRIXSPI_CS~input   ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; MATRIXSPI_MOSI              ; Top       ; Input Port    ; n/a      ;             ;
+;     -- MATRIXSPI_MOSI       ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- MATRIXSPI_MOSI~input ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; MATRIXSPI_SCK               ; Top       ; Input Port    ; n/a      ;             ;
+;     -- MATRIXSPI_SCK        ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- MATRIXSPI_SCK~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; PIN_HSE                     ; Top       ; Input Port    ; n/a      ;             ;
+;     -- PIN_HSE              ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- PIN_HSE~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; PIN_HSI                     ; Top       ; Input Port    ; n/a      ;             ;
+;     -- PIN_HSI              ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- PIN_HSI~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
+; PIN_OSC                     ; Top       ; Input Port    ; n/a      ;             ;
+;     -- PIN_OSC              ; Top       ; Input Pad     ; Unplaced ; Synthesized ;
+;     -- PIN_OSC~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized ;
+;                             ;           ;               ;          ;             ;
++-----------------------------+-----------+---------------+----------+-------------+
 
 
 +-------------------------------------------------------------------+
@@ -1021,33 +1013,33 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 69                  ;
+; Estimated Total logic elements              ; 83                  ;
 ;                                             ;                     ;
-; Total combinational functions               ; 50                  ;
+; Total combinational functions               ; 63                  ;
 ; Logic element usage by number of LUT inputs ;                     ;
 ;     -- 4 input functions                    ; 9                   ;
 ;     -- 3 input functions                    ; 4                   ;
-;     -- <=2 input functions                  ; 37                  ;
+;     -- <=2 input functions                  ; 50                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 35                  ;
-;     -- arithmetic mode                      ; 15                  ;
+;     -- normal mode                          ; 43                  ;
+;     -- arithmetic mode                      ; 20                  ;
 ;                                             ;                     ;
 ; Total registers                             ; 51                  ;
 ;     -- Dedicated logic registers            ; 51                  ;
 ;     -- I/O registers                        ; 0                   ;
 ;                                             ;                     ;
 ; Virtual pins                                ; 1                   ;
-; I/O pins                                    ; 21                  ;
+; I/O pins                                    ; 19                  ;
 ; Total memory bits                           ; 12288               ;
 ; Embedded Multiplier 9-bit elements          ; 0                   ;
 ; Total PLLs                                  ; 1                   ;
 ;     -- PLLs                                 ; 1                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MATRIXSPI_SCK~input ;
-; Maximum fan-out                             ; 34                  ;
-; Total fan-out                               ; 454                 ;
-; Average fan-out                             ; 2.95                ;
+; Maximum fan-out                             ; 40                  ;
+; Total fan-out                               ; 481                 ;
+; Average fan-out                             ; 2.99                ;
 +---------------------------------------------+---------------------+
 
 
@@ -1056,8 +1048,8 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------------+
 ; Name                                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                                    ;
 +------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------------+
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 3            ; 2048         ; 3            ; 6144 ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ;
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 3            ; 2048         ; 3            ; 6144 ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_t9j1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 3            ; 2048         ; 3            ; 6144 ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_t9j1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2048         ; 3            ; 2048         ; 3            ; 6144 ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ;
 +------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+--------------------------------------------------------+
 
 
@@ -1067,7 +1059,7 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 10:56:24 2025
+    Info: Processing started: Fri Dec 19 13:50:49 2025
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off example_board -c example_board --merge=on
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "rv32"
@@ -1101,17 +1093,16 @@ Warning (35016): Found partition port(s) not driving logic, possibly wasting are
 Warning (15899): PLL "altpll:pll_inst|altpll_vf32:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PIN_OSC"
-Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 13 output pins
-    Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 71 logic cells
+    Info (21061): Implemented 85 logic cells
     Info (21064): Implemented 6 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 4619 megabytes
-    Info: Processing ended: Fri Dec 19 10:56:24 2025
-    Info: Elapsed time: 00:00:00
+    Info: Processing ended: Fri Dec 19 13:50:50 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

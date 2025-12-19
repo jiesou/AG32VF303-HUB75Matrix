@@ -1,13 +1,13 @@
 > alta::tcl_whisper "Cmd : [alta::prog_path] [alta::prog_version]([alta::prog_subversion])\n"
 Cmd : C:/Users/user/AgRV_pio/packages/tool-agrv_logic/bin/af.exe 2025.12.b0(77524a7d)
 > alta::tcl_whisper "Args : [string map {\{ \" \} \"} $tcl_cmd_args]\n"
-Args : -X "set QUARTUS_SDC true" -X "set FITTING Auto" -X "set FITTER full" -X "set EFFORT high" -X "set HOLDX default" -X "set SKEW   basic" -X "set MODE QUARTUS" -X "set FLOW ALL" -F af_run.tcl
+Args : -X "set QUARTUS_SDC true" -X "set FITTING Auto" -X "set FITTER full" -X "set HOLDX default" -X "set SKEW   basic" -X "set MODE QUARTUS" -X "set FLOW ALL" -F af_run.tcl
 > 
 > set_seed_rand $SEED
 > set ar_timing_derate ${TIMING_DERATE}
 > 
 > date_time
-Fri Dec 19 10:57:07 2025
+Fri Dec 19 13:51:27 2025
 > if { [file exists [file join . ${DESIGN}.pre.asf]] } {
   alta::tcl_highlight "Using pre-ASF file ${DESIGN}.pre.asf.\n"
   source [file join . ${DESIGN}.pre.asf]
@@ -376,7 +376,7 @@ Loading architect libraries...
 ## Memory Usage: 50MB (50MB)
 Loading route table...
 ## CPU time: 0:0:3, REAL time: 0:0:4
-## Memory Usage: 313MB (313MB)
+## Memory Usage: 315MB (315MB)
 Using design VERILOG file ./simulation/modelsim/example_board.vo.
 Using design VE file example_board.vex.
 Preparing design...
@@ -384,7 +384,7 @@ Info: Rename duplicated module cell alta_rv32 to alta_rv32_duplicated at ./alta_
 Info: Removing bbox feeder slice sys_ctrl_clkSource[0] driven by BBOX rv32|sys_ctrl_clkSource[0].
 Info: Removing bbox feeder slice sys_ctrl_clkSource[1] driven by BBOX rv32|sys_ctrl_clkSource[1].
 ## CPU time: 0:0:0, REAL time: 0:0:0
-## Memory Usage: 332MB (332MB)
+## Memory Usage: 335MB (335MB)
 Pseudo pack design...
 Using location file example_board.vex
 VCO frequency: 400.000 Mhz
@@ -395,89 +395,83 @@ VCO frequency: 400.000 Mhz
   clkout4: Disabled, 0.781 Mhz
 Info: Instance gclksw_inst|gclk_switch is identified as a clock switch.
 Packing Statistics
- Total      Logics : 66/2112 (  3%)
- Total        LUTs : 60/2112 (  2%)
+ Total      Logics : 80/2112 (  3%)
+ Total        LUTs : 74/2112 (  3%)
  Total   Registers : 51/2112 (  2%)
  Total  Block Rams :  2/   4 ( 50%)
  Total        PLLs :  1/   1 (100%)
- Total        Pins : 21/ 128 ( 16%)
+ Total        Pins : 19/ 128 ( 14%)
  Global    Signals :  5/   5 (100%)
                     MATRIXSPI_CS~inputclkctrl_outclk (from:                             MATRIXSPI_CS~input_o)
                    MATRIXSPI_SCK~inputclkctrl_outclk (from:                            MATRIXSPI_SCK~input_o)
                            PLL_ENABLE~clkctrl_outclk (from:                               PLL_ENABLE~combout)
       auto_generated_inst.hbo_22_f9ff3d300b43c0f2_bp (from:   auto_generated_inst.hbo_22_f9ff3d300b43c0f2_bp)
-        macro_inst|sys_clk_div_cnt[3]~clkctrl_outclk (from:                    macro_inst|sys_clk_div_cnt[3])
- Total Lonely   Datain   : 13
+        macro_inst|sys_clk_div_cnt[1]~clkctrl_outclk (from:                    macro_inst|sys_clk_div_cnt[1])
+ Total Lonely   Datain   : 14
  Total Lonely   Register : 6
- Total LUT-FF   Pairs    : 32
- Total Register Packings : 0
+ Total LUT-FF   Pairs    : 30
+ Total Register Packings : 1
  Registers with synchronous    reset : 0
  Registers with asynchronous   reset : 17
  Registers with sync and async reset : 0
 ## CPU time: 0:0:0, REAL time: 0:0:0
-## Memory Usage: 332MB (332MB)
+## Memory Usage: 332MB (335MB)
 Filter verilog...
 ## CPU time: 0:0:0, REAL time: 0:0:0
-## Memory Usage: 332MB (332MB)
+## Memory Usage: 333MB (335MB)
 Reading DB design...
-## CPU time: 0:0:0, REAL time: 0:0:1
-## Memory Usage: 333MB (333MB)
+## CPU time: 0:0:0, REAL time: 0:0:0
+## Memory Usage: 336MB (336MB)
 Processing design...
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_LAT~output false
 > set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_CLK~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[1]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[2]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_OE~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[5]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[1]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[0]~output false
 > set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[3]~output false
 > set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[2]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[0]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[4]~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[0]~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_OE~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_LAT~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[5]~output false
 > set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[3]~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D2~output false
-> set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D3~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[1]~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[4]~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[1]~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[2]~output false
+> set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[0]~output false
 > set_instance_assignment -extension -name CLKIN_FREQ -to pll_inst|auto_generated|pll1 8
 > set_instance_assignment -extension -name FIXED_COORD -to gclksw_inst|gclk_switch__alta_gclksw {22 4 0}
 > set_instance_assignment -extension -name FIXED_COORD -to gclksw_inst|gclk_switch {22 4 5}
-> set_location_assignment -to HUB75_ADDR[0] PIN_84
-> set_location_assignment -to HUB75_ADDR[1] PIN_83
-> set_location_assignment -to HUB75_ADDR[2] PIN_82
-> set_location_assignment -to HUB75_ADDR[3] PIN_81
-> set_location_assignment -to HUB75_CLK PIN_80
-> set_location_assignment -to HUB75_DATA[0] PIN_92
-> set_location_assignment -to HUB75_DATA[1] PIN_93
-> set_location_assignment -to HUB75_DATA[2] PIN_95
-> set_location_assignment -to HUB75_DATA[3] PIN_86
-> set_location_assignment -to HUB75_DATA[4] PIN_87
-> set_location_assignment -to HUB75_DATA[5] PIN_88
-> set_location_assignment -to HUB75_LAT PIN_79
-> set_location_assignment -to HUB75_OE PIN_67
-> set_location_assignment -to LED_D2 PIN_33
-> set_location_assignment -to LED_D3 PIN_32
-> set_location_assignment -to MATRIXSPI_CS PIN_15
-> set_location_assignment -to MATRIXSPI_MOSI PIN_25
-> set_location_assignment -to MATRIXSPI_SCK PIN_17
+> set_location_assignment -to HUB75_ADDR[0] PIN_42
+> set_location_assignment -to HUB75_ADDR[1] PIN_41
+> set_location_assignment -to HUB75_ADDR[2] PIN_40
+> set_location_assignment -to HUB75_ADDR[3] PIN_39
+> set_location_assignment -to HUB75_CLK PIN_38
+> set_location_assignment -to HUB75_DATA[0] PIN_12
+> set_location_assignment -to HUB75_DATA[1] PIN_11
+> set_location_assignment -to HUB75_DATA[2] PIN_10
+> set_location_assignment -to HUB75_DATA[3] PIN_15
+> set_location_assignment -to HUB75_DATA[4] PIN_14
+> set_location_assignment -to HUB75_DATA[5] PIN_13
+> set_location_assignment -to HUB75_LAT PIN_43
+> set_location_assignment -to HUB75_OE PIN_18
+> set_location_assignment -to MATRIXSPI_CS PIN_25
+> set_location_assignment -to MATRIXSPI_MOSI PIN_28
+> set_location_assignment -to MATRIXSPI_SCK PIN_26
 > set_location_assignment -to PIN_HSE PIN_HSE
 > set_location_assignment -to PIN_HSI PIN_HSI
 > set_location_assignment -to PIN_OSC PIN_OSC
-Info: Found GCLK net MATRIXSPI_CS~inputclkctrl_outclk (1).
 Info: Found GCLK net PLL_ENABLE~clkctrl_outclk (1).
-Info: Found GCLK net macro_inst|sys_clk_div_cnt[3]~clkctrl_outclk (4).
-Info: Found GCLK net MATRIXSPI_SCK~inputclkctrl_outclk (5).
-Info: Found GCLK net auto_generated_inst.hbo_22_f9ff3d300b43c0f2_bp (6).
+Info: Found GCLK net MATRIXSPI_CS~inputclkctrl_outclk (2).
+Info: Found GCLK net auto_generated_inst.hbo_22_f9ff3d300b43c0f2_bp (4).
+Info: Found GCLK net macro_inst|sys_clk_div_cnt[1]~clkctrl_outclk (4).
+Info: Found GCLK net MATRIXSPI_SCK~inputclkctrl_outclk (7).
 Info: Fixing net rv32.resetn_out, from rv32|resetn_out to gclksw_inst|gclk_switch__alta_gclksw|resetn.
 Info: Fixing net PIN_HSE~input_o, from PIN_HSE~input|combout to gclksw_inst|gclk_switch__alta_gclksw|clkin1.
 Info: Fixing net gclksw_inst|gclk_switch__alta_gclksw__clkout, from gclksw_inst|gclk_switch__alta_gclksw|clkout to rv32|sys_clk.
 Info: Fixing net auto_generated_inst.hbo_13_044c0075445fcc2e_bp, from pll_inst|auto_generated|pll1|lock to rv32|sys_ctrl_pllReady.
 Info: Slice ~VCC is removed.
-Info: The input of IO LED_D2 is disabled since all input pins are unused.
-Info: The input of IO LED_D3 is disabled since all input pins are unused.
 > set_global_assignment -name DEVICE_IO_STANDARD "3.3-V LVTTL"
 > set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL_CLOCK" -to sys_resetn
 ## CPU time: 0:0:0, REAL time: 0:0:0
-## Memory Usage: 333MB (333MB)
+## Memory Usage: 336MB (336MB)
 Using design SDC file ./example_board.sdc.
 # pio_begin
 if { ! [info exists ::HSI_PERIOD] } {
@@ -496,8 +490,6 @@ if { ! [info exists ::OSC_PERIOD] } {
 create_clock -name PIN_OSC -period $::OSC_PERIOD [get_ports PIN_OSC]
 set_clock_groups -asynchronous -group PIN_OSC
 derive_pll_clocks -create_base_clocks
-Info: The input of IO LED_D2 is disabled since all input pins are unused.
-Info: The input of IO LED_D3 is disabled since all input pins are unused.
 Info: Auto constraint PLL: create_generated_clock -name pll_inst|auto_generated|pll1|clk[0] -multiply_by 25 -add -source PIN_HSE -master_clock PIN_HSE pll_inst|auto_generated|pll1|clkout0.
 set_false_path -from rv32|resetn_out
 # pio_end
@@ -526,19 +518,6 @@ derive_pll_clocks -create_base_clocks
 >  set pl_reuse_existing_placement false
 >  set pl_fix_bram_cells 0
 >  set pl_fix_mult_cells 0
->  set pl_neighbor_swap_range "3  6  6  3 "
->  set pl_pass_result "1 1 1 1"
->  set pl_max_pass    "1 1 1 1 1"
->  set pl_max_iter       10
->  set pl_max_iter_part  20
->  set pl_max_iter_final 20
->  set pl_max_iter_legal 10
->  set pl_max_iter_touch 00
-> #set pl_neighbor_swap_range "2  6  6  3 "
-> #set pl_spread_swap_max_iter "3 5  5 4"
-> #set pl_use_initial_place_once 0
->  set rt_min_converge "5"
->  set rt_optimize_max "3"
 >  set pl_useful_skew_level -1
 >  set rt_useful_skew_level 0
 >  set rt_useful_skew_bram         true
@@ -592,45 +571,45 @@ Using ASF file example_board.asf.
 > 
 > # Enable PIN_23 (WKUP pin) to wake up device from standby. This function is not available on other pins.
 > set_config -pin PIN_23 CFG_WKUP_EN 1'b1
+Error: Unrecognized IO pin PIN_23.
 > # Use falling edge of the WKUP pin. By default rising edge is used.
 > set_config -pin PIN_23 CFG_WKUP_INV 1'b1
+Error: Unrecognized IO pin PIN_23.
 > # pio_end    <<<<<< DO NOT MODIFY THIS SECTION! <<<<<<
 > 
-Info: The input of IO LED_D2 is disabled since all input pins are unused.
-Info: The input of IO LED_D3 is disabled since all input pins are unused.
 Warn: Auto constraint INTERNAL: create_clock -name Internal_generated_clock_example_board|MATRIXSPI_SCK -period 1000.000 MATRIXSPI_SCK.
-Warn: Auto constraint INTERNAL: create_generated_clock -name Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q -divide_by 2 -add -source pll_inst|auto_generated|pll1|clkout0 -master_clock pll_inst|auto_generated|pll1|clk[0] macro_inst|sys_clk_div_cnt[3]|Q.
-Warn: Auto constraint INTERNAL: create_generated_clock -name Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q -divide_by 2 -add -source PIN_HSI -master_clock PIN_HSI macro_inst|sys_clk_div_cnt[3]|Q.
+Warn: Auto constraint INTERNAL: create_generated_clock -name Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q -divide_by 2 -add -source PIN_HSI -master_clock PIN_HSI macro_inst|sys_clk_div_cnt[1]|Q.
+Warn: Auto constraint INTERNAL: create_generated_clock -name Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q -divide_by 2 -add -source pll_inst|auto_generated|pll1|clkout0 -master_clock pll_inst|auto_generated|pll1|clk[0] macro_inst|sys_clk_div_cnt[1]|Q.
 Placement Statistics
- Total  Logic    Counts  : 65/2112 (3.1%)
+ Total  Logic    Counts  : 79/2112 (3.7%)
  Total  Logic    Tiles   : 8/132 (6.1%)
  Total  Other    Tiles   : 2/4 (50.0%)
- Total  Valid    Nets    : 104 (53+51)
- Total  Valid    Fanouts : 425 (219+206)
- Total  Tile     Fanouts : 105
- Tile   Zip      Fanins  : 6 (0:25)
- Tile   Zip      Fanouts : 9 (0:25)
- Total  Ignored  Nets    : 432
- Total  Valid    Blocks  : 22 (10/10)
- Total  Ignored  Blocks  : 1
- Total  Zip Complexities : 30/105 1.62/48.71
- Avg    Zip   Bottleneck : 1.62 4.38
- Avg    Net   Bottleneck : 10.00 208.75
+ Total  Valid    Nets    : 121 (67+54)
+ Total  Valid    Fanouts : 470 (263+207)
+ Total  Tile     Fanouts : 123
+ Tile   Zip      Fanins  : 7 (0:25)
+ Tile   Zip      Fanouts : 11 (0:26)
+ Total  Ignored  Nets    : 435
+ Total  Valid    Blocks  : 20 (10/8)
+ Total  Ignored  Blocks  : 0
+ Total  Zip Complexities : 26/118 2.01/52.25
+ Avg    Zip   Bottleneck : 1.88 5.88
+ Avg    Net   Bottleneck : 11.75 241.25
 Iter #1/1 ...
 Pass 1 #1/1 ...
 Partitioning...
  step = 0, partition : 20,12
 
  step = 1, partition : 10,7
-....................
+..........
  step = 2, partition : 5,3
-....................
+..........
  step = 3, partition : 2,2
-....................
+..........
  step = 4, partition : 2,2
-....................
+..........
 
-## CPU time: 0:0:0, REAL time: 0:0:0
+## CPU time: 0:0:0, REAL time: 0:0:1
 Pass 2 #1/1 ...
 Legalization and Swapping...
 ..........
@@ -647,19 +626,19 @@ Optimization...
 Finishing...
 
 ## CPU time: 0:0:0, REAL time: 0:0:0
-Total wire cost after placement: 0:0:0(3.568:0.7136) 157.769(50.9639)+303(0)+134 176.607(22.3621)+48.25
+Total wire cost after placement: 0:0:0(3.794:0.7588) 188.658(58.7009)+458(0)+102 298.232(37.2821)+103.75
 
 *** Post Placement Timing Report ***
 === User constraints ===
 Fmax report
-  User constraint:   8.000MHz, Fmax: 698.328MHz, Clock: PIN_HSE, Restricted Fmax: 500.000MHz
-  User constraint:  10.000MHz, Fmax: 698.324MHz, Clock: PIN_HSI, Restricted Fmax: 500.000MHz
-  User constraint: 200.000MHz, Fmax: 698.324MHz, Clock: pll_inst|auto_generated|pll1|clk[0], Restricted Fmax: 200.080MHz
+  User constraint:   8.000MHz, Fmax: 829.192MHz, Clock: PIN_HSE, Restricted Fmax: 500.000MHz
+  User constraint:  10.000MHz, Fmax: 829.181MHz, Clock: PIN_HSI, Restricted Fmax: 500.000MHz
+  User constraint: 200.000MHz, Fmax: 829.188MHz, Clock: pll_inst|auto_generated|pll1|clk[0], Restricted Fmax: 200.080MHz
 
 Clock transfer report:
-  Worst setup: 123.568, with clock PIN_HSE
-  Worst setup:  98.568, with clock PIN_HSI
-  Worst setup:   3.568, with clock pll_inst|auto_generated|pll1|clk[0]
+  Worst setup: 123.794, with clock PIN_HSE
+  Worst setup:  98.794, with clock PIN_HSI
+  Worst setup:   3.794, with clock pll_inst|auto_generated|pll1|clk[0]
 
   Worst  hold:   0.615, with clock PIN_HSE
   Worst  hold:   0.615, with clock PIN_HSI
@@ -667,65 +646,61 @@ Clock transfer report:
 
 === Auto constraints ===
 Fmax report
-  User constraint:   1.000MHz, Fmax: 291.033MHz, Clock: Internal_generated_clock_example_board|MATRIXSPI_SCK
-  User constraint:   5.000MHz, Fmax: 301.204MHz, Clock: Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
+  User constraint:   1.000MHz, Fmax: 279.409MHz, Clock: Internal_generated_clock_example_board|MATRIXSPI_SCK, Restricted Fmax: 200.080MHz
+  User constraint: 100.000MHz, Fmax: 254.324MHz, Clock: Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
 
 Clock transfer report:
-  Worst setup: 996.564, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
-  Worst setup: 196.680, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
-  Worst setup:  -0.304, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
-  Worst setup:  -4.919, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
+  Worst setup: 996.421, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
+  Worst setup:   6.068, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
+  Worst setup:  -3.290, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q to pll_inst|auto_generated|pll1|clk[0]
 
-  Worst  hold:   0.603, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
-  Worst  hold:   0.615, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
-  Worst  hold:   3.942, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
-  Worst  hold:   3.339, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
+  Worst  hold:   0.101, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
+  Worst  hold:   0.615, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
+  Worst  hold:   0.615, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q to pll_inst|auto_generated|pll1|clk[0]
 
 Coverage report
-  User constraints covered 22 connections out of 304 total, coverage: 7.2%
-  Auto constraints covered 259 connections out of 304 total, coverage: 85.2%
+  User constraints covered 13 connections out of 333 total, coverage: 3.9%
+  Auto constraints covered 284 connections out of 333 total, coverage: 85.3%
 
 
-Hold from macro_inst|rx_inst|shift_reg[9] to macro_inst|rx_inst|data_out[10], clock Internal_generated_clock_example_board|MATRIXSPI_SCK, constraint 0.000, skew 0.125, data 0.569
-  Slack:   0.603
-    Arrival Time:    5.304
-    Required Time:   4.701
+Hold from macro_inst|write_addr[0] to macro_inst|ram_inst|mem_rtl_0|auto_generated|ram_block1a0, clock Internal_generated_clock_example_board|MATRIXSPI_SCK, constraint 0.000, skew -0.036, data 0.551
+  Slack:   0.101
+    Arrival Time:    6.317
+    Required Time:   6.216
 
 *** End Timing Report ***
 
 route_design -dump ./alta_db/route.tx -replace ./alta_db/replace.tx 
 Route Design Statistics
- Total Routing Nets : 105
- Fanout     Average : 3.07 (1..16)
- Max   Fanout  Net  : MATRIXSPI_CS~inputclkctrl_outclk__AsyncReset_X54_Y2_SIG
- Logic       Slices : 65/2112 (3.1%)
+ Total Routing Nets : 122
+ Fanout     Average : 2.87 (1..15)
+ Max   Fanout  Net  : AsyncReset_X53_Y1_GND
+ Logic       Slices : 79/2112 (3.7%)
 
 Routing...
  Budget Useful Skew...
 ## CPU time: 0:0:0, REAL time: 0:0:0
- iter = 1/1, route#: 105, violation# : 23, overflow# : 22, conflict# : 30, node#: 632
+ iter = 1/1, route#: 122, violation# : 15, overflow# : 15, conflict# : 25, node#: 714
 ## CPU time: 0:0:0, REAL time: 0:0:0
- iter = 2/2, route#: 105, violation# : 9, overflow# : 9, conflict# : 13, node#: 657
+ iter = 2/2, route#: 122, violation# : 6, overflow# : 6, conflict# : 9, node#: 736
 ## CPU time: 0:0:0, REAL time: 0:0:0
- iter = 3/3, route#: 105, violation# : 1, overflow# : 1, conflict# : 2, node#: 669
-## CPU time: 0:0:0, REAL time: 0:0:0
- iter = 4/4, route#: 105, violation# : 0, overflow# : 0, conflict# : 0, node#: 668
+ iter = 3/3, route#: 122, violation# : 0, overflow# : 0, conflict# : 0, node#: 745
 Optimizing...
-...
+..
 
 Done
 
 *** Post Routing Timing Report ***
 === User constraints ===
 Fmax report
-  User constraint:   8.000MHz, Fmax: 697.355MHz, Clock: PIN_HSE, Restricted Fmax: 500.000MHz
-  User constraint:  10.000MHz, Fmax: 697.355MHz, Clock: PIN_HSI, Restricted Fmax: 500.000MHz
-  User constraint: 200.000MHz, Fmax: 697.350MHz, Clock: pll_inst|auto_generated|pll1|clk[0], Restricted Fmax: 200.080MHz
+  User constraint:   8.000MHz, Fmax: 829.192MHz, Clock: PIN_HSE, Restricted Fmax: 500.000MHz
+  User constraint:  10.000MHz, Fmax: 829.181MHz, Clock: PIN_HSI, Restricted Fmax: 500.000MHz
+  User constraint: 200.000MHz, Fmax: 829.188MHz, Clock: pll_inst|auto_generated|pll1|clk[0], Restricted Fmax: 200.080MHz
 
 Clock transfer report:
-  Worst setup: 123.566, with clock PIN_HSE
-  Worst setup:  98.566, with clock PIN_HSI
-  Worst setup:   3.566, with clock pll_inst|auto_generated|pll1|clk[0]
+  Worst setup: 123.794, with clock PIN_HSE
+  Worst setup:  98.794, with clock PIN_HSI
+  Worst setup:   3.794, with clock pll_inst|auto_generated|pll1|clk[0]
 
   Worst  hold:   0.615, with clock PIN_HSE
   Worst  hold:   0.615, with clock PIN_HSI
@@ -733,34 +708,32 @@ Clock transfer report:
 
 === Auto constraints ===
 Fmax report
-  User constraint:   1.000MHz, Fmax: 307.976MHz, Clock: Internal_generated_clock_example_board|MATRIXSPI_SCK
-  User constraint:   5.000MHz, Fmax: 312.597MHz, Clock: Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
+  User constraint:   1.000MHz, Fmax: 292.739MHz, Clock: Internal_generated_clock_example_board|MATRIXSPI_SCK, Restricted Fmax: 200.080MHz
+  User constraint: 100.000MHz, Fmax: 285.470MHz, Clock: Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
 
 Clock transfer report:
-  Worst setup: 996.753, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
-  Worst setup: 196.801, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
-  Worst setup:  -1.017, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
-  Worst setup:  -5.043, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
+  Worst setup: 996.584, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
+  Worst setup:   6.497, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
+  Worst setup:  -3.137, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q to pll_inst|auto_generated|pll1|clk[0]
 
-  Worst  hold:   0.603, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
-  Worst  hold:   0.615, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
-  Worst  hold:   4.200, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
-  Worst  hold:   3.339, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
+  Worst  hold:   0.104, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
+  Worst  hold:   0.615, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q
+  Worst  hold:   0.615, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[1]|Q to pll_inst|auto_generated|pll1|clk[0]
 
 Coverage report
-  User constraints covered 22 connections out of 304 total, coverage: 7.2%
-  Auto constraints covered 259 connections out of 304 total, coverage: 85.2%
+  User constraints covered 13 connections out of 333 total, coverage: 3.9%
+  Auto constraints covered 284 connections out of 333 total, coverage: 85.3%
 
 
-Hold from macro_inst|rx_inst|shift_reg[14] to macro_inst|rx_inst|data_out[15], clock Internal_generated_clock_example_board|MATRIXSPI_SCK, constraint 0.000, skew 0.125, data 0.569
-  Slack:   0.603
-    Arrival Time:    5.304
-    Required Time:   4.701
+Hold from macro_inst|write_addr[0] to macro_inst|ram_inst|mem_rtl_0|auto_generated|ram_block1a0, clock Internal_generated_clock_example_board|MATRIXSPI_SCK, constraint 0.000, skew -0.036, data 0.554
+  Slack:   0.104
+    Arrival Time:    6.320
+    Required Time:   6.216
 
 *** End Timing Report ***
 
-Fri Dec 19 10:57:14 2025
-Warn: User constraints coverage is too low at 7.2%.
+Fri Dec 19 13:51:34 2025
+Warn: User constraints coverage is too low at 3.9%.
 Generating batch file: {C:/Users/user/AgRV_pio/packages/tool-agrv_logic/python_dist/python.exe} {C:/Users/user/AgRV_pio/packages/tool-agrv_logic/pio/gen_batch} -d 1075838977 -i 0xbff5105000730062aa234371030002b7 -o ./example_board_batch.bin --logic-config ./example_board.bin --logic-address 0x80007000 
 > 
 > if { [file exists "./${DESIGN}.post.asf"] } {
@@ -772,7 +745,7 @@ Using post-ASF file example_board.post.asf.
 > # pio_end    <<<<<< DO NOT MODIFY THIS SECTION! <<<<<<
 > 
 > date_time
-Fri Dec 19 10:57:15 2025
+Fri Dec 19 13:51:34 2025
 > exit
 
-Total 0 fatals, 0 errors, 4 warnings, 21 infos.
+Total 0 fatals, 2 errors, 4 warnings, 15 infos.

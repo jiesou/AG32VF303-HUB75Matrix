@@ -4,8 +4,6 @@ module user_ip (
   output tri0 [5:0]  HUB75_DATA,
   output tri0        HUB75_LAT,
   output tri0        HUB75_OE,
-  inout              LED_D2,
-  inout              LED_D3,
   input              MATRIXSPI_CS,
   input              MATRIXSPI_MOSI,
   input              MATRIXSPI_SCK,

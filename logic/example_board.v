@@ -8,8 +8,6 @@ module example_board (
   HUB75_DATA,
   HUB75_LAT,
   HUB75_OE,
-  LED_D2,
-  LED_D3,
   MATRIXSPI_CS,
   MATRIXSPI_MOSI,
   MATRIXSPI_SCK,
@@ -22,8 +20,6 @@ output        HUB75_CLK;
 output [5:0]  HUB75_DATA;
 output        HUB75_LAT;
 output        HUB75_OE;
-inout         LED_D2;
-inout         LED_D3;
 input         MATRIXSPI_CS;
 input         MATRIXSPI_MOSI;
 input         MATRIXSPI_SCK;
@@ -246,8 +242,6 @@ user_ip macro_inst(
   .HUB75_DATA         ({HUB75_DATA[5], HUB75_DATA[4], HUB75_DATA[3], HUB75_DATA[2], HUB75_DATA[1], HUB75_DATA[0]}),
   .HUB75_LAT          (HUB75_LAT                                                                                 ),
   .HUB75_OE           (HUB75_OE                                                                                  ),
-  .LED_D2             (LED_D2                                                                                    ),
-  .LED_D3             (LED_D3                                                                                    ),
   .MATRIXSPI_CS       (MATRIXSPI_CS                                                                              ),
   .MATRIXSPI_MOSI     (MATRIXSPI_MOSI                                                                            ),
   .MATRIXSPI_SCK      (MATRIXSPI_SCK                                                                             ),
