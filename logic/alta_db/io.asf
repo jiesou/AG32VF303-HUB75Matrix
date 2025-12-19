@@ -1,0 +1,42 @@
+set_location_assignment -to HUB75_ADDR[3] PIN_81
+set_location_assignment -to HUB75_ADDR[2] PIN_82
+set_location_assignment -to HUB75_ADDR[1] PIN_83
+set_location_assignment -to HUB75_ADDR[0] PIN_84
+set_location_assignment -to HUB75_CLK PIN_80
+set_location_assignment -to HUB75_DATA[5] PIN_88
+set_location_assignment -to HUB75_DATA[4] PIN_87
+set_location_assignment -to HUB75_DATA[3] PIN_86
+set_location_assignment -to HUB75_DATA[2] PIN_95
+set_location_assignment -to HUB75_DATA[1] PIN_93
+set_location_assignment -to HUB75_DATA[0] PIN_92
+set_location_assignment -to HUB75_LAT PIN_79
+set_location_assignment -to HUB75_OE PIN_67
+set_location_assignment -to LED_D2 PIN_33
+set_location_assignment -to LED_D3 PIN_32
+set_location_assignment -to MATRIXSPI_CS PIN_15
+set_location_assignment -to MATRIXSPI_MOSI PIN_25
+set_location_assignment -to MATRIXSPI_SCK PIN_17
+set_location_assignment -to PIN_HSE PIN_HSE
+set_location_assignment -to PIN_HSI PIN_HSI
+set_location_assignment -to PIN_OSC PIN_OSC
+set_instance_assignment -name IO_STANDARD -to HUB75_ADDR[3] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_ADDR[2] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_ADDR[1] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_ADDR[0] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_CLK "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_DATA[5] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_DATA[4] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_DATA[3] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_DATA[2] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_DATA[1] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_DATA[0] "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_LAT "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to HUB75_OE "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to LED_D2 "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to LED_D3 "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to MATRIXSPI_CS "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to MATRIXSPI_MOSI "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to MATRIXSPI_SCK "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to PIN_HSE "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to PIN_HSI "3.3-V LVTTL"
+set_instance_assignment -name IO_STANDARD -to PIN_OSC "3.3-V LVTTL"

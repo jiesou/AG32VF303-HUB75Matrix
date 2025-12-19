@@ -1,0 +1,5 @@
+
+State Machine - |example_board|user_ip:macro_inst|hub75_driver:hub75_inst|state_reg
+Name state_reg.STATE_LATCH 
+state_reg.STATE_SHIFT 0 
+state_reg.STATE_LATCH 1 

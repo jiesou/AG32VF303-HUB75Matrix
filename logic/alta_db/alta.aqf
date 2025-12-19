@@ -1,0 +1,2 @@
+set_global_assignment -name DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL_CLOCK" -to sys_resetn

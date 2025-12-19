@@ -1,0 +1,39 @@
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[1]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D3~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_CLK~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[3]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[0]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[0]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[2]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[1]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_LAT~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[5]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[2]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[3]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_OE~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[4]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D2~output false
+set_instance_assignment -extension -name CLKIN_FREQ -to pll_inst|auto_generated|pll1 8
+set_instance_assignment -extension -name FIXED_COORD -to gclksw_inst|gclk_switch__alta_gclksw {22 4 0}
+set_instance_assignment -extension -name FIXED_COORD -to gclksw_inst|gclk_switch {22 4 5}
+set_location_assignment -to HUB75_ADDR[0] PIN_84
+set_location_assignment -to HUB75_ADDR[1] PIN_83
+set_location_assignment -to HUB75_ADDR[2] PIN_82
+set_location_assignment -to HUB75_ADDR[3] PIN_81
+set_location_assignment -to HUB75_CLK PIN_80
+set_location_assignment -to HUB75_DATA[0] PIN_92
+set_location_assignment -to HUB75_DATA[1] PIN_93
+set_location_assignment -to HUB75_DATA[2] PIN_95
+set_location_assignment -to HUB75_DATA[3] PIN_86
+set_location_assignment -to HUB75_DATA[4] PIN_87
+set_location_assignment -to HUB75_DATA[5] PIN_88
+set_location_assignment -to HUB75_LAT PIN_79
+set_location_assignment -to HUB75_OE PIN_67
+set_location_assignment -to LED_D2 PIN_33
+set_location_assignment -to LED_D3 PIN_32
+set_location_assignment -to MATRIXSPI_CS PIN_15
+set_location_assignment -to MATRIXSPI_MOSI PIN_25
+set_location_assignment -to MATRIXSPI_SCK PIN_17
+set_location_assignment -to PIN_HSE PIN_HSE
+set_location_assignment -to PIN_HSI PIN_HSI
+set_location_assignment -to PIN_OSC PIN_OSC
