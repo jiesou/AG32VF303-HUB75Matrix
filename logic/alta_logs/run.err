@@ -3,8 +3,10 @@ Info: Removing bbox feeder slice sys_ctrl_clkSource[0] driven by BBOX rv32|sys_c
 Info: Removing bbox feeder slice sys_ctrl_clkSource[1] driven by BBOX rv32|sys_ctrl_clkSource[1].
 Info: Instance gclksw_inst|gclk_switch is identified as a clock switch.
 Info: Found GCLK net PLL_ENABLE~clkctrl_outclk (1).
-Info: Found GCLK net auto_generated_inst.hbo_22_f9ff3d300b43c0f2_bp (2).
-Info: Found GCLK net macro_inst|sys_clk_div_cnt[3]~clkctrl_outclk (4).
+Info: Found GCLK net MATRIXSPI_CS~inputclkctrl_outclk (2).
+Info: Found GCLK net macro_inst|sys_clk_div_cnt[3]~clkctrl_outclk (3).
+Info: Found GCLK net MATRIXSPI_SCK~inputclkctrl_outclk (5).
+Info: Found GCLK net auto_generated_inst.hbo_22_f9ff3d300b43c0f2_bp (6).
 Info: Fixing net rv32.resetn_out, from rv32|resetn_out to gclksw_inst|gclk_switch__alta_gclksw|resetn.
 Info: Fixing net PIN_HSE~input_o, from PIN_HSE~input|combout to gclksw_inst|gclk_switch__alta_gclksw|clkin1.
 Info: Fixing net gclksw_inst|gclk_switch__alta_gclksw__clkout, from gclksw_inst|gclk_switch__alta_gclksw|clkout to rv32|sys_clk.
@@ -13,22 +15,14 @@ Info: Slice ~VCC is removed.
 Info: Slice ~GND is removed.
 Info: The input of IO LED_D2 is disabled since all input pins are unused.
 Info: The input of IO LED_D3 is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_CS is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_MOSI is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_SCK is disabled since all input pins are unused.
 Info: The input of IO LED_D2 is disabled since all input pins are unused.
 Info: The input of IO LED_D3 is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_CS is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_MOSI is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_SCK is disabled since all input pins are unused.
 Info: Auto constraint PLL: create_generated_clock -name pll_inst|auto_generated|pll1|clk[0] -multiply_by 25 -add -source PIN_HSE -master_clock PIN_HSE pll_inst|auto_generated|pll1|clkout0.
 Info: The input of IO LED_D2 is disabled since all input pins are unused.
 Info: The input of IO LED_D3 is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_CS is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_MOSI is disabled since all input pins are unused.
-Info: The input of IO MATRIXSPI_SCK is disabled since all input pins are unused.
+Warn: Auto constraint INTERNAL: create_clock -name Internal_generated_clock_example_board|MATRIXSPI_SCK -period 1000.000 MATRIXSPI_SCK.
 Warn: Auto constraint INTERNAL: create_generated_clock -name Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q -divide_by 2 -add -source pll_inst|auto_generated|pll1|clkout0 -master_clock pll_inst|auto_generated|pll1|clk[0] macro_inst|sys_clk_div_cnt[3]|Q.
 Warn: Auto constraint INTERNAL: create_generated_clock -name Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q -divide_by 2 -add -source PIN_HSI -master_clock PIN_HSI macro_inst|sys_clk_div_cnt[3]|Q.
-Warn: User constraints coverage is too low at 18.5%.
+Warn: User constraints coverage is too low at 7.1%.
 
-Total 0 fatals, 0 errors, 3 warnings, 29 infos.
+Total 0 fatals, 0 errors, 4 warnings, 22 infos.

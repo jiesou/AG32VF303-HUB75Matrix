@@ -45,6 +45,41 @@ module user_ip (
 assign mem_ahb_hreadyout = 1'b1;
 assign slave_ahb_hready  = 1'b1;
 
+/* 例化 SPI 接收 */
+wire [15:0] data_out;
+wire data_valid;
+spi_rx_16bit rx_inst (
+    .SCK(MATRIXSPI_SCK), .MOSI(MATRIXSPI_MOSI), .CS(MATRIXSPI_CS),
+    .data_out(data_out), .data_valid(data_valid)
+);
+
+// data_out 转为 3bit RGB 存入 ram
+reg [10:0] write_addr;
+wire [2:0] pixel_rgb3;
+// 大端序，手动取位处理 RGB 565
+// RGB565: RRRRRGGG GGGBBBBB
+assign pixel_rgb3 = {data_out[15], data_out[10], data_out[4]};
+always @(posedge MATRIXSPI_SCK or posedge MATRIXSPI_CS) begin
+    if (MATRIXSPI_CS) write_addr <= 0;
+    else if (data_valid) write_addr <= write_addr + 1;
+end
+
+/* 例化 RAM 存储 framebuffer */
+wire [10:0] hub_addr_top, hub_addr_bot;
+wire [2:0] data_to_hub_top, data_to_hub_bot;
+
+framebuffer_ram ram_inst (
+    .clk(sys_clock),
+    .wr_en(data_valid), // SPI 接收完成脉冲信号即写入
+    .wr_addr(write_addr),
+    .wr_data(pixel_rgb3),
+    .rd_addr_a(hub_addr_top),
+    .rd_addr_b(hub_addr_bot),
+    .rd_data_a(data_to_hub_top),
+    .rd_data_b(data_to_hub_bot)
+);
+
+/* 例化 HUB75 */
 // 16 分频：用 4-bit 计数器把 sys_clock 分频为 sys_clk_div16
 reg [3:0] sys_clk_div_cnt;
 wire sys_clk_div16 = sys_clk_div_cnt[3];
@@ -57,6 +92,10 @@ end
 
 hub75_driver hub75_inst (
     .clk(sys_clk_div16),
+    .rd_addr_a(hub_addr_top),
+    .rd_addr_b(hub_addr_bot),
+    .rd_data_a(data_to_hub_top),
+    .rd_data_b(data_to_hub_bot),
     .HUB75_CLK(HUB75_CLK),
     .HUB75_LAT(HUB75_LAT),
     .HUB75_OE(HUB75_OE),
@@ -66,58 +105,119 @@ hub75_driver hub75_inst (
 endmodule
 
 
+module spi_rx_16bit (
+    input  wire        SCK,
+    input  wire        MOSI,
+    input  wire        CS,
+    output reg [15:0]  data_out,
+    output reg         data_valid // 接收完16位后发出 脉冲信号
+);
+reg [3:0] bit_cnt;
+reg [15:0] shift_reg;
+always @(posedge SCK or posedge CS) begin
+    if (CS) begin
+        bit_cnt <= 0;
+        data_valid <= 0;
+    end else begin
+        // Mode 0: 上升沿采样
+        shift_reg <= {shift_reg[14:0], MOSI};
+        
+        if (bit_cnt == 4'd15) begin
+            bit_cnt <= 0;
+            data_out <= {shift_reg[14:0], MOSI}; // 最后一比特拼入
+            data_valid <= 1;
+        end else begin
+            bit_cnt <= bit_cnt + 1;
+            data_valid <= 0;
+        end
+    end
+end
+endmodule
+
+/* 存储转换后的 3bit*32*64 framebuffer 数据 */
+module framebuffer_ram (
+    input wire clk,
+    // 写端口 (来自 SPI)
+    input wire wr_en,
+    input wire [10:0] wr_addr, // 32*64 = 2048
+    input wire [2:0]  wr_data,
+    // 读端口 (来自 HUB75，支持同时读两个)
+    input wire [10:0] rd_addr_a, // 上半屏读取地址
+    input wire [10:0] rd_addr_b, // 下半屏读取地址
+    output reg [2:0]  rd_data_a,
+    output reg [2:0]  rd_data_b
+);
+// 2048 x 3bit
+reg [2:0] mem [0:2047];
+
+// 初值化为棋盘格样式
+integer i, r_idx, c_idx;
+initial begin
+    for (i = 0; i < 2048; i = i + 1) begin
+        // 将一维地址 i 还原为行 r 和列 c
+        // 地址格式是 {row[4:0], col[5:0]}，即 row * 64 + col
+        r_idx = i / 64; 
+        c_idx = i % 64;
+        
+        // 沿用你原来的 4x4 格子算法
+        if ( ((r_idx >> 2) & 1) == ((c_idx >> 2) & 1) )
+            mem[i] = 3'b100; // Red
+        else
+            mem[i] = 3'b001; // Blue
+    end
+end
+
+always @(posedge clk) begin
+    if (wr_en) mem[wr_addr] <= wr_data;
+    rd_data_a <= mem[rd_addr_a];
+    rd_data_b <= mem[rd_addr_b];
+end
+endmodule
+
+
 module hub75_driver (
     input  wire         clk,
+    // 连向 RAM 的接口
+    output wire [10:0]  rd_addr_a,
+    output wire [10:0]  rd_addr_b,
+    input  wire [2:0]   rd_data_a,
+    input  wire [2:0]   rd_data_b,
+    // 连向屏幕的接口
     output wire         HUB75_CLK,
     output wire         HUB75_LAT,
-    output wire         HUB75_OE,   // 输出使能先保持低电平
+    output wire         HUB75_OE,   // 输出使能低电平有效
     output wire [3:0]   HUB75_ADDR, // A/B/C/D 地址线
     output wire [5:0]   HUB75_DATA  // R1 G1 B1 R2 G2 B2
 );
 
-// --------------------------------------------------------
-// 常量参数
-// --------------------------------------------------------
+// --- 常量参数 ---
 localparam H_PIXELS     = 64;   // 屏幕宽度像素点 (每行)
 localparam W_PIXELS     = 16;   // 扫描行数 (A/B/C/D 0~15)
 localparam SHIFT_MAX = H_PIXELS - 1; // 移位计数器最大值
 localparam ROW_MAX   = W_PIXELS - 1;     // 行计数器最大值
 
-// --------------------------------------------------------
-// 状态
-// --------------------------------------------------------
-localparam [1:0] STATE_SHIFT = 2'b00; // 数据移位
-localparam [1:0] STATE_LATCH = 2'b01; // 锁存和换行
-
-reg [1:0] state_reg;
-
-// --------------------------------------------------------
-// 计数器
-// --------------------------------------------------------
+// --- 计数器 ---
 reg [6:0] shift_count_reg; // 0 到 63 (64 个像素)
 reg [3:0] hub75_addr_reg;   // 0 到 15 (16 行)
 
-// R G B 数据输出
-reg [5:0] hub75_data_reg;
-
-// Framebuffer 32x64
-reg [2:0] framebuffer [0:31][0:63];
-
-// 工具 wire，始终为下一个 addr
-wire [3:0] next_row_addr = (hub75_addr_reg == ROW_MAX) ? 4'd0 : (hub75_addr_reg + 4'd1);
+// --- ram 读取地址计算逻辑 ---
+// 由计数器推动
+// 我们要在当前节拍算出“下一个”要显示的像素地址，确保下一拍数据能准时出来
+// 拼接方式：{行地址(5bit), 列地址(6bit)} 刚好 11 位
+// 上半屏行：0~15 最高位一定是 0，下半屏行：16~31 最高位一定是 1
+assign rd_addr_a = {1'b0, hub75_addr_reg, shift_count_reg};      // 行 0-15
+assign rd_addr_b = {1'b1, hub75_addr_reg, shift_count_reg};      // 行 16-31
 
 // --------------------------------------------------------
 // 核心状态机
 // --------------------------------------------------------
+localparam [1:0] STATE_SHIFT = 2'b00; // 数据移位
+localparam [1:0] STATE_LATCH = 2'b01; // 锁存和换行
+reg [1:0] state_reg;
 always @(posedge clk) begin
     begin
         case (state_reg)
             STATE_SHIFT: begin
-                // 输出 index = shift_count_reg 的像素
-                hub75_data_reg <= {
-                    framebuffer[hub75_addr_reg][shift_count_reg],      // 上半屏 (行 0-15)
-                    framebuffer[hub75_addr_reg + 16][shift_count_reg]  // 下半屏 (行 16-31)
-                };
                 if (shift_count_reg == SHIFT_MAX) begin
                     // 移位完成，进入锁存状态
                     shift_count_reg <= 0;
@@ -144,43 +244,20 @@ always @(posedge clk) begin
                 shift_count_reg <= 0;
                 hub75_addr_reg <= 0;
                 state_reg <= STATE_SHIFT;
-                hub75_data_reg <= {framebuffer[0][0], framebuffer[16][0]};
             end
         endcase
     end
 end
 
-// 初值
-integer r, c;
-initial begin
-    // Initialize Framebuffer with 4x4 grid pattern for 32x64
-    for (r = 0; r < 32; r = r + 1) begin
-        for (c = 0; c < 64; c = c + 1) begin
-            // (row / 4) % 2 == (col / 4) % 2 ? Red : Blue
-            if ( ((r >> 2) & 1) == ((c >> 2) & 1) )
-                framebuffer[r][c] = 3'b100; // Red
-            else
-                framebuffer[r][c] = 3'b001; // Blue
-        end
-    end
-
-    state_reg       = STATE_SHIFT;
-    shift_count_reg = 0;
-    hub75_addr_reg  = 0;
-    hub75_data_reg  = {framebuffer[0][0], framebuffer[16][0]};
-end
-
-// --------------------------------------------------------
-// 输出 wire 信号
-// --------------------------------------------------------
-// HUB75_CLK
-assign HUB75_CLK = clk;
+// --- 输出 wire 信号 ---
+// HUB75_CLK：只在移位时给时钟
+assign HUB75_CLK  = (state_reg == STATE_SHIFT) ? clk : 1'b0;  
 
 // A/B/C/D 地址线：绑定寄存器
 assign HUB75_ADDR = hub75_addr_reg;
 
-// RGB 信号：绑定寄存器
-assign HUB75_DATA = hub75_data_reg;
+// RGB 信号：绑定 ram 返回的内容，a 即上半屏，b 即下半屏
+assign HUB75_DATA = {rd_data_a, rd_data_b};
 
 // LAT 信号：只在 LATCH 状态，且只持续一个时钟周期
 assign HUB75_LAT = (state_reg == STATE_LATCH); 

@@ -1,5 +1,5 @@
 Flow report for example_board
-Fri Dec 19 09:17:26 2025
+Fri Dec 19 10:11:52 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Flow Summary                                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 19 09:17:26 2025            ;
+; Flow Status                        ; Successful - Fri Dec 19 10:11:52 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
 ; Family                             ; Cyclone IV E                                     ;
 ; Device                             ; EP4CE75F29C8                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 32 / 75,408 ( < 1 % )                            ;
-;     Total combinational functions  ; 30 / 75,408 ( < 1 % )                            ;
-;     Dedicated logic registers      ; 20 / 75,408 ( < 1 % )                            ;
-; Total registers                    ; 20                                               ;
+; Total logic elements               ; 68 / 75,408 ( < 1 % )                            ;
+;     Total combinational functions  ; 52 / 75,408 ( < 1 % )                            ;
+;     Dedicated logic registers      ; 51 / 75,408 ( < 1 % )                            ;
+; Total registers                    ; 51                                               ;
 ; Total pins                         ; 21 / 427 ( 5 % )                                 ;
 ; Total virtual pins                 ; 1                                                ;
-; Total memory bits                  ; 0 / 2,810,880 ( 0 % )                            ;
+; Total memory bits                  ; 12,288 / 2,810,880 ( < 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 400 ( 0 % )                                  ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                                   ;
 +------------------------------------+--------------------------------------------------+
@@ -147,7 +147,18 @@ applicable agreement for further details.
 ; Fitter                    ; 00:00:19     ; 1.4                     ; 5231 MB             ; 00:00:17                           ;
 ; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4653 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4525 MB             ; 00:00:00                           ;
-; Total                     ; 00:02:35     ; --                      ; --                  ; 00:02:42                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:00     ; 1.0                     ; 4570 MB             ; 00:00:01                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4574 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4582 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4582 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:05     ; 1.8                     ; 4603 MB             ; 00:00:06                           ;
+; Partition Merge           ; 00:00:01     ; 1.0                     ; 4619 MB             ; 00:00:01                           ;
+; I/O Assignment Analysis   ; 00:00:06     ; 1.0                     ; 4883 MB             ; 00:00:03                           ;
+; Fitter                    ; 00:00:17     ; 1.5                     ; 5235 MB             ; 00:00:21                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4654 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4525 MB             ; 00:00:01                           ;
+; Total                     ; 00:03:14     ; --                      ; --                  ; 00:03:24                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -187,6 +198,17 @@ applicable agreement for further details.
 ; Fitter                    ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
 ; TimeQuest Timing Analyzer ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Partition Merge           ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; I/O Assignment Analysis   ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; chenPCWIN        ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -218,6 +240,17 @@ quartus_fit --read_settings_files=off --write_settings_files=off example_board -
 quartus_fit --read_settings_files=off --write_settings_files=off example_board -c example_board
 quartus_sta example_board -c example_board
 quartus_eda --read_settings_files=off --write_settings_files=off example_board -c example_board
+quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
+quartus_cdb --read_settings_files=off --write_settings_files=off example_board -c example_board --merge=on
+quartus_fit --read_settings_files=off --write_settings_files=off example_board -c example_board --check_ios
+quartus_fit --read_settings_files=off --write_settings_files=off example_board -c example_board
+quartus_sta example_board -c example_board
+quartus_eda --read_settings_files=off --write_settings_files=off example_board -c example_board
+quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
+quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
+quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
+quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
+quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
 quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
 quartus_cdb --read_settings_files=off --write_settings_files=off example_board -c example_board --merge=on
 quartus_fit --read_settings_files=off --write_settings_files=off example_board -c example_board --check_ios

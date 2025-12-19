@@ -1,18 +1,18 @@
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[1]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D2~output false
 set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D3~output false
 set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_CLK~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[3]~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[0]~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[0]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_LAT~output false
 set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[2]~output false
 set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[1]~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_LAT~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[5]~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[2]~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[3]~output false
 set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_OE~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[1]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[3]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[3]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_ADDR[0]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[2]~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[5]~output false
 set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[4]~output false
-set_instance_assignment -name ENABLE_OPEN_DRAIN -to LED_D2~output false
+set_instance_assignment -name ENABLE_OPEN_DRAIN -to HUB75_DATA[0]~output false
 set_instance_assignment -extension -name CLKIN_FREQ -to pll_inst|auto_generated|pll1 8
 set_instance_assignment -extension -name FIXED_COORD -to gclksw_inst|gclk_switch__alta_gclksw {22 4 0}
 set_instance_assignment -extension -name FIXED_COORD -to gclksw_inst|gclk_switch {22 4 5}

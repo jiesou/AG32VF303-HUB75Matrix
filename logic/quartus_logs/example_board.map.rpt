@@ -1,5 +1,5 @@
 Analysis & Synthesis report for example_board
-Fri Dec 19 09:16:53 2025
+Fri Dec 19 10:11:19 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -15,19 +15,25 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Ver
   7. Partition for Top-Level Resource Utilization by Entity
   8. State Machine - |example_board|user_ip:macro_inst|hub75_driver:hub75_inst|state_reg
   9. Registers Removed During Synthesis
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Source assignments for Top-level Entity: |example_board
- 12. Parameter Settings for User Entity Instance: altpll:pll_inst
- 13. Parameter Settings for User Entity Instance: alta_gclksw:gclksw_inst
- 14. Partition Dependent Files
- 15. Partition "rv32" Resource Utilization by Entity
- 16. Parameter Settings for User Entity Instance: alta_rv32:rv32
- 17. Partition Dependent Files
- 18. Port Connectivity Checks: "alta_rv32:rv32"
- 19. Port Connectivity Checks: "alta_gclksw:gclksw_inst"
- 20. Elapsed Time Per Partition
- 21. Analysis & Synthesis Messages
- 22. Analysis & Synthesis Suppressed Messages
+ 10. Registers Packed Into Inferred Megafunctions
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for Top-level Entity: |example_board
+ 13. Source assignments for user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated
+ 14. Source assignments for user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated
+ 15. Parameter Settings for User Entity Instance: altpll:pll_inst
+ 16. Parameter Settings for User Entity Instance: alta_gclksw:gclksw_inst
+ 17. Parameter Settings for Inferred Entity Instance: user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0
+ 18. Parameter Settings for Inferred Entity Instance: user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1
+ 19. Partition Dependent Files
+ 20. Partition "rv32" Resource Utilization by Entity
+ 21. Parameter Settings for User Entity Instance: alta_rv32:rv32
+ 22. Partition Dependent Files
+ 23. Port Connectivity Checks: "alta_rv32:rv32"
+ 24. Port Connectivity Checks: "user_ip:macro_inst|spi_rx_16bit:rx_inst"
+ 25. Port Connectivity Checks: "alta_gclksw:gclksw_inst"
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -53,7 +59,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                          ;
 +------------------------------------+--------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 19 09:16:53 2025            ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 19 10:11:19 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
@@ -168,12 +174,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.60        ;
+; Average used               ; 1.80        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  60.0%      ;
+;     Processor 2            ;  80.0%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -205,18 +211,24 @@ applicable agreement for further details.
 +----------------+-------------+----------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                    ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                       ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
-; |example_board                     ; 29 (6)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board                                            ; work         ;
-;    |alta_gclksw:gclksw_inst|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|alta_gclksw:gclksw_inst                    ; work         ;
-;    |altpll:pll_inst|               ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|altpll:pll_inst                            ; work         ;
-;       |altpll_vf32:auto_generated| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|altpll:pll_inst|altpll_vf32:auto_generated ; work         ;
-;    |user_ip:macro_inst|            ; 23 (4)            ; 19 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst                         ; work         ;
-;       |hub75_driver:hub75_inst|    ; 19 (19)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|hub75_driver:hub75_inst ; work         ;
-+------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition for Top-Level Resource Utilization by Entity                                                                                                                                                                                                                                   ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                            ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
+; |example_board                               ; 50 (6)            ; 51 (0)       ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board                                                                                                 ; work         ;
+;    |alta_gclksw:gclksw_inst|                 ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|alta_gclksw:gclksw_inst                                                                         ; work         ;
+;    |altpll:pll_inst|                         ; 0 (0)             ; 1 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|altpll:pll_inst                                                                                 ; work         ;
+;       |altpll_vf32:auto_generated|           ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|altpll:pll_inst|altpll_vf32:auto_generated                                                      ; work         ;
+;    |user_ip:macro_inst|                      ; 44 (15)           ; 50 (15)      ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst                                                                              ; work         ;
+;       |framebuffer_ram:ram_inst|             ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst                                                     ; work         ;
+;          |altsyncram:mem_rtl_0|              ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0                                ; work         ;
+;             |altsyncram_n6n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated ; work         ;
+;          |altsyncram:mem_rtl_1|              ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1                                ; work         ;
+;             |altsyncram_n6n1:auto_generated| ; 0 (0)             ; 0 (0)        ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated ; work         ;
+;       |hub75_driver:hub75_inst|              ; 23 (23)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|hub75_driver:hub75_inst                                                      ; work         ;
+;       |spi_rx_16bit:rx_inst|                 ; 6 (6)             ; 23 (23)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |example_board|user_ip:macro_inst|spi_rx_16bit:rx_inst                                                         ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -231,16 +243,24 @@ Encoding Type:  One-Hot
 +-----------------------+-------------------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                        ;
-+----------------------------------------------------------------+--------------------------------------------------------------------------+
-; Register name                                                  ; Reason for Removal                                                       ;
-+----------------------------------------------------------------+--------------------------------------------------------------------------+
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_data_reg[1,4] ; Stuck at GND due to stuck port data_in                                   ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|state_reg~4         ; Lost fanout                                                              ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_data_reg[5]   ; Merged with user_ip:macro_inst|hub75_driver:hub75_inst|hub75_data_reg[2] ;
-; Total Number of Removed Registers = 4                          ;                                                                          ;
-+----------------------------------------------------------------+--------------------------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                          ;
++--------------------------------------------------------+--------------------+
+; Register name                                          ; Reason for Removal ;
++--------------------------------------------------------+--------------------+
+; user_ip:macro_inst|hub75_driver:hub75_inst|state_reg~4 ; Lost fanout        ;
+; Total Number of Removed Registers = 1                  ;                    ;
++--------------------------------------------------------+--------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                               ;
++-------------------------------------------------------------+-------------------------------------------------------+------+
+; Register Name                                               ; Megafunction                                          ; Type ;
++-------------------------------------------------------------+-------------------------------------------------------+------+
+; user_ip:macro_inst|framebuffer_ram:ram_inst|rd_data_a[0..2] ; user_ip:macro_inst|framebuffer_ram:ram_inst|mem_rtl_0 ; RAM  ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|rd_data_b[0..2] ; user_ip:macro_inst|framebuffer_ram:ram_inst|mem_rtl_1 ; RAM  ;
++-------------------------------------------------------------+-------------------------------------------------------+------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -270,6 +290,24 @@ Encoding Type:  One-Hot
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; sys_ctrl_clkSource[0] ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; sys_ctrl_clkSource[0] ;
 +------------------------------+-------+------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                       ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                       ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
 
 
 +--------------------------------------------------------------------+
@@ -659,6 +697,128 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0 ;
++------------------------------------+--------------------------------------------------------+---------------------+
+; Parameter Name                     ; Value                                                  ; Type                ;
++------------------------------------+--------------------------------------------------------+---------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                      ; Untyped             ;
+; AUTO_CARRY_CHAINS                  ; ON                                                     ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                    ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                ; ON                                                     ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                    ; IGNORE_CASCADE      ;
+; WIDTH_BYTEENA                      ; 1                                                      ; Untyped             ;
+; OPERATION_MODE                     ; DUAL_PORT                                              ; Untyped             ;
+; WIDTH_A                            ; 3                                                      ; Untyped             ;
+; WIDTHAD_A                          ; 11                                                     ; Untyped             ;
+; NUMWORDS_A                         ; 2048                                                   ; Untyped             ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                           ; Untyped             ;
+; ADDRESS_ACLR_A                     ; NONE                                                   ; Untyped             ;
+; OUTDATA_ACLR_A                     ; NONE                                                   ; Untyped             ;
+; WRCONTROL_ACLR_A                   ; NONE                                                   ; Untyped             ;
+; INDATA_ACLR_A                      ; NONE                                                   ; Untyped             ;
+; BYTEENA_ACLR_A                     ; NONE                                                   ; Untyped             ;
+; WIDTH_B                            ; 3                                                      ; Untyped             ;
+; WIDTHAD_B                          ; 11                                                     ; Untyped             ;
+; NUMWORDS_B                         ; 2048                                                   ; Untyped             ;
+; INDATA_REG_B                       ; CLOCK1                                                 ; Untyped             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                 ; Untyped             ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                 ; Untyped             ;
+; ADDRESS_REG_B                      ; CLOCK0                                                 ; Untyped             ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                           ; Untyped             ;
+; BYTEENA_REG_B                      ; CLOCK1                                                 ; Untyped             ;
+; INDATA_ACLR_B                      ; NONE                                                   ; Untyped             ;
+; WRCONTROL_ACLR_B                   ; NONE                                                   ; Untyped             ;
+; ADDRESS_ACLR_B                     ; NONE                                                   ; Untyped             ;
+; OUTDATA_ACLR_B                     ; NONE                                                   ; Untyped             ;
+; RDCONTROL_ACLR_B                   ; NONE                                                   ; Untyped             ;
+; BYTEENA_ACLR_B                     ; NONE                                                   ; Untyped             ;
+; WIDTH_BYTEENA_A                    ; 1                                                      ; Untyped             ;
+; WIDTH_BYTEENA_B                    ; 1                                                      ; Untyped             ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                   ; Untyped             ;
+; BYTE_SIZE                          ; 8                                                      ; Untyped             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                               ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                   ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                   ; Untyped             ;
+; INIT_FILE                          ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ; Untyped             ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                 ; Untyped             ;
+; MAXIMUM_DEPTH                      ; 0                                                      ; Untyped             ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                        ; Untyped             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                        ; Untyped             ;
+; ENABLE_ECC                         ; FALSE                                                  ; Untyped             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                  ; Untyped             ;
+; WIDTH_ECCSTATUS                    ; 3                                                      ; Untyped             ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                           ; Untyped             ;
+; CBXI_PARAMETER                     ; altsyncram_n6n1                                        ; Untyped             ;
++------------------------------------+--------------------------------------------------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1 ;
++------------------------------------+--------------------------------------------------------+---------------------+
+; Parameter Name                     ; Value                                                  ; Type                ;
++------------------------------------+--------------------------------------------------------+---------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                                      ; Untyped             ;
+; AUTO_CARRY_CHAINS                  ; ON                                                     ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                                    ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                ; ON                                                     ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                                    ; IGNORE_CASCADE      ;
+; WIDTH_BYTEENA                      ; 1                                                      ; Untyped             ;
+; OPERATION_MODE                     ; DUAL_PORT                                              ; Untyped             ;
+; WIDTH_A                            ; 3                                                      ; Untyped             ;
+; WIDTHAD_A                          ; 11                                                     ; Untyped             ;
+; NUMWORDS_A                         ; 2048                                                   ; Untyped             ;
+; OUTDATA_REG_A                      ; UNREGISTERED                                           ; Untyped             ;
+; ADDRESS_ACLR_A                     ; NONE                                                   ; Untyped             ;
+; OUTDATA_ACLR_A                     ; NONE                                                   ; Untyped             ;
+; WRCONTROL_ACLR_A                   ; NONE                                                   ; Untyped             ;
+; INDATA_ACLR_A                      ; NONE                                                   ; Untyped             ;
+; BYTEENA_ACLR_A                     ; NONE                                                   ; Untyped             ;
+; WIDTH_B                            ; 3                                                      ; Untyped             ;
+; WIDTHAD_B                          ; 11                                                     ; Untyped             ;
+; NUMWORDS_B                         ; 2048                                                   ; Untyped             ;
+; INDATA_REG_B                       ; CLOCK1                                                 ; Untyped             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                 ; Untyped             ;
+; RDCONTROL_REG_B                    ; CLOCK1                                                 ; Untyped             ;
+; ADDRESS_REG_B                      ; CLOCK0                                                 ; Untyped             ;
+; OUTDATA_REG_B                      ; UNREGISTERED                                           ; Untyped             ;
+; BYTEENA_REG_B                      ; CLOCK1                                                 ; Untyped             ;
+; INDATA_ACLR_B                      ; NONE                                                   ; Untyped             ;
+; WRCONTROL_ACLR_B                   ; NONE                                                   ; Untyped             ;
+; ADDRESS_ACLR_B                     ; NONE                                                   ; Untyped             ;
+; OUTDATA_ACLR_B                     ; NONE                                                   ; Untyped             ;
+; RDCONTROL_ACLR_B                   ; NONE                                                   ; Untyped             ;
+; BYTEENA_ACLR_B                     ; NONE                                                   ; Untyped             ;
+; WIDTH_BYTEENA_A                    ; 1                                                      ; Untyped             ;
+; WIDTH_BYTEENA_B                    ; 1                                                      ; Untyped             ;
+; RAM_BLOCK_TYPE                     ; AUTO                                                   ; Untyped             ;
+; BYTE_SIZE                          ; 8                                                      ; Untyped             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                               ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                   ; Untyped             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                   ; Untyped             ;
+; INIT_FILE                          ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ; Untyped             ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                                 ; Untyped             ;
+; MAXIMUM_DEPTH                      ; 0                                                      ; Untyped             ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                                 ; Untyped             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                        ; Untyped             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                        ; Untyped             ;
+; ENABLE_ECC                         ; FALSE                                                  ; Untyped             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                  ; Untyped             ;
+; WIDTH_ECCSTATUS                    ; 3                                                      ; Untyped             ;
+; DEVICE_FAMILY                      ; Cyclone IV E                                           ; Untyped             ;
+; CBXI_PARAMETER                     ; altsyncram_n6n1                                        ; Untyped             ;
++------------------------------------+--------------------------------------------------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Partition Dependent Files                                                                                                                      ;
 +------------------------------------------------------------------------------+--------------------+---------+----------------------------------+
@@ -672,7 +832,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ../../../../.platformio/packages/tool-agrv_logic/etc/arch/rodinia/alta_sim.v ; Project Directory  ; work    ; 08d1c9efdd83a6c865cee658fabe7fee ;
 ; db/altpll_vf32.tdf                                                           ; Project Directory  ; work    ; ba7cf6d657c8600ae31853022e767681 ;
 ; example_board.v                                                              ; Project Directory  ; work    ; 70505e02486b8ab2091e108ac74023da ;
-; user_ip.v                                                                    ; Project Directory  ; work    ; 8664ae50b080560618cbee9d935e1dea ;
+; user_ip.v                                                                    ; Project Directory  ; work    ; 739b96bc00793da43307fb27e5446193 ;
 +------------------------------------------------------------------------------+--------------------+---------+----------------------------------+
 
 
@@ -759,6 +919,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------------------+------------------+----------+------------------------------------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "user_ip:macro_inst|spi_rx_16bit:rx_inst"                                                        ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; data_out[14..11] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out[9..5]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; data_out[3..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-----------------------------------------------------+
 ; Port Connectivity Checks: "alta_gclksw:gclksw_inst" ;
 +--------+-------+----------+-------------------------+
@@ -785,7 +956,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 09:16:47 2025
+    Info: Processing started: Fri Dec 19 10:11:14 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off example_board -c example_board
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 59 design units, including 59 entities, in source file /users/user/.platformio/packages/tool-agrv_logic/etc/arch/rodinia/alta_sim.v
@@ -850,9 +1021,11 @@ Info (12021): Found 59 design units, including 59 entities, in source file /user
     Info (12023): Found entity 59: alta_lram
 Info (12021): Found 1 design units, including 1 entities, in source file example_board.v
     Info (12023): Found entity 1: example_board
-Info (12021): Found 2 design units, including 2 entities, in source file user_ip.v
+Info (12021): Found 4 design units, including 4 entities, in source file user_ip.v
     Info (12023): Found entity 1: user_ip
-    Info (12023): Found entity 2: hub75_driver
+    Info (12023): Found entity 2: spi_rx_16bit
+    Info (12023): Found entity 3: framebuffer_ram
+    Info (12023): Found entity 4: hub75_driver
 Warning (10236): Verilog HDL Implicit Net warning at alta_sim.v(180): created implicit net for "ena_reg"
 Warning (10236): Verilog HDL Implicit Net warning at alta_sim.v(204): created implicit net for "ena_int"
 Warning (10236): Verilog HDL Implicit Net warning at alta_sim.v(205): created implicit net for "ena_reg"
@@ -914,12 +1087,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "altpll_vf32" for hierarchy "altpll:pll_inst|altpll_vf32:auto_generated"
 Info (12128): Elaborating entity "alta_gclksw" for hierarchy "alta_gclksw:gclksw_inst"
 Info (12128): Elaborating entity "user_ip" for hierarchy "user_ip:macro_inst"
+Warning (10230): Verilog HDL assignment warning at user_ip.v(64): truncated value with size 32 to match size of target (11)
+Info (12128): Elaborating entity "spi_rx_16bit" for hierarchy "user_ip:macro_inst|spi_rx_16bit:rx_inst"
+Warning (10230): Verilog HDL assignment warning at user_ip.v(130): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "framebuffer_ram" for hierarchy "user_ip:macro_inst|framebuffer_ram:ram_inst"
 Info (12128): Elaborating entity "hub75_driver" for hierarchy "user_ip:macro_inst|hub75_driver:hub75_inst"
-Warning (10036): Verilog HDL or VHDL warning at user_ip.v(107): object "next_row_addr" assigned a value but never read
-Warning (10027): Verilog HDL or VHDL warning at the user_ip.v(118): index expression is not wide enough to address all of the elements in the array
-Warning (10230): Verilog HDL assignment warning at user_ip.v(127): truncated value with size 32 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at user_ip.v(136): truncated value with size 32 to match size of target (4)
-Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "framebuffer" into its bus
+Warning (10230): Verilog HDL assignment warning at user_ip.v(208): truncated value with size 12 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at user_ip.v(209): truncated value with size 12 to match size of target (11)
+Warning (10230): Verilog HDL assignment warning at user_ip.v(227): truncated value with size 32 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at user_ip.v(236): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "alta_rv32" for hierarchy "alta_rv32:rv32"
 Warning (10034): Output port "gpio0_io_out_data" at alta_sim.v(3741) has no driver
 Warning (10034): Output port "gpio0_io_out_en" at alta_sim.v(3742) has no driver
@@ -954,8 +1130,63 @@ Info (281037): Using 2 processors to synthesize 2 partitions in parallel
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 09:16:50 2025
+    Info: Processing started: Fri Dec 19 10:11:16 2025
 Info: Command: quartus_map --parallel=1 --helper=0 --partition=Top example_board -c example_board
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "user_ip:macro_inst|framebuffer_ram:ram_inst|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 3
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 3
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "user_ip:macro_inst|framebuffer_ram:ram_inst|mem_rtl_1" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 3
+        Info (286033): Parameter WIDTHAD_A set to 11
+        Info (286033): Parameter NUMWORDS_A set to 2048
+        Info (286033): Parameter WIDTH_B set to 3
+        Info (286033): Parameter WIDTHAD_B set to 11
+        Info (286033): Parameter NUMWORDS_B set to 2048
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "3"
+    Info (12134): Parameter "WIDTHAD_A" = "11"
+    Info (12134): Parameter "NUMWORDS_A" = "2048"
+    Info (12134): Parameter "WIDTH_B" = "3"
+    Info (12134): Parameter "WIDTHAD_B" = "11"
+    Info (12134): Parameter "NUMWORDS_B" = "2048"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_n6n1.tdf
+    Info (12023): Found entity 1: altsyncram_n6n1
 Info (270000): Limiting DSP block usage to 0 DSP block(s) for the partition Top
 Info (270017): Limiting M4K/M9K RAM block usage to 4 M4K/M9K RAM block(s) for the Top
 Info (270017): Limiting M4K/M9K RAM block usage to 4 M4K/M9K RAM block(s) for the Top
@@ -967,9 +1198,6 @@ Warning (13039): The following bidir pins have no drivers
 Warning (13008): TRI or OPNDRN buffers permanently disabled
     Warning (13010): Node "LED_D2~synth"
     Warning (13010): Node "LED_D3~synth"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HUB75_DATA[1]" is stuck at GND
-    Warning (13410): Pin "HUB75_DATA[4]" is stuck at GND
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (17016): Found the following redundant logic cells in design
@@ -989,22 +1217,23 @@ Info (332111): Found 4 clocks
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:01
-Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 32 logic cells
+    Info (21061): Implemented 70 logic cells
+    Info (21064): Implemented 6 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21071): Implemented 1 partitions
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Fri Dec 19 09:16:52 2025
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Dec 19 10:11:19 2025
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 09:16:50 2025
+    Info: Processing started: Fri Dec 19 10:11:16 2025
 Info: Command: quartus_map --parallel=1 --helper=1 --partition=rv32 example_board -c example_board
 Info (270000): Limiting DSP block usage to 0 DSP block(s) for the partition alta_rv32:rv32
 Info (270017): Limiting M4K/M9K RAM block usage to 4 M4K/M9K RAM block(s) for the alta_rv32:rv32
@@ -1199,16 +1428,16 @@ Info (21057): Implemented 520 device resources after synthesis - the final resou
     Info (21061): Implemented 1 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 171 warnings
     Info: Peak virtual memory: 4670 megabytes
-    Info: Processing ended: Fri Dec 19 09:16:52 2025
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Fri Dec 19 10:11:19 2025
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:04
 Info (281038): Finished parallel synthesis of all partitions
 Info (144001): Generated suppressed messages file C:/Users/user/Documents/ag32/hub75matrix/logic/quartus_logs/example_board.map.smsg
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 230 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 229 warnings
     Info: Peak virtual memory: 4603 megabytes
-    Info: Processing ended: Fri Dec 19 09:16:53 2025
+    Info: Processing ended: Fri Dec 19 10:11:20 2025
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
 
 
 +------------------------------------------+
