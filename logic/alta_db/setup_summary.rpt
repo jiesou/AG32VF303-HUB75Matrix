@@ -1,35 +1,35 @@
 === User constraints ===
 Fmax report
-  User constraint:   8.000MHz, Fmax: 697.841MHz, Clock: PIN_HSE, Restricted Fmax: 500.000MHz
-  User constraint:  10.000MHz, Fmax: 697.837MHz, Clock: PIN_HSI, Restricted Fmax: 500.000MHz
-  User constraint: 200.000MHz, Fmax: 697.837MHz, Clock: pll_inst|auto_generated|pll1|clk[0], Restricted Fmax: 200.080MHz
+  User constraint:   8.000MHz, Fmax: 697.355MHz, Clock: PIN_HSE, Restricted Fmax: 500.000MHz
+  User constraint:  10.000MHz, Fmax: 697.355MHz, Clock: PIN_HSI, Restricted Fmax: 500.000MHz
+  User constraint: 200.000MHz, Fmax: 697.350MHz, Clock: pll_inst|auto_generated|pll1|clk[0], Restricted Fmax: 200.080MHz
 
 Clock transfer report:
-  Worst setup: 123.567, with clock PIN_HSE
-  Worst setup:  98.567, with clock PIN_HSI
-  Worst setup:   3.567, with clock pll_inst|auto_generated|pll1|clk[0]
+  Worst setup: 123.566, with clock PIN_HSE
+  Worst setup:  98.566, with clock PIN_HSI
+  Worst setup:   3.566, with clock pll_inst|auto_generated|pll1|clk[0]
 
 
 === Auto constraints ===
 Fmax report
-  User constraint:   1.000MHz, Fmax: 297.707MHz, Clock: Internal_generated_clock_example_board|MATRIXSPI_SCK
-  User constraint:   5.000MHz, Fmax: 285.878MHz, Clock: Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
+  User constraint:   1.000MHz, Fmax: 307.976MHz, Clock: Internal_generated_clock_example_board|MATRIXSPI_SCK
+  User constraint:   5.000MHz, Fmax: 312.597MHz, Clock: Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
 
 Clock transfer report:
-  Worst setup: 996.641, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
-  Worst setup: 196.502, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
-  Worst setup:  -0.947, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
-  Worst setup:  -4.449, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
+  Worst setup: 996.753, with clock Internal_generated_clock_example_board|MATRIXSPI_SCK
+  Worst setup: 196.801, with clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q
+  Worst setup:  -1.017, from clock Internal_generated_clock_example_board|MATRIXSPI_SCK to pll_inst|auto_generated|pll1|clk[0]
+  Worst setup:  -5.043, from clock Internal_generated_clock_macro_inst|sys_clk_div_cnt[3]|Q to pll_inst|auto_generated|pll1|clk[0]
 
 
 Coverage report
-  User constraints covered 22 connections out of 311 total, coverage: 7.1%
-  Auto constraints covered 266 connections out of 311 total, coverage: 85.5%
+  User constraints covered 22 connections out of 304 total, coverage: 7.2%
+  Auto constraints covered 259 connections out of 304 total, coverage: 85.2%
 
 
-Setup from macro_inst|sys_clk_div_cnt[1] to macro_inst|sys_clk_div_cnt[2], clock pll_inst|auto_generated|pll1|clk[0], constraint 5.000, skew -0.053, data 0.619
-  Slack:   3.567
-    Arrival Time:    1.556
+Setup from macro_inst|sys_clk_div_cnt[0] to macro_inst|sys_clk_div_cnt[1], clock pll_inst|auto_generated|pll1|clk[0], constraint 5.000, skew -0.053, data 0.623
+  Slack:   3.566
+    Arrival Time:    1.557
         0.000    0.000   R                         Launch Clock Edge
       Launch Clock Path:
         0.000    0.000   RR                    example_board|PIN_HSE =>                      PIN_HSE~input|padio 
@@ -44,12 +44,12 @@ Setup from macro_inst|sys_clk_div_cnt[1] to macro_inst|sys_clk_div_cnt[2], clock
        -1.008    0.402   RR gclksw_inst|gclk_switch__alta_gclksw|clkin2 => gclksw_inst|gclk_switch__alta_gclksw|clkout 
        -0.895    0.113   RR gclksw_inst|gclk_switch__alta_gclksw|clkout =>            gclksw_inst|gclk_switch|inclk 
        -0.895    0.000   RR            gclksw_inst|gclk_switch|inclk =>           gclksw_inst|gclk_switch|outclk 
-        0.656    1.551   RR           gclksw_inst|gclk_switch|outclk =>               clken_ctrl_X49_Y1_N0|ClkIn 
-        0.804    0.148   RR               clken_ctrl_X49_Y1_N0|ClkIn =>              clken_ctrl_X49_Y1_N0|ClkOut 
-        0.937    0.133   RR              clken_ctrl_X49_Y1_N0|ClkOut =>        macro_inst|sys_clk_div_cnt[1]|Clk 
+        0.656    1.551   RR           gclksw_inst|gclk_switch|outclk =>               clken_ctrl_X50_Y1_N0|ClkIn 
+        0.804    0.148   RR               clken_ctrl_X50_Y1_N0|ClkIn =>              clken_ctrl_X50_Y1_N0|ClkOut 
+        0.937    0.133   RR              clken_ctrl_X50_Y1_N0|ClkOut =>        macro_inst|sys_clk_div_cnt[0]|Clk 
       Data Path:
-        1.172    0.235   RF        macro_inst|sys_clk_div_cnt[1]|Clk =>          macro_inst|sys_clk_div_cnt[1]|Q D
-        1.556    0.384   FF          macro_inst|sys_clk_div_cnt[1]|Q =>          macro_inst|sys_clk_div_cnt[2]|A E
+        1.172    0.235   RF        macro_inst|sys_clk_div_cnt[0]|Clk =>          macro_inst|sys_clk_div_cnt[0]|Q D
+        1.557    0.385   FF          macro_inst|sys_clk_div_cnt[0]|Q =>          macro_inst|sys_clk_div_cnt[1]|A E
     Required Time:   5.123
         5.000    5.000   R                          Latch Clock Edge
       Latch Clock Path:
@@ -65,9 +65,9 @@ Setup from macro_inst|sys_clk_div_cnt[1] to macro_inst|sys_clk_div_cnt[2], clock
         3.982    0.402   RR gclksw_inst|gclk_switch__alta_gclksw|clkin2 => gclksw_inst|gclk_switch__alta_gclksw|clkout 
         4.095    0.113   RR gclksw_inst|gclk_switch__alta_gclksw|clkout =>            gclksw_inst|gclk_switch|inclk 
         4.095    0.000   RR            gclksw_inst|gclk_switch|inclk =>           gclksw_inst|gclk_switch|outclk 
-        5.605    1.510   RR           gclksw_inst|gclk_switch|outclk =>               clken_ctrl_X49_Y1_N0|ClkIn 
-        5.753    0.148   RR               clken_ctrl_X49_Y1_N0|ClkIn =>              clken_ctrl_X49_Y1_N0|ClkOut 
-        5.884    0.131   RR              clken_ctrl_X49_Y1_N0|ClkOut =>        macro_inst|sys_clk_div_cnt[2]|Clk 
+        5.605    1.510   RR           gclksw_inst|gclk_switch|outclk =>               clken_ctrl_X50_Y1_N0|ClkIn 
+        5.753    0.148   RR               clken_ctrl_X50_Y1_N0|ClkIn =>              clken_ctrl_X50_Y1_N0|ClkOut 
+        5.884    0.131   RR              clken_ctrl_X50_Y1_N0|ClkOut =>        macro_inst|sys_clk_div_cnt[1]|Clk 
         5.072   -0.812   R                                     Setup
         5.123    0.051                               Clock Variation
 

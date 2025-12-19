@@ -1,5 +1,5 @@
 Fitter report for example_board
-Fri Dec 19 10:11:46 2025
+Fri Dec 19 10:56:47 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -75,15 +75,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                        ;
 +------------------------------------+--------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 19 10:11:46 2025            ;
+; Fitter Status                      ; Successful - Fri Dec 19 10:56:47 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
 ; Family                             ; Cyclone IV E                                     ;
 ; Device                             ; EP4CE75F29C8                                     ;
 ; Timing Models                      ; Final                                            ;
-; Total logic elements               ; 68 / 75,408 ( < 1 % )                            ;
-;     Total combinational functions  ; 52 / 75,408 ( < 1 % )                            ;
+; Total logic elements               ; 69 / 75,408 ( < 1 % )                            ;
+;     Total combinational functions  ; 51 / 75,408 ( < 1 % )                            ;
 ;     Dedicated logic registers      ; 51 / 75,408 ( < 1 % )                            ;
 ; Total registers                    ; 51                                               ;
 ; Total pins                         ; 21 / 427 ( 5 % )                                 ;
@@ -163,12 +163,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.47        ;
+; Average used               ; 1.35        ;
 ; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  47.1%      ;
+;     Processor 2            ;  35.3%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -714,8 +714,8 @@ applicable agreement for further details.
 ; Type                ; Value                  ;
 +---------------------+------------------------+
 ; Placement (by node) ;                        ;
-;     -- Requested    ; 0 / 170 ( 0.00 % )     ;
-;     -- Achieved     ; 0 / 170 ( 0.00 % )     ;
+;     -- Requested    ; 0 / 169 ( 0.00 % )     ;
+;     -- Achieved     ; 0 / 169 ( 0.00 % )     ;
 ;                     ;                        ;
 ; Routing (by net)    ;                        ;
 ;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
@@ -739,7 +739,7 @@ applicable agreement for further details.
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
-; Top                            ; 156     ; 0                 ; N/A                     ; Source File       ;
+; Top                            ; 155     ; 0                 ; N/A                     ; Source File       ;
 ; rv32                           ; 2       ; 0                 ; N/A                     ; Source File       ;
 ; hard_block:auto_generated_inst ; 12      ; 0                 ; N/A                     ; Source File       ;
 +--------------------------------+---------+-------------------+-------------------------+-------------------+
@@ -767,26 +767,26 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 +---------------------------------------------+------------------------------+
 ; Resource                                    ; Usage                        ;
 +---------------------------------------------+------------------------------+
-; Total logic elements                        ; 68 / 75,408 ( < 1 % )        ;
-;     -- Combinational with no register       ; 17                           ;
-;     -- Register only                        ; 16                           ;
-;     -- Combinational with a register        ; 35                           ;
+; Total logic elements                        ; 69 / 75,408 ( < 1 % )        ;
+;     -- Combinational with no register       ; 18                           ;
+;     -- Register only                        ; 18                           ;
+;     -- Combinational with a register        ; 33                           ;
 ;                                             ;                              ;
 ; Logic element usage by number of LUT inputs ;                              ;
-;     -- 4 input functions                    ; 8                            ;
-;     -- 3 input functions                    ; 10                           ;
-;     -- <=2 input functions                  ; 34                           ;
-;     -- Register only                        ; 16                           ;
+;     -- 4 input functions                    ; 9                            ;
+;     -- 3 input functions                    ; 4                            ;
+;     -- <=2 input functions                  ; 38                           ;
+;     -- Register only                        ; 18                           ;
 ;                                             ;                              ;
 ; Logic elements by mode                      ;                              ;
-;     -- normal mode                          ; 37                           ;
+;     -- normal mode                          ; 36                           ;
 ;     -- arithmetic mode                      ; 15                           ;
 ;                                             ;                              ;
 ; Total registers*                            ; 51 / 77,471 ( < 1 % )        ;
 ;     -- Dedicated logic registers            ; 51 / 75,408 ( < 1 % )        ;
 ;     -- I/O registers                        ; 0 / 2,063 ( 0 % )            ;
 ;                                             ;                              ;
-; Total LABs:  partially or completely used   ; 10 / 4,713 ( < 1 % )         ;
+; Total LABs:  partially or completely used   ; 11 / 4,713 ( < 1 % )         ;
 ; Virtual pins                                ; 1                            ;
 ; I/O pins                                    ; 21 / 427 ( 5 % )             ;
 ;     -- Clock pins                           ; 3 / 7 ( 43 % )               ;
@@ -804,11 +804,11 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )                ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )                ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%                 ;
-; Peak interconnect usage (total/H/V)         ; 0% / 1% / 0%                 ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%                 ;
 ; Maximum fan-out                             ; 34                           ;
-; Highest non-global fan-out                  ; 16                           ;
-; Total fan-out                               ; 377                          ;
-; Average fan-out                             ; 2.15                         ;
+; Highest non-global fan-out                  ; 19                           ;
+; Total fan-out                               ; 382                          ;
+; Average fan-out                             ; 2.16                         ;
 +---------------------------------------------+------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -821,25 +821,25 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 +---------------------------------------------+-------------------+------------------+-------------------+
 ; Difficulty Clustering Region                ; Low               ; Low              ; Low               ;
 ;                                             ;                   ;                  ;                   ;
-; Total logic elements                        ; 0 / 75408 ( 0 % ) ; 0 / 1536 ( 0 % ) ; 68 / 3648 ( 2 % ) ;
-;     -- Combinational with no register       ; 0                 ; 0                ; 17                ;
-;     -- Register only                        ; 0                 ; 0                ; 16                ;
-;     -- Combinational with a register        ; 0                 ; 0                ; 35                ;
+; Total logic elements                        ; 0 / 75408 ( 0 % ) ; 0 / 1536 ( 0 % ) ; 69 / 3648 ( 2 % ) ;
+;     -- Combinational with no register       ; 0                 ; 0                ; 18                ;
+;     -- Register only                        ; 0                 ; 0                ; 18                ;
+;     -- Combinational with a register        ; 0                 ; 0                ; 33                ;
 ;                                             ;                   ;                  ;                   ;
 ; Logic element usage by number of LUT inputs ;                   ;                  ;                   ;
-;     -- 4 input functions                    ; 0                 ; 0                ; 8                 ;
-;     -- 3 input functions                    ; 0                 ; 0                ; 10                ;
-;     -- <=2 input functions                  ; 0                 ; 0                ; 34                ;
-;     -- Register only                        ; 0                 ; 0                ; 16                ;
+;     -- 4 input functions                    ; 0                 ; 0                ; 9                 ;
+;     -- 3 input functions                    ; 0                 ; 0                ; 4                 ;
+;     -- <=2 input functions                  ; 0                 ; 0                ; 38                ;
+;     -- Register only                        ; 0                 ; 0                ; 18                ;
 ;                                             ;                   ;                  ;                   ;
 ; Logic elements by mode                      ;                   ;                  ;                   ;
-;     -- normal mode                          ; 0                 ; 0                ; 37                ;
+;     -- normal mode                          ; 0                 ; 0                ; 36                ;
 ;     -- arithmetic mode                      ; 0                 ; 0                ; 15                ;
 ;                                             ;                   ;                  ;                   ;
 ; Total registers                             ; 0                 ; 0                ; 51                ;
 ;     -- Dedicated logic registers            ; 0 / 75408 ( 0 % ) ; 0 / 1536 ( 0 % ) ; 51 / 3648 ( 1 % ) ;
 ;                                             ;                   ;                  ;                   ;
-; Total LABs:  partially or completely used   ; 0 / 4713 ( 0 % )  ; 0 / 96 ( 0 % )   ; 9 / 228 ( 4 % )   ;
+; Total LABs:  partially or completely used   ; 0 / 4713 ( 0 % )  ; 0 / 96 ( 0 % )   ; 10 / 228 ( 4 % )  ;
 ;                                             ;                   ;                  ;                   ;
 ; Virtual pins                                ; 0                 ; 0                ; 1                 ;
 ; I/O pins                                    ; 21                ; 0                ; 0                 ;
@@ -857,8 +857,8 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ;     -- Registered Output Connections        ; 0                 ; 0                ; 7                 ;
 ;                                             ;                   ;                  ;                   ;
 ; Internal Connections                        ;                   ;                  ;                   ;
-;     -- Total Connections                    ; 141               ; 0                ; 343               ;
-;     -- Registered Connections               ; 0                 ; 0                ; 253               ;
+;     -- Total Connections                    ; 141               ; 0                ; 347               ;
+;     -- Registered Connections               ; 0                 ; 0                ; 250               ;
 ;                                             ;                   ;                  ;                   ;
 ; External Connections                        ;                   ;                  ;                   ;
 ;     -- Root Region                          ; 0                 ; 0                ; 106               ;
@@ -879,25 +879,25 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 +---------------------------------------------+----------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                  ; Low                 ; Low                            ;
 ;                                             ;                      ;                     ;                                ;
-; Total logic elements                        ; 67 / 75408 ( < 1 % ) ; 1 / 75408 ( < 1 % ) ; 0 / 75408 ( 0 % )              ;
-;     -- Combinational with no register       ; 16                   ; 1                   ; 0                              ;
-;     -- Register only                        ; 16                   ; 0                   ; 0                              ;
-;     -- Combinational with a register        ; 35                   ; 0                   ; 0                              ;
+; Total logic elements                        ; 68 / 75408 ( < 1 % ) ; 1 / 75408 ( < 1 % ) ; 0 / 75408 ( 0 % )              ;
+;     -- Combinational with no register       ; 17                   ; 1                   ; 0                              ;
+;     -- Register only                        ; 18                   ; 0                   ; 0                              ;
+;     -- Combinational with a register        ; 33                   ; 0                   ; 0                              ;
 ;                                             ;                      ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                      ;                     ;                                ;
-;     -- 4 input functions                    ; 8                    ; 0                   ; 0                              ;
-;     -- 3 input functions                    ; 10                   ; 0                   ; 0                              ;
-;     -- <=2 input functions                  ; 33                   ; 1                   ; 0                              ;
-;     -- Register only                        ; 16                   ; 0                   ; 0                              ;
+;     -- 4 input functions                    ; 9                    ; 0                   ; 0                              ;
+;     -- 3 input functions                    ; 4                    ; 0                   ; 0                              ;
+;     -- <=2 input functions                  ; 37                   ; 1                   ; 0                              ;
+;     -- Register only                        ; 18                   ; 0                   ; 0                              ;
 ;                                             ;                      ;                     ;                                ;
 ; Logic elements by mode                      ;                      ;                     ;                                ;
-;     -- normal mode                          ; 36                   ; 1                   ; 0                              ;
+;     -- normal mode                          ; 35                   ; 1                   ; 0                              ;
 ;     -- arithmetic mode                      ; 15                   ; 0                   ; 0                              ;
 ;                                             ;                      ;                     ;                                ;
 ; Total registers                             ; 51                   ; 0                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 51 / 75408 ( < 1 % ) ; 0 / 75408 ( 0 % )   ; 0 / 75408 ( 0 % )              ;
 ;                                             ;                      ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 8 / 4713 ( < 1 % )   ; 1 / 4713 ( < 1 % )  ; 0 / 4713 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 9 / 4713 ( < 1 % )   ; 1 / 4713 ( < 1 % )  ; 0 / 4713 ( 0 % )               ;
 ;                                             ;                      ;                     ;                                ;
 ; Virtual pins                                ; 0                    ; 1                   ; 0                              ;
 ; I/O pins                                    ; 21                   ; 0                   ; 0                              ;
@@ -915,8 +915,8 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ;     -- Registered Output Connections        ; 0                    ; 0                   ; 0                              ;
 ;                                             ;                      ;                     ;                                ;
 ; Internal Connections                        ;                      ;                     ;                                ;
-;     -- Total Connections                    ; 370                  ; 1                   ; 21                             ;
-;     -- Registered Connections               ; 174                  ; 0                   ; 0                              ;
+;     -- Total Connections                    ; 374                  ; 1                   ; 21                             ;
+;     -- Registered Connections               ; 171                  ; 0                   ; 0                              ;
 ;                                             ;                      ;                     ;                                ;
 ; External Connections                        ;                      ;                     ;                                ;
 ;     -- Top                                  ; 10                   ; 0                   ; 13                             ;
@@ -950,11 +950,11 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; Name           ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination Control Block ; Location assigned by ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 ; MATRIXSPI_CS   ; AH14  ; 3        ; 49           ; 0            ; 14           ; 32                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
-; MATRIXSPI_MOSI ; AC15  ; 4        ; 51           ; 0            ; 21           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
+; MATRIXSPI_MOSI ; AD15  ; 4        ; 51           ; 0            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
 ; MATRIXSPI_SCK  ; Y1    ; 2        ; 0            ; 30           ; 21           ; 34                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
 ; PIN_HSE        ; J1    ; 1        ; 0            ; 30           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
 ; PIN_HSI        ; Y2    ; 2        ; 0            ; 30           ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
-; PIN_OSC        ; D27   ; 6        ; 94           ; 54           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
+; PIN_OSC        ; T7    ; 2        ; 0            ; 25           ; 14           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL  ; --                        ; Fitter               ;
 +----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
 
@@ -963,19 +963,19 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name          ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; HUB75_ADDR[0] ; AG17  ; 4        ; 53           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_ADDR[1] ; AE15  ; 4        ; 51           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_ADDR[2] ; AF15  ; 4        ; 51           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_ADDR[3] ; AH17  ; 4        ; 53           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_CLK     ; AH12  ; 3        ; 47           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_DATA[0] ; AH18  ; 4        ; 58           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_ADDR[0] ; AA15  ; 4        ; 56           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_ADDR[1] ; AE16  ; 4        ; 56           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_ADDR[2] ; AH18  ; 4        ; 58           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_ADDR[3] ; AB16  ; 4        ; 56           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_CLK     ; AE15  ; 4        ; 51           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_DATA[0] ; AG18  ; 4        ; 58           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 ; HUB75_DATA[1] ; AA16  ; 4        ; 53           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_DATA[2] ; AE16  ; 4        ; 56           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_DATA[3] ; AF16  ; 4        ; 53           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_DATA[4] ; AB16  ; 4        ; 56           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_DATA[5] ; AA15  ; 4        ; 56           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_LAT     ; AG12  ; 3        ; 47           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; HUB75_OE      ; AD15  ; 4        ; 51           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_DATA[2] ; AF16  ; 4        ; 53           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_DATA[3] ; AE17  ; 4        ; 58           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_DATA[4] ; AF17  ; 4        ; 58           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_DATA[5] ; AG17  ; 4        ; 53           ; 0            ; 21           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_LAT     ; AF15  ; 4        ; 51           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; HUB75_OE      ; AH17  ; 4        ; 53           ; 0            ; 14           ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off         ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +---------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -984,8 +984,8 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------+------+----------------------+---------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------+------+----------------------+---------------------+
-; LED_D2 ; AC7   ; 3        ; 11           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; Fitter               ; 0 pF ; -                    ; -                   ;
-; LED_D3 ; AF8   ; 3        ; 27           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LED_D2 ; F21   ; 7        ; 88           ; 62           ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; Fitter               ; 0 pF ; -                    ; -                   ;
+; LED_D3 ; B26   ; 7        ; 92           ; 62           ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; Fitter               ; 0 pF ; -                    ; -                   ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------+------+----------------------+---------------------+
 
 
@@ -1007,7 +1007,6 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; M22      ; MSEL2                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P22      ; MSEL3                       ; -                        ; -                       ; Dedicated Programming Pin ;
 ; P28      ; DIFFIO_R19n, nCEO           ; Use as programming pin   ; ~ALTERA_nCEO~           ; Dual Purpose Pin          ;
-; D27      ; DIFFIO_R5p, PADD21          ; Use as regular IO        ; PIN_OSC                 ; Dual Purpose Pin          ;
 +----------+-----------------------------+--------------------------+-------------------------+---------------------------+
 
 
@@ -1017,12 +1016,12 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
 ; 1        ; 5 / 45 ( 11 % )  ; 3.3V          ; --           ;
-; 2        ; 2 / 49 ( 4 % )   ; 3.3V          ; --           ;
-; 3        ; 5 / 59 ( 8 % )   ; 3.3V          ; --           ;
-; 4        ; 12 / 58 ( 21 % ) ; 3.3V          ; --           ;
+; 2        ; 3 / 49 ( 6 % )   ; 3.3V          ; --           ;
+; 3        ; 1 / 59 ( 2 % )   ; 3.3V          ; --           ;
+; 4        ; 14 / 58 ( 24 % ) ; 3.3V          ; --           ;
 ; 5        ; 0 / 52 ( 0 % )   ; 3.3V          ; --           ;
-; 6        ; 2 / 48 ( 4 % )   ; 3.3V          ; --           ;
-; 7        ; 0 / 59 ( 0 % )   ; 3.3V          ; --           ;
+; 6        ; 1 / 48 ( 2 % )   ; 3.3V          ; --           ;
+; 7        ; 2 / 59 ( 3 % )   ; 3.3V          ; --           ;
 ; 8        ; 0 / 57 ( 0 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
@@ -1072,7 +1071,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AA12     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA13     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AA14     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; AA15     ; 173        ; 4        ; HUB75_DATA[5]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AA15     ; 173        ; 4        ; HUB75_ADDR[0]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA16     ; 171        ; 4        ; HUB75_DATA[1]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AA17     ; 201        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AA18     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1101,7 +1100,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AB13     ; 154        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AB14     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB15     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; AB16     ; 172        ; 4        ; HUB75_DATA[4]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AB16     ; 172        ; 4        ; HUB75_ADDR[3]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AB17     ; 202        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AB18     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB19     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1120,7 +1119,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AC4      ; 100        ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC5      ; 99         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; AC6      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AC7      ; 119        ; 3        ; LED_D2                                                    ; bidir  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC7      ; 119        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC8      ; 128        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC10     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1128,7 +1127,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AC12     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC13     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC14     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; AC15     ; 164        ; 4        ; MATRIXSPI_MOSI                                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC15     ; 164        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC16     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AC17     ; 181        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AC18     ; 200        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
@@ -1156,7 +1155,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AD12     ; 155        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD14     ;            ;          ; NC                                                        ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; AD15     ; 165        ; 4        ; HUB75_OE                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD15     ; 165        ; 4        ; MATRIXSPI_MOSI                                            ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AD17     ; 182        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AD18     ; 197        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1184,9 +1183,9 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AE12     ; 144        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE13     ; 152        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE14     ; 156        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AE15     ; 166        ; 4        ; HUB75_ADDR[1]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE16     ; 174        ; 4        ; HUB75_DATA[2]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE17     ; 175        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AE15     ; 166        ; 4        ; HUB75_CLK                                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE16     ; 174        ; 4        ; HUB75_ADDR[1]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE17     ; 175        ; 4        ; HUB75_DATA[3]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AE18     ; 185        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE19     ; 191        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AE20     ; 195        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1205,16 +1204,16 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AF5      ; 111        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF6      ; 114        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF7      ; 134        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF8      ; 137        ; 3        ; LED_D3                                                    ; bidir  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF8      ; 137        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF9      ; 135        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF10     ; 141        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF11     ; 147        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF12     ; 145        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF13     ; 153        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF14     ; 157        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AF15     ; 167        ; 4        ; HUB75_ADDR[2]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF16     ; 170        ; 4        ; HUB75_DATA[3]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF17     ; 176        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AF15     ; 167        ; 4        ; HUB75_LAT                                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF16     ; 170        ; 4        ; HUB75_DATA[2]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF17     ; 176        ; 4        ; HUB75_DATA[4]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AF18     ; 186        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF19     ; 192        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AF20     ; 196        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1237,13 +1236,13 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AG9      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG10     ; 142        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG11     ; 150        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AG12     ; 158        ; 3        ; HUB75_LAT                                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG12     ; 158        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG13     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG14     ; 160        ; 3        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AG15     ; 162        ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AG16     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AG17     ; 168        ; 4        ; HUB75_ADDR[0]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG18     ; 177        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; AG17     ; 168        ; 4        ; HUB75_DATA[5]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG18     ; 177        ; 4        ; HUB75_DATA[0]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AG19     ; 179        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AG20     ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG21     ; 183        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1264,13 +1263,13 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; AH9      ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH10     ; 143        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH11     ; 151        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; AH12     ; 159        ; 3        ; HUB75_CLK                                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH12     ; 159        ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH13     ;            ; 3        ; VCCIO3                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH14     ; 161        ; 3        ; MATRIXSPI_CS                                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH15     ; 163        ; 4        ; GND+                                                      ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; AH16     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AH17     ; 169        ; 4        ; HUB75_ADDR[3]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AH18     ; 178        ; 4        ; HUB75_DATA[0]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH17     ; 169        ; 4        ; HUB75_OE                                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH18     ; 178        ; 4        ; HUB75_ADDR[2]                                             ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AH19     ; 180        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; AH20     ;            ; 4        ; VCCIO4                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH21     ; 184        ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -1305,7 +1304,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; B23      ; 338        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; B24      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B25      ; 331        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; B26      ; 326        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; B26      ; 326        ; 7        ; LED_D3                                                    ; bidir  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B27      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; B28      ;            ; 6        ; VCCIO6                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; C1       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1362,7 +1361,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; D24      ; 342        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D25      ; 335        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; D26      ; 317        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; D27      ; 315        ; 6        ; PIN_OSC                                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D27      ; 315        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; D28      ; 314        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E1       ; 17         ; 1        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E2       ; 16         ; 1        ; ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; On           ;
@@ -1412,7 +1411,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; F18      ; 353        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F19      ; 345        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; F20      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; F21      ; 333        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; F21      ; 333        ; 7        ; LED_D2                                                    ; bidir  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; F22      ; 334        ; 7        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; F23      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F24      ; 324        ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
@@ -1678,7 +1677,7 @@ The pin-out file can be found in C:/Users/user/Documents/ag32/hub75matrix/logic/
 ; T4       ; 63         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; T5       ;            ; 2        ; VCCIO2                                                    ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T6       ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; T7       ; 66         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
+; T7       ; 66         ; 2        ; PIN_OSC                                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T8       ; 88         ; 2        ; RESERVED_INPUT_WITH_WEAK_PULLUP                           ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T9       ;            ;          ; VCCINT                                                    ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; T10      ;            ;          ; GND                                                       ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1871,19 +1870,19 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                            ; Library Name ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------+--------------+
-; |example_board                               ; 68 (6)      ; 51 (0)                    ; 0 (0)         ; 12288       ; 2    ; 0            ; 0       ; 0         ; 21   ; 1            ; 17 (6)       ; 16 (0)            ; 35 (0)           ; |example_board                                                                                                 ; work         ;
+; |example_board                               ; 69 (6)      ; 51 (0)                    ; 0 (0)         ; 12288       ; 2    ; 0            ; 0       ; 0         ; 21   ; 1            ; 18 (6)       ; 18 (0)            ; 33 (0)           ; |example_board                                                                                                 ; work         ;
 ;    |alta_gclksw:gclksw_inst|                 ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|alta_gclksw:gclksw_inst                                                                         ; work         ;
 ;    |alta_rv32:rv32|                          ; 1 (1)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 1            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; |example_board|alta_rv32:rv32                                                                                  ; work         ;
 ;    |altpll:pll_inst|                         ; 1 (0)       ; 1 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (0)            ; |example_board|altpll:pll_inst                                                                                 ; work         ;
 ;       |altpll_vf32:auto_generated|           ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |example_board|altpll:pll_inst|altpll_vf32:auto_generated                                                      ; work         ;
-;    |user_ip:macro_inst|                      ; 60 (15)     ; 50 (15)                   ; 0 (0)         ; 12288       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (0)       ; 16 (0)            ; 34 (15)          ; |example_board|user_ip:macro_inst                                                                              ; work         ;
+;    |user_ip:macro_inst|                      ; 61 (15)     ; 50 (15)                   ; 0 (0)         ; 12288       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (0)       ; 18 (0)            ; 32 (15)          ; |example_board|user_ip:macro_inst                                                                              ; work         ;
 ;       |framebuffer_ram:ram_inst|             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 12288       ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst                                                     ; work         ;
-;          |altsyncram:mem_rtl_0|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0                                ; work         ;
-;             |altsyncram_n6n1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 2    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated ; work         ;
-;          |altsyncram:mem_rtl_1|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1                                ; work         ;
-;             |altsyncram_n6n1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated ; work         ;
-;       |hub75_driver:hub75_inst|              ; 23 (23)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 15 (15)          ; |example_board|user_ip:macro_inst|hub75_driver:hub75_inst                                                      ; work         ;
-;       |spi_rx_16bit:rx_inst|                 ; 25 (25)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 16 (16)           ; 7 (7)            ; |example_board|user_ip:macro_inst|spi_rx_16bit:rx_inst                                                         ; work         ;
+;          |altsyncram:mem_rtl_0|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0                                ; work         ;
+;             |altsyncram_n6n1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated ; work         ;
+;          |altsyncram:mem_rtl_1|              ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1                                ; work         ;
+;             |altsyncram_n6n1:auto_generated| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 6144        ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |example_board|user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated ; work         ;
+;       |hub75_driver:hub75_inst|              ; 22 (22)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 12 (12)          ; |example_board|user_ip:macro_inst|hub75_driver:hub75_inst                                                      ; work         ;
+;       |spi_rx_16bit:rx_inst|                 ; 24 (24)     ; 23 (23)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 18 (18)           ; 5 (5)            ; |example_board|user_ip:macro_inst|spi_rx_16bit:rx_inst                                                         ; work         ;
 +----------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -1934,24 +1933,25 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------+-------------------+---------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                                                                                                                      ;
-+--------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
-; Name                                                   ; Location          ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ; Input Clock 0 ; Input Clock 1 ; Input Clock 2                                     ; Input Clock 3 ; Clock Select 0        ; Clock Select 1        ;
-+--------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
-; MATRIXSPI_CS                                           ; PIN_AH14          ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; MATRIXSPI_CS                                           ; PIN_AH14          ; 16      ; Async. clear               ; yes    ; Global Clock         ; GCLK19           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; MATRIXSPI_SCK                                          ; PIN_Y1            ; 34      ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; PIN_HSE                                                ; PIN_J1            ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; PIN_HSI                                                ; PIN_Y2            ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; PLL_ENABLE                                             ; LCCOMB_X52_Y1_N26 ; 2       ; Async. clear               ; yes    ; Global Clock         ; GCLK18           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; alta_gclksw:gclksw_inst|clkout                         ; CLKCTRL_G3        ; 7       ; Clock                      ; yes    ; Global Clock         ; GCLK3            ; VCC                       ; PIN_HSI       ; --            ; altpll:pll_inst|altpll_vf32:auto_generated|clk[0] ; --            ; sys_ctrl_clkSource[0] ; sys_ctrl_clkSource[1] ;
-; altpll:pll_inst|altpll_vf32:auto_generated|clk[0]      ; PLL_1             ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; altpll:pll_inst|altpll_vf32:auto_generated|pll1~LOCKED ; PLL_1             ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_out[15]~0 ; LCCOMB_X53_Y1_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_valid     ; FF_X56_Y1_N9      ; 13      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; user_ip:macro_inst|sys_clk_div_cnt[3]                  ; FF_X49_Y1_N23     ; 12      ; Clock                      ; yes    ; Global Clock         ; GCLK17           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-+--------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                                                                                                                                ;
++------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
+; Name                                                             ; Location          ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ; Input Clock 0 ; Input Clock 1 ; Input Clock 2                                     ; Input Clock 3 ; Clock Select 0        ; Clock Select 1        ;
++------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
+; MATRIXSPI_CS                                                     ; PIN_AH14          ; 17      ; Clock enable               ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; MATRIXSPI_CS                                                     ; PIN_AH14          ; 16      ; Async. clear               ; yes    ; Global Clock         ; GCLK19           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; MATRIXSPI_SCK                                                    ; PIN_Y1            ; 34      ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; PIN_HSE                                                          ; PIN_J1            ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; PIN_HSI                                                          ; PIN_Y2            ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; PLL_ENABLE                                                       ; LCCOMB_X49_Y1_N28 ; 2       ; Async. clear               ; yes    ; Global Clock         ; GCLK16           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; alta_gclksw:gclksw_inst|clkout                                   ; CLKCTRL_G3        ; 7       ; Clock                      ; yes    ; Global Clock         ; GCLK3            ; VCC                       ; PIN_HSI       ; --            ; altpll:pll_inst|altpll_vf32:auto_generated|clk[0] ; --            ; sys_ctrl_clkSource[0] ; sys_ctrl_clkSource[1] ;
+; altpll:pll_inst|altpll_vf32:auto_generated|clk[0]                ; PLL_1             ; 1       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; altpll:pll_inst|altpll_vf32:auto_generated|pll1~LOCKED           ; PLL_1             ; 2       ; Clock                      ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|state_reg.STATE_LATCH ; FF_X54_Y1_N3      ; 19      ; Clock enable               ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_out[15]~0           ; LCCOMB_X53_Y1_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_valid               ; FF_X54_Y2_N5      ; 13      ; Clock enable, Write enable ; no     ; --                   ; --               ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; user_ip:macro_inst|sys_clk_div_cnt[3]                            ; FF_X50_Y1_N27     ; 12      ; Clock                      ; yes    ; Global Clock         ; GCLK17           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
++------------------------------------------------------------------+-------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1961,9 +1961,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
 ; MATRIXSPI_CS                          ; PIN_AH14          ; 16      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
 ; MATRIXSPI_SCK                         ; PIN_Y1            ; 34      ; 0                                    ; Global Clock         ; GCLK0            ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
-; PLL_ENABLE                            ; LCCOMB_X52_Y1_N26 ; 2       ; 0                                    ; Global Clock         ; GCLK18           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; PLL_ENABLE                            ; LCCOMB_X49_Y1_N28 ; 2       ; 0                                    ; Global Clock         ; GCLK16           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
 ; alta_gclksw:gclksw_inst|clkout        ; CLKCTRL_G3        ; 7       ; 0                                    ; Global Clock         ; GCLK3            ; VCC                       ; PIN_HSI       ; --            ; altpll:pll_inst|altpll_vf32:auto_generated|clk[0] ; --            ; sys_ctrl_clkSource[0] ; sys_ctrl_clkSource[1] ;
-; user_ip:macro_inst|sys_clk_div_cnt[3] ; FF_X49_Y1_N23     ; 12      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
+; user_ip:macro_inst|sys_clk_div_cnt[3] ; FF_X50_Y1_N27     ; 12      ; 0                                    ; Global Clock         ; GCLK17           ; --                        ; --            ; --            ; --                                                ; --            ; --                    ; --                    ;
 +---------------------------------------+-------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+---------------+---------------+---------------------------------------------------+---------------+-----------------------+-----------------------+
 
 
@@ -1972,27 +1972,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                         ; Fan-Out ;
 +--------------------------------------------------------------------------------------------------------------+---------+
+; user_ip:macro_inst|hub75_driver:hub75_inst|state_reg.STATE_LATCH                                             ; 19      ;
 ; MATRIXSPI_CS~input                                                                                           ; 16      ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|state_reg.STATE_LATCH                                             ; 15      ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_valid                                                           ; 13      ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[0]                                                 ; 7       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[1]                                                 ; 6       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[0]                                                 ; 9       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[1]                                                 ; 7       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|bit_cnt[0]                                                           ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[5]                                                ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[4]                                                ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[6]                                                ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[3]                                                ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[2]                                                ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[1]                                                ; 5       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[0]                                                ; 5       ;
 ; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[2]                                                 ; 5       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|bit_cnt[1]                                                           ; 4       ;
 ; user_ip:macro_inst|write_addr[0]                                                                             ; 4       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[5]                                                ; 4       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[4]                                                ; 4       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[3]                                                ; 4       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[2]                                                ; 4       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[1]                                                ; 4       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[0]                                                ; 4       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[0]                                                                        ; 4       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[3]                                                 ; 4       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_out[15]~0                                                       ; 3       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|bit_cnt[2]                                                           ; 3       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[1]                                                                        ; 3       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[3]                                                 ; 3       ;
 ; user_ip:macro_inst|write_addr[10]                                                                            ; 3       ;
 ; user_ip:macro_inst|write_addr[9]                                                                             ; 3       ;
 ; user_ip:macro_inst|write_addr[8]                                                                             ; 3       ;
@@ -2010,8 +2009,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PLL_LOCK                                                                                                     ; 2       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_out[15]                                                         ; 2       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_out[10]                                                         ; 2       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|rd_addr_a[9]~4                                                    ; 2       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|rd_addr_a[8]~2                                                    ; 2       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|rd_addr_a[7]~1                                                    ; 2       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|rd_addr_a[6]~0                                                    ; 2       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|data_out[4]                                                          ; 2       ;
 ; user_ip:macro_inst|hub75_driver:hub75_inst|Equal0~1                                                          ; 2       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[6]                                                ; 2       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[2]                                                                        ; 2       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[3]                                                                        ; 2       ;
 ; altpll:pll_inst|altpll_vf32:auto_generated|pll1~LOCKED                                                       ; 2       ;
@@ -2020,10 +2024,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; PIN_HSE~input                                                                                                ; 1       ;
 ; PIN_HSI~input                                                                                                ; 1       ;
 ; ~VCC                                                                                                         ; 1       ;
+; ~GND                                                                                                         ; 1       ;
 ; sys_ctrl_clkSource[1]                                                                                        ; 1       ;
 ; sys_ctrl_clkSource[0]                                                                                        ; 1       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|bit_cnt[0]~3                                                         ; 1       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[0]~3                                                                      ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[0]~3                                               ; 1       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|shift_reg[4]                                                         ; 1       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|shift_reg[10]                                                        ; 1       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|shift_reg[5]                                                         ; 1       ;
@@ -2041,24 +2047,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|bit_cnt[3]~0                                                         ; 1       ;
 ; user_ip:macro_inst|spi_rx_16bit:rx_inst|shift_reg[14]                                                        ; 1       ;
 ; user_ip:macro_inst|write_addr[0]~10                                                                          ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[5]~6                                              ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[4]~5                                              ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[6]~4                                              ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[3]~3                                              ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[2]~2                                              ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[1]~1                                              ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg[0]~0                                              ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|shift_count_reg~0                                                 ; 1       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[1]~2                                                                      ; 1       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[2]~1                                                                      ; 1       ;
 ; altpll:pll_inst|altpll_vf32:auto_generated|pll_lock_sync                                                     ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|rd_addr_a[9]~3                                                    ; 1       ;
 ; user_ip:macro_inst|hub75_driver:hub75_inst|state_reg~5                                                       ; 1       ;
 ; user_ip:macro_inst|hub75_driver:hub75_inst|Equal0~0                                                          ; 1       ;
 ; user_ip:macro_inst|sys_clk_div_cnt[3]~0                                                                      ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[3]~4                                               ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[3]~3                                               ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[2]~2                                               ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[1]~1                                               ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[0]~0                                               ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[3]~2                                               ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[3]~1                                               ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|hub75_addr_reg[2]~0                                               ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add1~0                                                            ; 1       ;
 ; user_ip:macro_inst|hub75_driver:hub75_inst|HUB75_CLK~0                                                       ; 1       ;
 ; user_ip:macro_inst|write_addr[10]~29                                                                         ; 1       ;
 ; user_ip:macro_inst|write_addr[9]~28                                                                          ; 1       ;
@@ -2079,38 +2079,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; user_ip:macro_inst|write_addr[2]~13                                                                          ; 1       ;
 ; user_ip:macro_inst|write_addr[1]~12                                                                          ; 1       ;
 ; user_ip:macro_inst|write_addr[1]~11                                                                          ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~12                                                           ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~11                                                           ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~10                                                           ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~9                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~8                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~7                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~6                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~5                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~4                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~3                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~2                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~1                                                            ; 1       ;
-; user_ip:macro_inst|hub75_driver:hub75_inst|Add0~0                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~12                                                           ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~11                                                           ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~10                                                           ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~9                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~8                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~7                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~6                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~5                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~4                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~3                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~2                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~1                                                            ; 1       ;
+; user_ip:macro_inst|hub75_driver:hub75_inst|Add2~0                                                            ; 1       ;
 ; altpll:pll_inst|altpll_vf32:auto_generated|clk[0]                                                            ; 1       ;
 ; altpll:pll_inst|altpll_vf32:auto_generated|pll1~FBOUT                                                        ; 1       ;
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ram_block1a2 ; 1       ;
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ram_block1a1 ; 1       ;
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ram_block1a0 ; 1       ;
 ; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ram_block1a1 ; 1       ;
 ; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ram_block1a2 ; 1       ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ram_block1a0 ; 1       ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ram_block1a1 ; 1       ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ram_block1a2 ; 1       ;
 ; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ram_block1a0 ; 1       ;
 +--------------------------------------------------------------------------------------------------------------+---------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
-+------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------------------------------------+------------------------------+----------------------+-----------------+-----------------+
-; Name                                                                                                       ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                                    ; Location                     ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
-+------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------------------------------------+------------------------------+----------------------+-----------------+-----------------+
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 3            ; 2048         ; 3            ; yes                    ; no                      ; yes                    ; no                      ; 6144 ; 2048                        ; 3                           ; 2048                        ; 3                           ; 6144                ; 2    ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ; M9K_X55_Y1_N0, M9K_X55_Y2_N0 ; Old data             ; Old data        ; Old data        ;
-; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 3            ; 2048         ; 3            ; yes                    ; no                      ; yes                    ; no                      ; 6144 ; 2048                        ; 3                           ; 2048                        ; 3                           ; 6144                ; 1    ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ; M9K_X55_Y1_N0                ; Old data             ; Old data        ; Old data        ;
-+------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------------------------------------+------------------------------+----------------------+-----------------+-----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter RAM Summary                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------------------------------------+---------------+----------------------+-----------------+-----------------+
+; Name                                                                                                       ; Type ; Mode             ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M9Ks ; MIF                                                    ; Location      ; Mixed Width RDW Mode ; Port A RDW Mode ; Port B RDW Mode ;
++------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------------------------------------+---------------+----------------------+-----------------+-----------------+
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_0|altsyncram_n6n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 3            ; 2048         ; 3            ; yes                    ; no                      ; yes                    ; no                      ; 6144 ; 2048                        ; 3                           ; 2048                        ; 3                           ; 6144                ; 1    ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ; M9K_X55_Y2_N0 ; Old data             ; Old data        ; Old data        ;
+; user_ip:macro_inst|framebuffer_ram:ram_inst|altsyncram:mem_rtl_1|altsyncram_n6n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; Single Clock ; 2048         ; 3            ; 2048         ; 3            ; yes                    ; no                      ; yes                    ; no                      ; 6144 ; 2048                        ; 3                           ; 2048                        ; 3                           ; 6144                ; 1    ; db/example_board.ram0_framebuffer_ram_ac8b38ff.hdl.mif ; M9K_X55_Y1_N0 ; Old data             ; Old data        ; Old data        ;
++------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------------------------------------------------+---------------+----------------------+-----------------+-----------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
 
@@ -2647,34 +2647,34 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-----------------------------+------------------------+
 ; Other Routing Resource Type ; Usage                  ;
 +-----------------------------+------------------------+
-; Block interconnects         ; 91 / 238,469 ( < 1 % ) ;
+; Block interconnects         ; 82 / 238,469 ( < 1 % ) ;
 ; C16 interconnects           ; 2 / 7,238 ( < 1 % )    ;
-; C4 interconnects            ; 55 / 146,424 ( < 1 % ) ;
-; Direct links                ; 9 / 238,469 ( < 1 % )  ;
+; C4 interconnects            ; 58 / 146,424 ( < 1 % ) ;
+; Direct links                ; 8 / 238,469 ( < 1 % )  ;
 ; Global clocks               ; 5 / 20 ( 25 % )        ;
-; Local interconnects         ; 55 / 81,264 ( < 1 % )  ;
-; R24 interconnects           ; 7 / 7,153 ( < 1 % )    ;
-; R4 interconnects            ; 63 / 201,722 ( < 1 % ) ;
+; Local interconnects         ; 52 / 81,264 ( < 1 % )  ;
+; R24 interconnects           ; 6 / 7,153 ( < 1 % )    ;
+; R4 interconnects            ; 61 / 201,722 ( < 1 % ) ;
 +-----------------------------+------------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 6.90) ; Number of LABs  (Total = 10) ;
+; Number of Logic Elements  (Average = 6.36) ; Number of LABs  (Total = 11) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 3                            ;
 ; 2                                          ; 0                            ;
-; 3                                          ; 1                            ;
+; 3                                          ; 2                            ;
 ; 4                                          ; 1                            ;
 ; 5                                          ; 1                            ;
 ; 6                                          ; 0                            ;
 ; 7                                          ; 0                            ;
 ; 8                                          ; 0                            ;
 ; 9                                          ; 0                            ;
-; 10                                         ; 0                            ;
+; 10                                         ; 1                            ;
 ; 11                                         ; 1                            ;
-; 12                                         ; 1                            ;
+; 12                                         ; 0                            ;
 ; 13                                         ; 0                            ;
 ; 14                                         ; 0                            ;
 ; 15                                         ; 1                            ;
@@ -2685,35 +2685,34 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.10) ; Number of LABs  (Total = 10) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 11) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 3                            ;
-; 1 Clock                            ; 4                            ;
-; 1 Clock enable                     ; 2                            ;
-; 2 Clocks                           ; 2                            ;
+; 1 Async. clear                     ; 2                            ;
+; 1 Clock                            ; 6                            ;
+; 1 Clock enable                     ; 3                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 11.00) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced  (Average = 10.27) ; Number of LABs  (Total = 11) ;
 +----------------------------------------------+------------------------------+
-; 0                                            ; 3                            ;
-; 1                                            ; 0                            ;
+; 0                                            ; 2                            ;
+; 1                                            ; 1                            ;
 ; 2                                            ; 0                            ;
 ; 3                                            ; 1                            ;
-; 4                                            ; 0                            ;
+; 4                                            ; 1                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
+; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
-; 8                                            ; 0                            ;
-; 9                                            ; 1                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 0                            ;
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 0                            ;
+; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 0                            ;
 ; 17                                           ; 0                            ;
@@ -2722,47 +2721,52 @@ RAM content values are presented in the following format: (Binary) (Octal) (Deci
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
-; 23                                           ; 1                            ;
+; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 3.90) ; Number of LABs  (Total = 10) ;
+; Number of Signals Sourced Out  (Average = 3.55) ; Number of LABs  (Total = 11) ;
 +-------------------------------------------------+------------------------------+
-; 0                                               ; 3                            ;
-; 1                                               ; 0                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 2                            ;
+; 0                                               ; 2                            ;
+; 1                                               ; 2                            ;
+; 2                                               ; 3                            ;
+; 3                                               ; 1                            ;
 ; 4                                               ; 0                            ;
 ; 5                                               ; 0                            ;
-; 6                                               ; 1                            ;
-; 7                                               ; 0                            ;
-; 8                                               ; 0                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 1                            ;
 ; 9                                               ; 0                            ;
 ; 10                                              ; 0                            ;
-; 11                                              ; 1                            ;
-; 12                                              ; 1                            ;
+; 11                                              ; 0                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 2.90) ; Number of LABs  (Total = 10) ;
+; Number of Distinct Inputs  (Average = 1.73) ; Number of LABs  (Total = 11) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 2                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 2                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
-; 6                                           ; 2                            ;
-; 7                                           ; 1                            ;
+; 1                                           ; 4                            ;
+; 2                                           ; 3                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 1                            ;
+; 5                                           ; 1                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -3517,7 +3521,7 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X47_Y0 to location X58_Y11
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
-Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.28 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -3525,23 +3529,23 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Warning (169177): 8 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
-    Info (169178): Pin PIN_OSC uses I/O standard 3.3-V LVTTL at D27
-    Info (169178): Pin LED_D2 uses I/O standard 3.3-V LVTTL at AC7
-    Info (169178): Pin LED_D3 uses I/O standard 3.3-V LVTTL at AF8
+    Info (169178): Pin PIN_OSC uses I/O standard 3.3-V LVTTL at T7
+    Info (169178): Pin LED_D2 uses I/O standard 3.3-V LVTTL at F21
+    Info (169178): Pin LED_D3 uses I/O standard 3.3-V LVTTL at B26
     Info (169178): Pin PIN_HSI uses I/O standard 3.3-V LVTTL at Y2
     Info (169178): Pin MATRIXSPI_SCK uses I/O standard 3.3-V LVTTL at Y1
     Info (169178): Pin MATRIXSPI_CS uses I/O standard 3.3-V LVTTL at AH14
     Info (169178): Pin PIN_HSE uses I/O standard 3.3-V LVTTL at J1
-    Info (169178): Pin MATRIXSPI_MOSI uses I/O standard 3.3-V LVTTL at AC15
+    Info (169178): Pin MATRIXSPI_MOSI uses I/O standard 3.3-V LVTTL at AD15
 Warning (169064): Following 2 pins have no output enable or a GND or VCC output enable - later changes to this connectivity may change fitting results
     Info (169065): Pin LED_D2 has a permanently disabled output enable
     Info (169065): Pin LED_D3 has a permanently disabled output enable
 Info (144001): Generated suppressed messages file C:/Users/user/Documents/ag32/hub75matrix/logic/quartus_logs/example_board.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 517 warnings
-    Info: Peak virtual memory: 5235 megabytes
-    Info: Processing ended: Fri Dec 19 10:11:47 2025
+    Info: Peak virtual memory: 5236 megabytes
+    Info: Processing ended: Fri Dec 19 10:56:47 2025
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:22
 
 
 +----------------------------+

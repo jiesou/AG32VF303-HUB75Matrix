@@ -1,5 +1,5 @@
 Partition Merge report for example_board
-Fri Dec 19 10:11:22 2025
+Fri Dec 19 10:56:24 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
 
 
@@ -40,13 +40,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                               ;
 +------------------------------------+--------------------------------------------------+
-; Partition Merge Status             ; Successful - Fri Dec 19 10:11:22 2025            ;
+; Partition Merge Status             ; Successful - Fri Dec 19 10:56:24 2025            ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version ;
 ; Revision Name                      ; example_board                                    ;
 ; Top-level Entity Name              ; example_board                                    ;
 ; Family                             ; Cyclone IV E                                     ;
-; Total logic elements               ; 70                                               ;
-;     Total combinational functions  ; 51                                               ;
+; Total logic elements               ; 69                                               ;
+;     Total combinational functions  ; 50                                               ;
 ;     Dedicated logic registers      ; 51                                               ;
 ; Total registers                    ; 51                                               ;
 ; Total pins                         ; 21                                               ;
@@ -73,6 +73,339 @@ applicable agreement for further details.
 +--------------------------------------+-----------+------------------------+
 ; Port                                 ; Partition ; Info                   ;
 +--------------------------------------+-----------+------------------------+
+; alta_rv32:rv32|ext_dma_DMACBREQ[3]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACTC[3]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACCLR[3]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACBREQ[2]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACTC[2]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACCLR[2]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACBREQ[1]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACTC[1]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACCLR[1]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACBREQ[0]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACTC[0]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACCLR[0]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[31]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[31]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[30]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[30]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[29]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[29]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[28]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[28]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[27]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[27]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[26]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[26]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[25]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[25]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[24]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[24]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[23]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[23]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[22]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[22]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[21]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[21]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[20]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[20]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[19]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[19]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[18]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[18]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[17]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[17]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[16]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[16]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[15]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[15]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[14]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[14]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[13]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[13]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[12]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[12]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[11]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[11]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[10]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[10]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[9]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[9]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[8]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[8]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[7]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[7]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[6]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[6]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[5]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[5]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[4]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[4]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[3]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[3]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[2]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[2]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[1]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[1]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_haddr[0]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hrdata[0]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hsel        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hresp       ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hreadyout   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[31]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[31]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[31]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[30]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[30]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[30]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[29]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[29]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[29]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[28]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[28]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[28]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[27]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[27]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[27]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[26]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[26]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[26]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[25]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[25]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[25]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[24]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[24]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[24]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[23]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[23]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[23]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[22]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[22]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[22]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[21]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[21]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[21]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[20]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[20]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[20]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[19]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[19]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[19]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[18]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[18]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[18]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[17]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[17]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[17]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[16]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[16]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[16]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[15]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[15]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[15]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[14]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[14]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[14]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[13]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[13]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[13]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[12]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[12]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[12]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[11]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[11]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[11]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[10]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[10]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[10]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[9]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[9]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[9]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[8]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[8]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[8]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[7]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[7]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[7]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[6]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[6]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[6]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[5]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[5]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[5]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[4]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[4]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[4]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[3]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[3]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[3]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[2]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[2]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[2]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[1]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[1]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[1]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hrdata[0]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwdata[0]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_haddr[0]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hresp         ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hwrite        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hburst[2]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hburst[1]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hburst[0]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hsize[2]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hsize[1]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hsize[0]      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_htrans[1]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_htrans[0]     ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|mem_ahb_hready        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|test_mode[1]          ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|test_mode[0]          ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|local_int[3]          ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|local_int[2]          ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|local_int[1]          ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|local_int[0]          ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLSREQ[3]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLSREQ[2]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLSREQ[1]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLSREQ[0]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACSREQ[3]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACSREQ[2]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACSREQ[1]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACSREQ[0]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLBREQ[3]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLBREQ[2]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLBREQ[1]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_dma_DMACLBREQ[0]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[7]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[6]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[5]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[4]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[3]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[2]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[1]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|ext_int[0]            ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio9_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio8_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio7_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio6_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio5_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio4_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio3_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio2_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio1_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[7]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[6]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[5]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[4]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[3]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[2]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[1]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|gpio0_io_in[0]        ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[31]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[30]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[29]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[28]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[27]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[26]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[25]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[24]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[23]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[22]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[21]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[20]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[19]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[18]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[17]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[16]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[15]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[14]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[13]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[12]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[11]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[10]  ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[9]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[8]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[7]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[6]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[5]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[4]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[3]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[2]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[1]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwdata[0]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hwrite      ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hburst[2]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hburst[1]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hburst[0]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hsize[2]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hsize[1]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_hsize[0]    ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_htrans[1]   ; rv32      ; Driven by constant GND ;
+; alta_rv32:rv32|slave_ahb_htrans[0]   ; rv32      ; Driven by constant GND ;
 ; alta_rv32:rv32|ext_resetn            ; rv32      ; Driven by constant VCC ;
 ; alta_rv32:rv32|resetn_out            ; rv32      ; Driven by constant VCC ;
 ; alta_rv32:rv32|usb0_xcvr_clk         ; rv32      ; Driven by constant VCC ;
@@ -532,16 +865,16 @@ Note: The Incremental Compilation Advisor can be used to get more detailed recom
 +---------------------------------------------+-------+------+--------------------------------+
 ; Statistic                                   ; Top   ; rv32 ; hard_block:auto_generated_inst ;
 +---------------------------------------------+-------+------+--------------------------------+
-; Estimated Total logic elements              ; 69    ; 1    ; 0                              ;
+; Estimated Total logic elements              ; 68    ; 1    ; 0                              ;
 ;                                             ;       ;      ;                                ;
-; Total combinational functions               ; 50    ; 1    ; 0                              ;
+; Total combinational functions               ; 49    ; 1    ; 0                              ;
 ; Logic element usage by number of LUT inputs ;       ;      ;                                ;
-;     -- 4 input functions                    ; 8     ; 0    ; 0                              ;
-;     -- 3 input functions                    ; 10    ; 0    ; 0                              ;
-;     -- <=2 input functions                  ; 32    ; 1    ; 0                              ;
+;     -- 4 input functions                    ; 9     ; 0    ; 0                              ;
+;     -- 3 input functions                    ; 4     ; 0    ; 0                              ;
+;     -- <=2 input functions                  ; 36    ; 1    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Logic elements by mode                      ;       ;      ;                                ;
-;     -- normal mode                          ; 35    ; 1    ; 0                              ;
+;     -- normal mode                          ; 34    ; 1    ; 0                              ;
 ;     -- arithmetic mode                      ; 15    ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Total registers                             ; 51    ; 0    ; 0                              ;
@@ -561,8 +894,8 @@ Note: The Incremental Compilation Advisor can be used to get more detailed recom
 ;     -- Registered Output Connections        ; 0     ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; Internal Connections                        ;       ;      ;                                ;
-;     -- Total Connections                    ; 452   ; 1    ; 20                             ;
-;     -- Registered Connections               ; 277   ; 0    ; 0                              ;
+;     -- Total Connections                    ; 451   ; 1    ; 20                             ;
+;     -- Registered Connections               ; 254   ; 0    ; 0                              ;
 ;                                             ;       ;      ;                                ;
 ; External Connections                        ;       ;      ;                                ;
 ;     -- Top                                  ; 10    ; 0    ; 17                             ;
@@ -688,16 +1021,16 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 70                  ;
+; Estimated Total logic elements              ; 69                  ;
 ;                                             ;                     ;
-; Total combinational functions               ; 51                  ;
+; Total combinational functions               ; 50                  ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 8                   ;
-;     -- 3 input functions                    ; 10                  ;
-;     -- <=2 input functions                  ; 33                  ;
+;     -- 4 input functions                    ; 9                   ;
+;     -- 3 input functions                    ; 4                   ;
+;     -- <=2 input functions                  ; 37                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 36                  ;
+;     -- normal mode                          ; 35                  ;
 ;     -- arithmetic mode                      ; 15                  ;
 ;                                             ;                     ;
 ; Total registers                             ; 51                  ;
@@ -713,8 +1046,8 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MATRIXSPI_SCK~input ;
 ; Maximum fan-out                             ; 34                  ;
-; Total fan-out                               ; 455                 ;
-; Average fan-out                             ; 2.94                ;
+; Total fan-out                               ; 454                 ;
+; Average fan-out                             ; 2.95                ;
 +---------------------------------------------+---------------------+
 
 
@@ -734,14 +1067,14 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Partition Merge
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Full Version
-    Info: Processing started: Fri Dec 19 10:11:21 2025
+    Info: Processing started: Fri Dec 19 10:56:24 2025
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off example_board -c example_board --merge=on
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "rv32"
 Info (35002): Resolved and merged 2 partition(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 2 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (35048): Found 7 ports with constant drivers. For more information, refer to the Partition Merger report
+Info (35048): Found 340 ports with constant drivers. For more information, refer to the Partition Merger report
 Info (35047): Found 443 ports with no fan-out. For more information, refer to the Partition Merger report
 Warning (35016): Found partition port(s) not driving logic, possibly wasting area
     Warning (35017): Partition port "alta_rv32:rv32|sys_clk", driven by node "alta_gclksw:gclksw_inst|gclk_switch", does not drive logic
@@ -768,17 +1101,17 @@ Warning (35016): Found partition port(s) not driving logic, possibly wasting are
 Warning (15899): PLL "altpll:pll_inst|altpll_vf32:auto_generated|pll1" has parameters clk1_multiply_by and clk1_divide_by specified but port CLK[1] is not connected
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "PIN_OSC"
-Info (21057): Implemented 101 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 100 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 13 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 72 logic cells
+    Info (21061): Implemented 71 logic cells
     Info (21064): Implemented 6 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Partition Merge was successful. 0 errors, 25 warnings
     Info: Peak virtual memory: 4619 megabytes
-    Info: Processing ended: Fri Dec 19 10:11:22 2025
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Fri Dec 19 10:56:24 2025
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -158,8 +158,6 @@ initial begin
         // 地址格式是 {row[4:0], col[5:0]}，即 row * 64 + col
         r_idx = i / 64; 
         c_idx = i % 64;
-        
-        // 沿用你原来的 4x4 格子算法
         if ( ((r_idx >> 2) & 1) == ((c_idx >> 2) & 1) )
             mem[i] = 3'b100; // Red
         else
@@ -202,11 +200,18 @@ reg [3:0] hub75_addr_reg;   // 0 到 15 (16 行)
 
 // --- ram 读取地址计算逻辑 ---
 // 由计数器推动
-// 我们要在当前节拍算出“下一个”要显示的像素地址，确保下一拍数据能准时出来
+// 修正错位
+// 1. 正在显示第 N 行时 (hub75_addr_reg = N)，我们需要移位读入第 N+1 行的数据。
+// 2. 在 LATCH 状态 (即将切换到 N+1 行显示)，我们需要预读取第 N+2 行的第 0 个像素，
+//    以便在进入 SHIFT 状态的第一个周期就能输出正确数据。
+
+wire [3:0] row_to_fetch;
+assign row_to_fetch = (state_reg == STATE_LATCH) ? (hub75_addr_reg + 4'd2) : (hub75_addr_reg + 4'd1);
+
 // 拼接方式：{行地址(5bit), 列地址(6bit)} 刚好 11 位
 // 上半屏行：0~15 最高位一定是 0，下半屏行：16~31 最高位一定是 1
-assign rd_addr_a = {1'b0, hub75_addr_reg, shift_count_reg};      // 行 0-15
-assign rd_addr_b = {1'b1, hub75_addr_reg, shift_count_reg};      // 行 16-31
+assign rd_addr_a = {1'b0, row_to_fetch, shift_count_reg[5:0]};      // 行 0-15
+assign rd_addr_b = {1'b1, row_to_fetch, shift_count_reg[5:0]};      // 行 16-31
 
 // --------------------------------------------------------
 // 核心状态机
@@ -257,7 +262,8 @@ assign HUB75_CLK  = (state_reg == STATE_SHIFT) ? clk : 1'b0;
 assign HUB75_ADDR = hub75_addr_reg;
 
 // RGB 信号：绑定 ram 返回的内容，a 即上半屏，b 即下半屏
-assign HUB75_DATA = {rd_data_a, rd_data_b};
+// 调换顺序以匹配硬件引脚定义 (假设 [2:0] 为上半屏 R1G1B1, [5:3] 为下半屏 R2G2B2)
+assign HUB75_DATA = {rd_data_b, rd_data_a};
 
 // LAT 信号：只在 LATCH 状态，且只持续一个时钟周期
 assign HUB75_LAT = (state_reg == STATE_LATCH); 

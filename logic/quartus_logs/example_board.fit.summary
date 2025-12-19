@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Dec 19 10:11:46 2025
+Fitter Status : Successful - Fri Dec 19 10:56:47 2025
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Full Version
 Revision Name : example_board
 Top-level Entity Name : example_board
 Family : Cyclone IV E
 Device : EP4CE75F29C8
 Timing Models : Final
-Total logic elements : 68 / 75,408 ( < 1 % )
-    Total combinational functions : 52 / 75,408 ( < 1 % )
+Total logic elements : 69 / 75,408 ( < 1 % )
+    Total combinational functions : 51 / 75,408 ( < 1 % )
     Dedicated logic registers : 51 / 75,408 ( < 1 % )
 Total registers : 51
 Total pins : 21 / 427 ( 5 % )
